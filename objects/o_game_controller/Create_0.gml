@@ -28,17 +28,19 @@ for(var i = exploration_index; i < array_length(attributes); i++)
 }
 while(sum > 0)
 {
-	var index = irandom_range(0,9);
-	for(var i = 0; i < 3 && index != 8 && attributes[exploration_index + 8] > 0; i++)
-		index = irandom_range(0,9);
-	while(attributes[exploration_index + index] <= 0)
+	var index = irandom_range(0,sum-1);
+	var sml_sum = 0;
+	for(var i = exploration_index; i < array_length(attributes); i++)
 	{
-		index++;
-		if(index > 9)
-			index = 0;
+		sml_sum += attributes[i];
+		if(index < sml_sum)
+		{
+			index = i;
+			break;
+		}
 	}
-	attributes[exploration_index + index] -= 1;
-	array_push(exploration_tokens, tokens[index]);
+	attributes[index] -= 1;
+	array_push(exploration_tokens, tokens[index-exploration_index]);
 	sum--;
 }
 alarm[0] = 1;

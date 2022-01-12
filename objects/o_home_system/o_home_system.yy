@@ -1,0 +1,43 @@
+{
+  "spriteId": {
+    "name": "s_system",
+    "path": "sprites/s_system/s_system.yy",
+  },
+  "solid": false,
+  "visible": true,
+  "spriteMaskId": null,
+  "persistent": false,
+  "parentObjectId": {
+    "name": "o_system",
+    "path": "objects/o_system/o_system.yy",
+  },
+  "physicsObject": false,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsGroup": 1,
+  "physicsDensity": 0.5,
+  "physicsRestitution": 0.1,
+  "physicsLinearDamping": 0.1,
+  "physicsAngularDamping": 0.1,
+  "physicsFriction": 0.2,
+  "physicsStartAwake": true,
+  "physicsKinematic": false,
+  "physicsShapePoints": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
+  "properties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[1,0,1,1,0,1]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"explored","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"ownership","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
+  "parent": {
+    "name": "Systems",
+    "path": "folders/Objects/Map/Systems.yy",
+  },
+  "resourceVersion": "1.0",
+  "name": "o_home_system",
+  "tags": [],
+  "resourceType": "GMObject",
+}
