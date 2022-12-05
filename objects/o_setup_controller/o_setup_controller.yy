@@ -27,8 +27,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "Controller",
-    "path": "folders/Objects/Controller.yy",
+    "name": "Game",
+    "path": "folders/Objects/Controller/Game.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_setup_controller",

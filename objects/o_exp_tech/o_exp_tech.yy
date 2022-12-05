@@ -20,12 +20,16 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"name","path":"objects/o_exploration/o_exploration.yy",},"objectId":{"name":"o_exploration","path":"objects/o_exploration/o_exploration.yy",},"value":"Ancient Tech","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
-    "name": "Exploration",
-    "path": "folders/Objects/Tokens/Exploration.yy",
+    "name": "Simple",
+    "path": "folders/Objects/Tokens/Exploration/Simple.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_exp_tech",

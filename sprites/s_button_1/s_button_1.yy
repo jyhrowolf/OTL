@@ -138,7 +138,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"s_button_1","path":"sprites/s_button_1/s_button_1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "s_button_1",
     "tags": [],
     "resourceType": "GMSequence",
@@ -173,7 +173,7 @@
   },
   "parent": {
     "name": "Buttons",
-    "path": "folders/Sprites/GUI/Buttons.yy",
+    "path": "folders/Sprites/GUI/Menu/Buttons.yy",
   },
   "resourceVersion": "1.0",
   "name": "s_button_1",

@@ -36,8 +36,8 @@
   ],
   "overriddenProperties": [],
   "parent": {
-    "name": "GUI",
-    "path": "folders/Objects/GUI.yy",
+    "name": "Menu",
+    "path": "folders/Objects/GUI/Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "o_setup_button",

@@ -1,11 +1,23 @@
 /// @description Draw Hex
-draw_self();
 if(explored)
-	for(var i = 0; i < 6; i++)
+{
+	if(exploration_token != noone)
+		draw_system_token(self,c_grey);
+	if(player > 0)
+		draw_system(self,c_white);
+	else
 	{
-		if(layout[i])
-		{
-			draw_sprite_ext(s_warp_tunnel, 0, x+45*cos(-pi/3*i + pi/6), y+45*sin(-pi/3*i+pi/6),
-							1, 1, (pi/3*i+pi/3)*180/pi, c_white, 1);
-		}
+		draw_system(self,c_grey);
+		if(enemy != noone)
+			draw_system_enemy(self,enemy,array_length(ships)); //enemy tokens
 	}
+	draw_system_warp_tunnels(self);
+	if(highlighted)
+		draw_highlight_system(self);
+}
+else if (explorable)
+{
+	draw_empty_system(self);
+	if(highlighted)
+		draw_highlight_system(self);
+}

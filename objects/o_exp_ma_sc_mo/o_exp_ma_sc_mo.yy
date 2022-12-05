@@ -20,9 +20,13 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"name","path":"objects/o_exploration/o_exploration.yy",},"objectId":{"name":"o_exploration","path":"objects/o_exploration/o_exploration.yy",},"value":"+3 Mon +2 Sci +2 Mat","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Simple",
     "path": "folders/Objects/Tokens/Exploration/Simple.yy",
