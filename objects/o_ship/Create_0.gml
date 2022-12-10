@@ -26,6 +26,7 @@ update_color = function()
 }
 update_blueprint = function()
 {
+	hull = blueprint.hull;
 	var _c = my_color /*+ #0A0A0A*(3-class)*/;
 	if(!surface_exists(surf))
 		surf = surface_create(surface_dim[0],surface_dim[1]);
@@ -62,7 +63,7 @@ update_blueprint = function()
 	
 	if(hull_sprite != noone)
 		draw_sprite_ext(hull_sprite,blueprint.ship_display[0],_x+hull_offset[0][0],_y-hull_offset[0][1],1,1,0,_c,1);
-
+	
 	if(drive_sprite != noone)
 		draw_sprite_ext(drive_sprite,blueprint.ship_display[1],_x+drive_offset[0][0],_y-drive_offset[0][1],1,1,0,c_white,1);
 	
@@ -81,14 +82,12 @@ update_blueprint = function()
 }
 ship_path_start = function(_speed,_random_dir)
 {
-	show_debug_message([x,y]);
 	if(_speed > 0)
 	{
 		x += path_get_x(orbit_path,1);
 		y += path_get_y(orbit_path,0);
 		path_start(orbit_path,_speed,path_action_continue,false);
 		path_position = random(1);
-		show_debug_message(path_position);
 		if(_random_dir)
 		{
 			if(random(1) >= .5)
@@ -110,6 +109,6 @@ ship_path_pause = function()
 }
 ship_path_end = function()
 {
-	path_end()
+	path_end();
 }
 

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_ship_11_missiles",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 8,
   "height": 6,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"434e5c4c-cdd8-4e1c-a4ea-6386b3f84830","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"434e5c4c-cdd8-4e1c-a4ea-6386b3f84830","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":{"name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"434e5c4c-cdd8-4e1c-a4ea-6386b3f84830","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d93ce5d0-92d5-447a-8727-a39294f6b448","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d93ce5d0-92d5-447a-8727-a39294f6b448","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":{"name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"d93ce5d0-92d5-447a-8727-a39294f6b448","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"45f43657-ee00-4a7d-b2a7-c0e692b4db18","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"45f43657-ee00-4a7d-b2a7-c0e692b4db18","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":{"name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"45f43657-ee00-4a7d-b2a7-c0e692b4db18","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"156a7601-6eb2-4814-8ec5-d5892b96edf9","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"156a7601-6eb2-4814-8ec5-d5892b96edf9","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"LayerId":{"name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","name":"156a7601-6eb2-4814-8ec5-d5892b96edf9","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"434e5c4c-cdd8-4e1c-a4ea-6386b3f84830",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d93ce5d0-92d5-447a-8727-a39294f6b448",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45f43657-ee00-4a7d-b2a7-c0e692b4db18",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"156a7601-6eb2-4814-8ec5-d5892b96edf9",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_ship_11_missiles",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"62736dfd-3231-4e32-a611-36cdd16407ca","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"434e5c4c-cdd8-4e1c-a4ea-6386b3f84830","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"43be8dca-573f-432a-b16e-fab616dbb0b8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d93ce5d0-92d5-447a-8727-a39294f6b448","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c7ce3692-8657-4ad7-bdad-731f3491c640","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"45f43657-ee00-4a7d-b2a7-c0e692b4db18","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8e8e8459-b5aa-47fb-ae7e-fbb64531ec2b","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"156a7601-6eb2-4814-8ec5-d5892b96edf9","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 6,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_ship_11_missiles","path":"sprites/s_ship_11_missiles/s_ship_11_missiles.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_ship_11_missiles",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d94c5aee-b1e3-4188-8e84-68ed5a8c141f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "2_Cruiser",
     "path": "folders/Sprites/Map/Civilizations/Ships/2_Cruiser.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_ship_11_missiles",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

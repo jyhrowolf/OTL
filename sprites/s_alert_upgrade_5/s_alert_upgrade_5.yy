@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_alert_upgrade_5",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 11,
   "height": 11,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0f59f100-46b3-4f47-b4df-f622e1939072","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f59f100-46b3-4f47-b4df-f622e1939072","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"LayerId":{"name":"713cfaf7-f5c6-4573-906a-75f3029e526c","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_alert_upgrade_5","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","name":"0f59f100-46b3-4f47-b4df-f622e1939072","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"8a75351c-7236-476e-8a65-790e10ebe726","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8a75351c-7236-476e-8a65-790e10ebe726","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"LayerId":{"name":"713cfaf7-f5c6-4573-906a-75f3029e526c","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_alert_upgrade_5","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","name":"8a75351c-7236-476e-8a65-790e10ebe726","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f59f100-46b3-4f47-b4df-f622e1939072",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8a75351c-7236-476e-8a65-790e10ebe726",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_alert_upgrade_5","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_alert_upgrade_5",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6a53f3c6-6d74-4e31-97e5-c1d72b7459e9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f59f100-46b3-4f47-b4df-f622e1939072","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d4e783c4-481a-457a-815a-da307dd4a89b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8a75351c-7236-476e-8a65-790e10ebe726","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 5,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_alert_upgrade_5","path":"sprites/s_alert_upgrade_5/s_alert_upgrade_5.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_alert_upgrade_5",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"713cfaf7-f5c6-4573-906a-75f3029e526c","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"713cfaf7-f5c6-4573-906a-75f3029e526c","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Upgrade",
     "path": "folders/Sprites/GUI/Game/HUD/Alerts/Upgrade.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_alert_upgrade_5",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

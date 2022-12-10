@@ -1,6 +1,25 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
+function is_ship_combat(_system)
+{
+	var p_list = [0,0,0,0,0,0,0];
+	var player_ships = _system.ships;
+	for(var i = 0 ; i < array_length(player_ships); i++) // all ships
+	{
+		if(instance_exists(player_ships[i]))
+		{
+			p_list[player_ships[i].player] = 1;
+		}
+	}
+	var sum = 0;
+	for(var i = 0 ; i < array_length(p_list); i++) // all categories
+	{
+		sum += p_list[i];
+	}
+	return sum > 1;
+}
+
 function is_player_pinned(_player,_system,_hypo)
 {
 	var pc = instance_find(o_player_controller,0);
@@ -125,7 +144,7 @@ function valid_rotation(_system,_map,_player,_whg)
 		{
 			var sys = _map[? map_hash(new_coord)]
 			if(sys.explored)
-				if(sys.player == _player || (is_player_ship(_player,sys,false) && !is_player_pinned(_player,sys,0,false)))
+				if(sys.player == _player || (is_player_ship(_player,sys,false) && !is_player_pinned(_player,sys,0)))
 				{
 					if(_whg)
 					{
@@ -165,7 +184,7 @@ function connected_to_player(_system,_map,_player)
 		{
 			var sys = _map[? map_hash(new_coord)]
 			if(sys.explored)
-				if(sys.player == _player || (is_player_ship(_player,sys,false) && !is_player_pinned(_player,sys,0,false)))
+				if(sys.player == _player || (is_player_ship(_player,sys,false) && !is_player_pinned(_player,sys,0)))
 					if(sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1)
 						return true;
 		}

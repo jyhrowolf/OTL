@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_ship_11_weapons",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 7,
   "height": 6,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"9114cd59-4b5d-4897-ac59-e685ef4c306a","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9114cd59-4b5d-4897-ac59-e685ef4c306a","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":{"name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"9114cd59-4b5d-4897-ac59-e685ef4c306a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"31afaabe-8b9b-42d0-a9eb-c2686f5bca0e","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"31afaabe-8b9b-42d0-a9eb-c2686f5bca0e","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":{"name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"31afaabe-8b9b-42d0-a9eb-c2686f5bca0e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ab95351c-57b4-4c10-b1b6-041a216d0b5b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ab95351c-57b4-4c10-b1b6-041a216d0b5b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":{"name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"ab95351c-57b4-4c10-b1b6-041a216d0b5b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f3e23c1f-9ded-4fd5-acfe-21065bfda726","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f3e23c1f-9ded-4fd5-acfe-21065bfda726","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"LayerId":{"name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","name":"f3e23c1f-9ded-4fd5-acfe-21065bfda726","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9114cd59-4b5d-4897-ac59-e685ef4c306a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"31afaabe-8b9b-42d0-a9eb-c2686f5bca0e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab95351c-57b4-4c10-b1b6-041a216d0b5b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f3e23c1f-9ded-4fd5-acfe-21065bfda726",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_ship_11_weapons",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"20b02806-52c0-4693-8257-9881d6832b30","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9114cd59-4b5d-4897-ac59-e685ef4c306a","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0ca957c7-441d-428f-b878-5c3920c0691f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"31afaabe-8b9b-42d0-a9eb-c2686f5bca0e","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"701f6d08-41fa-435b-b4cb-70d551af2852","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ab95351c-57b4-4c10-b1b6-041a216d0b5b","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5a993dcc-a460-44ad-bc1e-ba21b8605482","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f3e23c1f-9ded-4fd5-acfe-21065bfda726","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 6,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_ship_11_weapons","path":"sprites/s_ship_11_weapons/s_ship_11_weapons.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_ship_11_weapons",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c9e22f65-d230-44d2-9b53-6e55d7e6549b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "2_Cruiser",
     "path": "folders/Sprites/Map/Civilizations/Ships/2_Cruiser.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_ship_11_weapons",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

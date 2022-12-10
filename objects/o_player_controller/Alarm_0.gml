@@ -8,6 +8,8 @@ if(active_player + 1 < array_length(players))
 else
 	active_player = 1;
 
+var gc = instance_find(o_game_controller,0);
+
 var next_round = true;
 for(var i = 1; i < array_length(players); i++)
 {
@@ -17,6 +19,20 @@ for(var i = 1; i < array_length(players); i++)
 		break;
 	}
 }
+
+var combat = false;
+var list = [];
+ds_map_values_to_array(gc.map,list);
+for(var i = 0; i < array_length(list); i++) // find all hexes that have 2 different ships.
+{
+	if(is_ship_combat(list[i]))
+	{
+		combat = true;
+		gc.combat_hex = list[i];
+		break;
+	}
+}
+
 
 if(!next_round)
 {
@@ -28,7 +44,6 @@ if(!next_round)
 			active_player = 1;
 	}
 	
-	var gc = instance_find(o_game_controller,0);
 	var cur_player = players[active_player];
 	var cur_civ = cur_player.civilization;
 	cur_civ.calculate_colony(cur_civ.colony);
@@ -37,19 +52,27 @@ if(!next_round)
 	cur_player.calculate_influence_upkeep(0);
 	
 	gc.selected_hex = cur_player.last_selected_hex;
-	gc.done = 0;
 	gc.busy = 0;
 	
 	bottom_bar.my_buttons[6].image_index = 2;
 
 	rotate_camera(self,0,cur_player.last_selected_hex);
 }
+else if(combat)
+{
+	active_player--;
+	bottom_bar.my_buttons[6].image_index = 3;
+	ds_map_clear(gc.combat_initiative);
+	gc.combat_list = [];
+	gc.action = 8;
+	gc.busy = 0;
+	gc.alarm[8] = 1;
+}
 else // Next round
 {
 	active_player = next_round_active_player;
 	next_round_active_player = 0;
 	
-	var gc = instance_find(o_game_controller,0);
 	var cur_player = players[active_player];
 	var cur_civ = cur_player.civilization;
 

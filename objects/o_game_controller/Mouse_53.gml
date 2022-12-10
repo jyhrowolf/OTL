@@ -15,7 +15,6 @@ if(pc.action >= 0 && global.mouse_state < 1) //interact with map
 		var choose_hex = map[? map_hash(hex)]
 		if(busy == 0) //if we are not using selected_hex
 			selected_hex = choose_hex;
-		show_debug_message(pc.action);
 		switch (pc.action)
 		{
 			case 0: //move around map
@@ -43,6 +42,9 @@ if(pc.action >= 0 && global.mouse_state < 1) //interact with map
 			break;
 			case 7: //colonize
 				action_colony(self,pc,selected_hex);
+				break;
+			case 8: //combat win
+				action_combat(self,pc,combat_hex);
 		}
 	}
 }

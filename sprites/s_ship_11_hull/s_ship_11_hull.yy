@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_ship_11_hull",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 6,
   "height": 6,
   "textureGroupId": {
@@ -24,21 +28,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"00412177-ce60-42f1-b38c-3d5d4a9c2daa","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00412177-ce60-42f1-b38c-3d5d4a9c2daa","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":{"name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"00412177-ce60-42f1-b38c-3d5d4a9c2daa","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b5bd004f-ca8a-437f-b05f-5d2d0c50d425","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b5bd004f-ca8a-437f-b05f-5d2d0c50d425","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":{"name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"b5bd004f-ca8a-437f-b05f-5d2d0c50d425","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d6460130-dc61-4eb3-a681-c82898f30e6c","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6460130-dc61-4eb3-a681-c82898f30e6c","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":{"name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"d6460130-dc61-4eb3-a681-c82898f30e6c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f5a6adfa-008b-4985-bb18-c16a2a33013f","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f5a6adfa-008b-4985-bb18-c16a2a33013f","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"LayerId":{"name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","name":"f5a6adfa-008b-4985-bb18-c16a2a33013f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00412177-ce60-42f1-b38c-3d5d4a9c2daa",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b5bd004f-ca8a-437f-b05f-5d2d0c50d425",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6460130-dc61-4eb3-a681-c82898f30e6c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5a6adfa-008b-4985-bb18-c16a2a33013f",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_ship_11_hull",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -49,12 +47,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f3c7e176-1594-42f7-8244-b119209d6ef3","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"00412177-ce60-42f1-b38c-3d5d4a9c2daa","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a479cf8b-d161-4b92-86c8-a7d919bf3623","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b5bd004f-ca8a-437f-b05f-5d2d0c50d425","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b1806225-142b-43f6-9b5c-6f418d41c14b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d6460130-dc61-4eb3-a681-c82898f30e6c","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5df2a6a5-d90d-4281-8422-b822511c3a91","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f5a6adfa-008b-4985-bb18-c16a2a33013f","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -70,22 +68,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_ship_11_hull","path":"sprites/s_ship_11_hull/s_ship_11_hull.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_ship_11_hull",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"32cade8c-4bfa-4193-9be0-08e48d21f1c1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "2_Cruiser",
     "path": "folders/Sprites/Map/Civilizations/Ships/2_Cruiser.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_ship_11_hull",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

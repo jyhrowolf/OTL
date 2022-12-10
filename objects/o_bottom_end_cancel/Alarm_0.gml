@@ -23,3 +23,10 @@ else if(image_index == 2) // pass
 	var pc = instance_find(o_player_controller,0);
 	pc.alarm[11] = 1;
 }
+else if(image_index == 3) // battle
+{
+	var gc = instance_find(o_game_controller,0);
+
+	gc.player_controller.alarm[8] = 1;
+	gc.alarm[8] = 2;
+}

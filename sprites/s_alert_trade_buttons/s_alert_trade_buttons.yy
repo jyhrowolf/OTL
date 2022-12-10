@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_alert_trade_buttons",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 23,
   "height": 25,
   "textureGroupId": {
@@ -24,18 +28,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b5f21ce8-486d-433b-9747-7d09bcb816eb","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b5f21ce8-486d-433b-9747-7d09bcb816eb","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":{"name":"68b8ee71-566e-441a-bce9-f024f13cd2f6","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"b5f21ce8-486d-433b-9747-7d09bcb816eb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"95b3b9f4-de7c-4903-b693-77b24d54c9fc","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95b3b9f4-de7c-4903-b693-77b24d54c9fc","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":{"name":"68b8ee71-566e-441a-bce9-f024f13cd2f6","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"95b3b9f4-de7c-4903-b693-77b24d54c9fc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"148a6743-0338-417a-a3cc-332f06912913","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"148a6743-0338-417a-a3cc-332f06912913","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"LayerId":{"name":"68b8ee71-566e-441a-bce9-f024f13cd2f6","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","name":"148a6743-0338-417a-a3cc-332f06912913","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b5f21ce8-486d-433b-9747-7d09bcb816eb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"95b3b9f4-de7c-4903-b693-77b24d54c9fc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"148a6743-0338-417a-a3cc-332f06912913",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_alert_trade_buttons",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -46,11 +46,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"3dc94132-5005-47b1-ad35-7198e7c9a363","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b5f21ce8-486d-433b-9747-7d09bcb816eb","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"39f40a16-a182-4312-a319-70db21516874","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95b3b9f4-de7c-4903-b693-77b24d54c9fc","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"449cfb23-0ea6-4e0e-a92f-5351ad668695","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"148a6743-0338-417a-a3cc-332f06912913","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +66,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_alert_trade_buttons",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"68b8ee71-566e-441a-bce9-f024f13cd2f6","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"68b8ee71-566e-441a-bce9-f024f13cd2f6","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Trade",
     "path": "folders/Sprites/GUI/Game/HUD/Alerts/Trade.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_alert_trade_buttons",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

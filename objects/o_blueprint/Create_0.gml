@@ -195,3 +195,55 @@ update_ship_display = function()
 		}
 	}
 }
+roll_six = function()
+{
+	return irandom_range(1,6);
+}
+
+roll_missiles = function()
+{
+	var attacks = [];
+	for(var d = 1; d < array_length(missiles); d++)
+	{
+		for(var m = 0; m < missiles[d]; m++)
+		{
+			array_push(attacks,[d,roll_six() + computer]);
+		}
+	}
+	show_debug_message("Missiles rolled: " + string(attacks));
+	return attacks;
+}
+
+roll_weapons = function()
+{
+	var attacks = [];
+	for(var d = 1; d < array_length(weapons); d++)
+	{
+		for(var w = 0; w < weapons[d]; w++)
+		{
+			array_push(attacks,[d,roll_six() + computer]);
+		}
+	}
+	show_debug_message("Weapons rolled: " + string(attacks));
+	return attacks;
+}
+
+has_missiles = function()
+{
+	for(var d = 1; d < array_length(missiles); d++)
+	{
+		if(missiles[d] > 0)
+			return true;
+	}
+	return false;
+}
+
+has_weapons = function()
+{
+	for(var d = 1; d < array_length(weapons); d++)
+	{
+		if(weapons[d] > 0)
+			return true;
+	}
+	return false;
+}

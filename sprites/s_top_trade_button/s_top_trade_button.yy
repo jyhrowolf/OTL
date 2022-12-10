@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_top_trade_button",
   "bboxMode": 0,
   "collisionKind": 0,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 102,
   "height": 26,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"aa241883-3293-48da-9a2b-3c9d590ee424","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aa241883-3293-48da-9a2b-3c9d590ee424","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"LayerId":{"name":"0838db6f-6159-476f-85eb-f304a0584cbd","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_top_trade_button","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","name":"aa241883-3293-48da-9a2b-3c9d590ee424","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f2d2af9e-8c11-47fd-9b85-8c9dc8789cc2","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f2d2af9e-8c11-47fd-9b85-8c9dc8789cc2","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"LayerId":{"name":"0838db6f-6159-476f-85eb-f304a0584cbd","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_top_trade_button","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","name":"f2d2af9e-8c11-47fd-9b85-8c9dc8789cc2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aa241883-3293-48da-9a2b-3c9d590ee424",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2d2af9e-8c11-47fd-9b85-8c9dc8789cc2",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_top_trade_button","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_top_trade_button",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"7fddf621-e564-4797-a9b0-5cebd4167db0","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aa241883-3293-48da-9a2b-3c9d590ee424","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"53128cbb-5abf-41d6-8bdb-69734b075286","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2d2af9e-8c11-47fd-9b85-8c9dc8789cc2","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_top_trade_button","path":"sprites/s_top_trade_button/s_top_trade_button.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_top_trade_button",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0838db6f-6159-476f-85eb-f304a0584cbd","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0838db6f-6159-476f-85eb-f304a0584cbd","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Top Bar",
     "path": "folders/Sprites/GUI/Game/HUD/Top Bar.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_top_trade_button",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

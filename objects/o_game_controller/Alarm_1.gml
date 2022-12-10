@@ -93,7 +93,7 @@ for(var i = 0; i < array_length(list); i++) // calculate all hex connections
 						var tier = old_hex.tier;
 						tier = (tier-1)*(tier<4) + 2*(tier>=4);
 						if((new_hex.player == player_controller.active_player || 
-							(is_player_ship(player_controller.active_player,new_hex,false) && !is_player_pinned(player_controller.active_player,new_hex,0,false))) 
+							(is_player_ship(player_controller.active_player,new_hex,false) && !is_player_pinned(player_controller.active_player,new_hex,0))) 
 							&& array_length(system_tokens[tier]) > 0)
 						{
 							old_hex.highlighted = true;

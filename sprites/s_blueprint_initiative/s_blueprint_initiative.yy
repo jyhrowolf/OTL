@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_blueprint_initiative",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 9,
   "height": 7,
   "textureGroupId": {
@@ -24,12 +28,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"454d3698-71d3-480c-b609-06d9a5ab5c95","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"454d3698-71d3-480c-b609-06d9a5ab5c95","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},"LayerId":{"name":"c7097cd9-27ca-4d24-8238-5d8955833ded","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_blueprint_initiative","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},"resourceVersion":"1.0","name":"454d3698-71d3-480c-b609-06d9a5ab5c95","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"454d3698-71d3-480c-b609-06d9a5ab5c95",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_blueprint_initiative","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_blueprint_initiative",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +44,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"962cc5bd-880d-4315-92c7-1df1d77b04c2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"454d3698-71d3-480c-b609-06d9a5ab5c95","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +62,13 @@
     "yorigin": 3,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_blueprint_initiative","path":"sprites/s_blueprint_initiative/s_blueprint_initiative.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_blueprint_initiative",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c7097cd9-27ca-4d24-8238-5d8955833ded","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c7097cd9-27ca-4d24-8238-5d8955833ded","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Blueprints",
     "path": "folders/Sprites/GUI/Game/Blueprints.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_blueprint_initiative",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

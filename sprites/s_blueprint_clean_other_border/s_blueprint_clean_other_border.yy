@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "s_blueprint_clean_other_border",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -14,6 +17,7 @@
   "HTile": false,
   "VTile": false,
   "For3D": false,
+  "DynamicTexturePage": false,
   "width": 108,
   "height": 159,
   "textureGroupId": {
@@ -24,15 +28,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"cd97ce4f-e29f-449f-aa42-034acbcd3998","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cd97ce4f-e29f-449f-aa42-034acbcd3998","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"LayerId":{"name":"4884c6fd-9e11-412c-95c0-61a8fa4bdd3f","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_blueprint_clean_other_border","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","name":"cd97ce4f-e29f-449f-aa42-034acbcd3998","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e8895012-047d-436c-a19a-a5986dbbc556","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e8895012-047d-436c-a19a-a5986dbbc556","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"LayerId":{"name":"4884c6fd-9e11-412c-95c0-61a8fa4bdd3f","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"s_blueprint_clean_other_border","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","name":"e8895012-047d-436c-a19a-a5986dbbc556","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd97ce4f-e29f-449f-aa42-034acbcd3998",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8895012-047d-436c-a19a-a5986dbbc556",},
   ],
   "sequence": {
-    "spriteId": {"name":"s_blueprint_clean_other_border","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "s_blueprint_clean_other_border",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -43,10 +45,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"d1ec3d22-cb80-442b-b51e-1c6bebbaf113","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cd97ce4f-e29f-449f-aa42-034acbcd3998","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"aec903c6-2445-4cc4-9cf0-822c195d95a8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e8895012-047d-436c-a19a-a5986dbbc556","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -62,22 +64,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"s_blueprint_clean_other_border","path":"sprites/s_blueprint_clean_other_border/s_blueprint_clean_other_border.yy",},
-    "resourceVersion": "1.4",
-    "name": "s_blueprint_clean_other_border",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4884c6fd-9e11-412c-95c0-61a8fa4bdd3f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"4884c6fd-9e11-412c-95c0-61a8fa4bdd3f","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Blueprints",
     "path": "folders/Sprites/GUI/Game/Blueprints.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "s_blueprint_clean_other_border",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
