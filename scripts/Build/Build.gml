@@ -56,6 +56,7 @@ function action_build(_gc,_pc, choose_hex)
 					p.image_index = c;
 	
 					array_push(choose_hex.planets,p);
+					update_planets(choose_hex);
 				}
 							
 				current_player.civilization.calculate_resource(2,-current_player.civilization.buildable_cost[_gc.busy-1]);

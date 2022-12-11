@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_neutron_absorber",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,18 +25,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"application","path":"objects/o_trait/o_trait.yy",},"objectId":{"name":"o_trait","path":"objects/o_trait/o_trait.yy",},"value":"[\"system_loss\"]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"application","path":"objects/o_trait/o_trait.yy",},"objectId":{"name":"o_trait","path":"objects/o_trait/o_trait.yy",},"value":"[\"system_loss\"]",},
   ],
   "parent": {
     "name": "Trait",
     "path": "folders/Objects/Tokens/Research/Trait.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_neutron_absorber",
-  "tags": [],
-  "resourceType": "GMObject",
 }

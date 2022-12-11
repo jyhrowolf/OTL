@@ -9,7 +9,7 @@ if(global.mouse_state == 1)
 		if(position_meeting(m_x, m_y, my_buttons[i]))
 		{
 			my_buttons[i].alarm[0] = 1;
-			if(i != 6 && !pc.action_taken)
+			if((i != 6 && i != 7) && !pc.action_taken)
 				my_buttons[6].image_index = 1;
 		}
 	}

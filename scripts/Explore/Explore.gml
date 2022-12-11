@@ -95,6 +95,7 @@ function action_explore(_gc,_pc, hex, choose_hex)
 			if(choose_hex == _gc.selected_hex)
 			{
 				_gc.selected_hex.player = _pc.active_player;
+				update_planets(_gc.selected_hex);
 				array_push(current_player.civilization.systems,_gc.selected_hex);
 				current_player.civilization.influence--;
 				current_player.calculate_influence_upkeep(0);

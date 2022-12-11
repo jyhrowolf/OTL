@@ -7,7 +7,12 @@ if(image_index == 0) // end turn
 else if(image_index == 1) // cancel
 {
 	var gc = instance_find(o_game_controller,0);
-	if(gc.player_controller.action != 0)
+	if(gc.player_controller.action == 8)
+	{
+		var pc = instance_find(o_player_controller,0);
+		pc.alarm[0] = 1;
+	}
+	else if(gc.player_controller.action != 0)
 	{
 		gc.player_controller.alarm[gc.player_controller.action] = 1;
 		gc.alarm[gc.player_controller.action] = 2;

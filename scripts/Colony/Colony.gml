@@ -29,7 +29,7 @@ function action_colony(_gc,_pc, selected_hex)
 							current_player.civilization.resources_built[selected_hex.planets[i].resource]++;
 							current_player.calculate_resource_income([0,0,0]);
 							current_player.civilization.calculate_colony(current_player.civilization.colony - 1);
-							array_push(selected_hex.planets[i].resources,_pc.active_player);
+							selected_hex.planets[i].resources++;
 							_pc.alarm[7] = 1;
 							_gc.alarm[7] = 2;
 						}

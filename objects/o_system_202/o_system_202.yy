@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_system_202",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,20 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[0,1,0,1,0,1]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"artifact","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[0,1,0,1,0,1]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"artifact","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"True",},
   ],
   "parent": {
     "name": "Sector 2 (201-211,214,281)",
     "path": "folders/Objects/Map/Systems/Sector 2 (201-211,214,281).yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_system_202",
-  "tags": [],
-  "resourceType": "GMObject",
 }

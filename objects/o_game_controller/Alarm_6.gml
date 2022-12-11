@@ -9,6 +9,13 @@ if(busy == 0) // find hexes that are influenceable
 	
 	if(!player_controller.action_taken)
 		busy = complete;
+		
+	if(!player_controller.action_taken)
+	{
+		player_controller.action_taken = true;
+		current_player.civilization.calculate_colony(current_player.civilization.colony + 2);
+		player_controller.bottom_bar.alarm[0] = 1;
+	}
 	//settup connections
 	get_moveable(self);
 

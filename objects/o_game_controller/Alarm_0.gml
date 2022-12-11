@@ -92,13 +92,19 @@ for(var i = 0; i < 6; i++)
 		player.player = player_controller.active_player;
 		array_push(player_controller.players, player);
 		
-		species = instance_create_layer(system.x,system.y,"Player",o_species_terran);
+		var spec = noone;
+		if(attributes[player_controller.active_player+11] < 6)
+			spec = asset_get_index("o_species" + string(attributes[player_controller.active_player+11]));
+		else
+			spec = o_species_terran;
+		
+		species = instance_create_layer(system.x,system.y,"Player",spec);
 		if(species.faction_color == #000000)
 			species.faction_color = global.player_color[player_controller.active_player];
 		player.setup_species(species);
 		
 		_point = flat_hex_to_pixel(adv[i],global.hex_size);
-		system = instance_create_layer(_point[0],_point[1],"Map",o_home_system);
+		system = instance_create_layer(_point[0],_point[1],"Map",species.home_system);
 		system.hex_coord = adv[i];
 		system.tier = tier_calculate(adv[i]);
 		system.depth = 3;

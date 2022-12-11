@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_blueprint_12",
   "spriteId": {
     "name": "s_blueprint_12",
     "path": "sprites/s_blueprint_12/s_blueprint_12.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,19 +28,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"CHNK-88","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"CHNK-88",},
   ],
   "parent": {
-    "name": "Terran",
-    "path": "folders/Objects/Controller/Player/Blue Prints/Terran.yy",
+    "name": "6Terran",
+    "path": "folders/Objects/Controller/Player/Blue Prints/6Terran.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_blueprint_12",
-  "tags": [],
-  "resourceType": "GMObject",
 }

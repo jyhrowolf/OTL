@@ -25,20 +25,19 @@ for(var i = 0; i < 3; i++)
 ds_map_destroy(placements);
 
 planets[0].slots = [0,1];
-planets[0].resources[0] = player;
+planets[0].resources = 1;
 planets[0].resource = 0;
 planets[0].image_index = 0;
 pc.players[player].civilization.resources_built[planets[0].resource] += 1;
 
-
 planets[1].slots = [0,1];
-planets[1].resources[0] = player;
+planets[1].resources = 1;
 planets[1].resource = 1;
 planets[1].image_index = 1;
 pc.players[player].civilization.resources_built[planets[1].resource] += 1;
 
 planets[2].slots = [0];
-planets[2].resources[0] = player;
+planets[2].resources = 1;
 planets[2].resource = 2;
 planets[2].image_index = 2;
 pc.players[player].civilization.resources_built[planets[2].resource] += 1;
@@ -47,3 +46,5 @@ pc.players[player].civilization.influence--;
 
 pc.players[player].calculate_influence_upkeep(0);
 pc.players[player].calculate_resource_income([0,0,0]);
+
+update_planets(self);

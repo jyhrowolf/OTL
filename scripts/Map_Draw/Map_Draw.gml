@@ -6,6 +6,14 @@ function map_hash(_coord)
 	return _coord[0]*100 + _coord[1];
 }
 
+function update_planets(_hex)
+{
+	for(var i = 0; i < array_length(_hex.planets); i++)
+	{
+		_hex.planets[i].my_color = global.player_color[_hex.player];
+	}
+}
+
 function zoom_camera(_pc,_change,_selected_hex)
 {
 	var player = _pc.players[_pc.active_player];

@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_blueprint_01",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,18 +25,14 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"6","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"6",},
   ],
   "parent": {
-    "name": "Neutrals",
-    "path": "folders/Objects/Controller/Player/Blue Prints/Neutrals.yy",
+    "name": "7Neutrals",
+    "path": "folders/Objects/Controller/Player/Blue Prints/7Neutrals.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_blueprint_01",
-  "tags": [],
-  "resourceType": "GMObject",
 }

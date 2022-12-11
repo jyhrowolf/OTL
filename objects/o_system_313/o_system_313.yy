@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_system_313",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,19 +25,15 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[1,0,0,1,0,0]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[1,0,0,1,0,0]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"1",},
   ],
   "parent": {
     "name": "Sector 3 (301-318,381-382)",
     "path": "folders/Objects/Map/Systems/Sector 3 (301-318,381-382).yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_system_313",
-  "tags": [],
-  "resourceType": "GMObject",
 }

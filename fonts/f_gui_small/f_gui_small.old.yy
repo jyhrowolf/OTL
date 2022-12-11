@@ -7,7 +7,7 @@
   "fontName": "Ebrima",
   "styleName": "Regular",
   "size": 6.0,
-  "bold": false,
+  "bold": true,
   "italic": false,
   "charset": 0,
   "AntiAlias": 0,

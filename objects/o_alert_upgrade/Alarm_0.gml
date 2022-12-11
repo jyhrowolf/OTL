@@ -28,6 +28,9 @@ if(variable == noone)
 }
 else if(variable == "rare")
 {
-	available_blueprints[selected_blueprint-(array_length(my_buttons)-2-4)].display_to_blueprint(my_buttons[selected_blueprint]);
+	if(selected_blueprint != -1)
+	{
+		available_blueprints[selected_blueprint-(array_length(my_buttons)-2-4)].display_to_blueprint(my_buttons[selected_blueprint]);
+	}
 	instance_destroy(self);
 }

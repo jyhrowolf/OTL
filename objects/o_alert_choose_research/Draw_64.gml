@@ -6,11 +6,11 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
 draw_set_font(f_gui_large);
 				
-var _x = (-29)*2;
-var _y = (-21)*2;
+var _x = (-29)*3;
+var _y = (-21)*3;
 
-var s_w = (58*2)/string_width(name);
-var s_h = (11*2)/string_height(name);
+var s_w = (58*3)/string_width(name);
+var s_h = (11*3)/string_height(name);
 
 draw_text_transformed_color(x+_x,y-_y,name,
 					min(s_w,s_h), min(s_w,s_h),

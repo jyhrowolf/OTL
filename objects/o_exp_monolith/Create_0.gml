@@ -31,4 +31,5 @@ exploration_reward = function(_civilization)
 	p.image_index = 6;
 	
 	array_push(hex.planets,p);
+	update_planets(hex);
 }

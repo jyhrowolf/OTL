@@ -17,7 +17,7 @@ generate_research = function(_research)
 	else
 	{
 		image_index = index % 10;
-		x += (21 * image_index)*2;
+		x += (21 * image_index)*3;
 	}
 	
 }

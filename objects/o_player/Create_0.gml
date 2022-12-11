@@ -24,6 +24,10 @@ setup_species = function(_specie)
 	{
 		civilization.add_research(species.research[i]);
 	}
+	for(var i = 0; i < array_length(species.trait_list); i++) //add all species traits
+	{
+		civilization.add_trait(species.trait_list[i]);
+	}
 	civilization.buildable_cost_calculation(_specie.buildable_cost);
 }
 calculate_resource_income = function(_hypo)

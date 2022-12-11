@@ -9,23 +9,23 @@ var _x = 4;
 var _y = -23;
 var i = 0;
 
-var ll = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_top_label); //Money
-ll.image_xscale = 2;
-ll.image_yscale = 2;
+var ll = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_top_label); //Money
+ll.image_xscale = 3;
+ll.image_yscale = 3;
 my_labels[i] = ll;
 ll.image_index = ++i;
 _x += 115;
 
-ll = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_top_label);
-ll.image_xscale = 2;
-ll.image_yscale = 2;
+ll = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_top_label);
+ll.image_xscale = 3;
+ll.image_yscale = 3;
 my_labels[i] = ll;
 ll.image_index = ++i;
 _x += 87;
 
-ll = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_top_label);
-ll.image_xscale = 2;
-ll.image_yscale = 2;
+ll = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_top_label);
+ll.image_xscale = 3;
+ll.image_yscale = 3;
 my_labels[i] = ll;
 ll.image_index = ++i;
 
@@ -33,14 +33,14 @@ i = 0;
 _x = 534
 _y = -5
 
-var bb = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_top_colony);
-bb.image_xscale = 2;
-bb.image_yscale = 2;
+var bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_top_colony);
+bb.image_xscale = 3;
+bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[i++] = bb;
 
-var bb = instance_create_layer(x+(_x)*2,y-(_y - 24)*2,"GUI",o_top_trade);
-bb.image_xscale = 2;
-bb.image_yscale = 2;
+var bb = instance_create_layer(x+(_x)*3,y-(_y - 24)*3,"GUI",o_top_trade);
+bb.image_xscale = 3;
+bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[i++] = bb;

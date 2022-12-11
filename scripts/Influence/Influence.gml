@@ -11,15 +11,10 @@ function action_influence(_gc,_pc, choose_hex)
 	{
 		if(choose_hex.highlighted)
 		{
-			if(!_pc.action_taken)
-			{
-				_pc.action_taken = true;
-				current_player.civilization.calculate_colony(current_player.civilization.colony + 2);
-				_gc.bottom_bar.alarm[0] = 1;
-			}
 			if(choose_hex.player == 0 && _gc.complete > 0)
 			{
 				choose_hex.player = _pc.active_player;
+				update_planets(choose_hex);
 				array_push(current_player.civilization.systems,choose_hex);
 				current_player.civilization.influence--;
 				current_player.calculate_influence_upkeep(0);
@@ -48,16 +43,17 @@ function action_influence(_gc,_pc, choose_hex)
 						}
 					}
 					choose_hex.player = 0;
+					update_planets(choose_hex);
 					for(var i = 0; i < array_length(choose_hex.planets); i++)
 					{
 						if(choose_hex.planets[i].resource < 3) // planet
-							current_player.civilization.resources_built[choose_hex.planets[i].resource] -= array_length(choose_hex.planets[i].resources);
+							current_player.civilization.resources_built[choose_hex.planets[i].resource] -= choose_hex.planets[i].resources;
 						else if(choose_hex.planets[i].resource < 4) // white
-							current_player.civilization.resources_built[2] -= array_length(choose_hex.planets[i].resources);
+							current_player.civilization.resources_built[2] -= choose_hex.planets[i].resources;
 						else if(choose_hex.planets[i].resource < 5) // orbital
-							current_player.civilization.resources_built[1] -= array_length(choose_hex.planets[i].resources);
+							current_player.civilization.resources_built[1] -= choose_hex.planets[i].resources;
 										
-						choose_hex.planets[i].resources = [];
+						choose_hex.planets[i].resources = 0;
 					}
 					current_player.calculate_resource_income([0,0,0]);
 								

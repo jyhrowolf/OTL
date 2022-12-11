@@ -1,28 +1,35 @@
 /// @description Create
 /*
 at[0]		player count
-at[1-9]		tech count
-at[10-33]	exploration tokens
-at[34-46]	system system_tokens
+at[1-2]		tech draw
+at[3-11]	tech count
+at[12-17]	player species
+at[18-41]	exploration tokens
+at[42-54]	system system_tokens
 */
 randomise();
 var setup = instance_find(o_setup_controller, 0);
 var i = 0;
 attributes[i++] = setup.attributes[0].attribute_value; //player count
-
 attributes[i++] = 12 + 2 * (attributes[0] - 2); // research initial draw count
 attributes[i++] = 5 + (attributes[0] - 2); // research initial draw count
 var research_index = i;
-for(var i = research_index-2; i < array_length(setup.attributes); i++)
+for(var i = research_index-2; i < array_length(setup.attributes)-6; i++)
 {
 	attributes[i+2] = setup.attributes[i].attribute_value;
 }
 attributes[i+2] = 15; // rare research
 
+var species_index = i+3; // player specie
+for(var i = species_index -3; i < array_length(setup.attributes); i++)
+{
+	attributes[i+3] = setup.attributes[i].attribute_value;
+}
+
 var sum = 0;
 var research_tokens = [];
 var temp = [];
-for(var i = research_index; i < array_length(attributes)-1; i++)
+for(var i = research_index; i < species_index-1; i++)
 {
 	sum += 3*attributes[i];
 	temp[3*(i-research_index)] = attributes[i]; // 0 is mil
@@ -57,7 +64,7 @@ while(sum > 0)
 	array_push(research_tokens, string(s));
 	sum--;
 }
-i+= 2
+i+= 8
 /*array_sort(research_tokens,function(elm1, elm2)
     {
         return elm1 - elm2;

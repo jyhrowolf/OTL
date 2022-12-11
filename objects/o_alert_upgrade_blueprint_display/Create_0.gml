@@ -11,7 +11,7 @@ text_color = [
 text_color_weapon = [
 					#e6c85a,	//1
 					#e68b5a,	//2
-					#499ead,	//3
+					#5ad1e6,	//3
 					#e65a5a,	//4
 					];
 
@@ -50,7 +50,7 @@ valid_blueprint = function()
 {
 	if(source >= 0)
 	{
-		if(slots != 5) // not a starbase
+		if(!starbase) // not a starbase
 			return (drive >= 1); // it has a drive
 		else
 			return (drive < 1);

@@ -1,5 +1,16 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function is_system_unpopulated(_hex)
+{
+	for(var i = 0; i < array_length(_hex.planets); i++)
+	{
+		if(_hex.planets[i].resources > 0)
+		{
+			return false;
+		}
+	}
+	return true;
+}
 
 function is_ship_combat(_system)
 {
@@ -18,6 +29,21 @@ function is_ship_combat(_system)
 		sum += p_list[i];
 	}
 	return sum > 1;
+}
+
+function is_planet_combat(_system)
+{
+	if(_system.sieged == false)
+	{
+		var player_ships = _system.ships;
+		for(var i = 0 ; i < array_length(player_ships); i++) // all ships
+		{
+			if(instance_exists(player_ships[i]))
+				if(player_ships[i].player != _system.player)
+					return true;
+		}
+	}
+	return false;
 }
 
 function is_player_pinned(_player,_system,_hypo)
@@ -109,21 +135,21 @@ function is_planet_colonizable(_player,_planet,_choice)
 		if(_planet.resource < 3)
 		{
 			if(_player.civilization.colonizable[_choice] >= _planet.slots[h]) // _player can
-				if( h >= array_length(_planet.resources)) // if it is not currently inhibed
+				if( h >= _planet.resources) // if it is not currently inhibed
 					return true;
 		}
 		else if(_planet.resource < 4) // white planet
 		{
 			for(var c = 0 ; c < 3; c++) // all resources
 				if(_player.civilization.colonizable[c] >= _planet.slots[h]) // _player can
-					if( h >= array_length(_planet.resources)) // if it is not currently inhibed
+					if( h >= _planet.resources) // if it is not currently inhibed
 						return true;
 		}
 		else if(_planet.resource < 5) // orbital
 		{
 			for(var c = 0 ; c < 2; c++) // Money or Science
 				if(_player.civilization.colonizable[c] >= _planet.slots[h]) // _player can
-					if( h >= array_length(_planet.resources)) // if it is not currently inhibed
+					if( h >= _planet.resources) // if it is not currently inhibed
 						return true;
 		}
 	return false;

@@ -1,4 +1,14 @@
 /// @description Settup functions
+/*
+case 0:"Hull";
+case 1:"Drive";
+case 2:"Source";
+case 3:"Computer";
+case 4:"Shots";
+case 5:"Missiles";
+case 6:"Shields";
+case 7:"Initiative";
+*/
 for(var i = 0; i < slots; i++)
 {
 	ship_parts[i] = noone;
@@ -166,6 +176,8 @@ display_to_blueprint = function(_display)
 	calculate_blueprint();
 	update_ship_display();
 	var s = string_digits(object_get_name(self.object_index));
+	if(string_length(s) > 2)
+		s = string_copy(s,2,2);
 	for(var i = 0; i < instance_number(asset_get_index("o_ship_"+string(s))); i++)
 	{
 		var ship = instance_find(asset_get_index("o_ship_"+string(s)),i);
@@ -195,9 +207,12 @@ update_ship_display = function()
 		}
 	}
 }
-roll_six = function()
+roll_six = function(computer)
 {
-	return irandom_range(1,6);
+	var roll = irandom_range(0,5);
+	if(roll == 0)
+		return 0;
+	return roll + computer
 }
 
 roll_missiles = function()
@@ -207,7 +222,7 @@ roll_missiles = function()
 	{
 		for(var m = 0; m < missiles[d]; m++)
 		{
-			array_push(attacks,[d,roll_six() + computer]);
+			array_push(attacks,[d,roll_six(computer)]);
 		}
 	}
 	show_debug_message("Missiles rolled: " + string(attacks));
@@ -221,7 +236,7 @@ roll_weapons = function()
 	{
 		for(var w = 0; w < weapons[d]; w++)
 		{
-			array_push(attacks,[d,roll_six() + computer]);
+			array_push(attacks,[d,roll_six(computer)]);
 		}
 	}
 	show_debug_message("Weapons rolled: " + string(attacks));

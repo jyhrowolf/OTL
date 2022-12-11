@@ -14,7 +14,7 @@ if(action == 0)
 }
 else if(action == 8)
 {
-	busy = 1;
+	gc.busy = 1;
 	gc.alarm[8] = 1;
 	if(gc.combat_hex != noone) // center camera on combat_hex
 	{

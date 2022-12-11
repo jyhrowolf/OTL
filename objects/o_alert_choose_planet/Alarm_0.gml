@@ -8,7 +8,7 @@ if(choice > -1)
 		current_player.civilization.resources_built[choice]++;
 		current_player.calculate_resource_income([0,0,0]);
 		current_player.civilization.calculate_colony(current_player.civilization.colony - 1);
-		array_push(variable.resources,player_controller.active_player);
+		variable.resources++;
 		
 		gc.player_controller.alarm[7] = 1;
 		gc.alarm[7] = 2;

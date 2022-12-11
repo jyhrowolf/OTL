@@ -7,7 +7,7 @@ var _x = 12;
 var _y = -3;
 for(var i = 0; i < 13; i++)
 {
-	draw_sprite_ext(s_top_influence,1,x+(_x + i*21)*2,y-_y*2,2,2,0,c_white,1);
+	draw_sprite_ext(s_top_influence,1,x+(_x + i*21)*3,y-_y*3,3,3,0,c_white,1);
 	if(i < player.civilization.influence)
-		draw_sprite_ext(s_top_influence,0,x+(_x + i*21)*2,y-_y*2,2,2,0,player.species.faction_color,1);
+		draw_sprite_ext(s_top_influence,0,x+(_x + i*21)*3,y-_y*3,3,3,0,player.species.faction_color,1);
 }

@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_system_108",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,20 +25,16 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[0,1,1,0,1,1]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"enemy","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"s_pirate_icon","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"layout","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"[0,1,1,0,1,1]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"enemy","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"s_pirate_icon",},
   ],
   "parent": {
     "name": "Sector 1 (101-110)",
     "path": "folders/Objects/Map/Systems/Sector 1 (101-110).yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_system_108",
-  "tags": [],
-  "resourceType": "GMObject",
 }

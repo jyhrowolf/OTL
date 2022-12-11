@@ -13,8 +13,8 @@ current_civ = player_controller.players[player_controller.active_player].civiliz
 
 x = view_get_wport(0)/2;
 y = view_get_hport(0)*2/5;
-image_xscale = 2;
-image_yscale = 2;
+image_xscale = 3;
+image_yscale = 3;
 var bb;
 var b_index = 0;
 var _x = -73;
@@ -25,9 +25,9 @@ for(var i = 0; i < array_length(available_research)-1; i++)
 	var discount = current_civ.research.discount[i];
 	for(var j = 0; j < array_length(available_research[i]); j++)
 	{
-		bb = instance_create_layer(x+(_x)*2,y-(_y + 23*(4-i))*2,"GUI",o_alert_research_display);
-		bb.image_xscale = 2;
-		bb.image_yscale = 2;
+		bb = instance_create_layer(x+(_x)*3,y-(_y + 23*(4-i))*3,"GUI",o_alert_research_display);
+		bb.image_xscale = 3;
+		bb.image_yscale = 3;
 		bb.generate_research(available_research[i][j]);
 		if(array_length(available_research[i]) > j +1)
 			if(available_research[i][j] == available_research[i][j+1]) // skip duplicates
@@ -40,9 +40,9 @@ for(var i = 0; i < array_length(available_research)-1; i++)
 discount = max(current_civ.research.discount[0],current_civ.research.discount[1],current_civ.research.discount[2]);
 for(var j = 0; j < array_length(available_research[i]); j++) // rare
 {
-	bb = instance_create_layer(x+(_x+21*j)*2,y-(_y + 23*(4-i))*2,"GUI",o_alert_research_display);
-	bb.image_xscale = 2;
-	bb.image_yscale = 2;
+	bb = instance_create_layer(x+(_x+21*j)*3,y-(_y + 23*(4-i))*3,"GUI",o_alert_research_display);
+	bb.image_xscale = 3;
+	bb.image_yscale = 3;
 	bb.generate_research(available_research[i][j]);
 	
 	bb.expected_cost = (bb.cost - discount)*(discount <= bb.cost - bb.discount) + bb.discount*(discount > bb.cost - bb.discount);
@@ -53,18 +53,18 @@ for(var j = 0; j < array_length(available_research[i]); j++) // rare
 _x = -51;
 _y = -72;
 
-bb = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_alert_yes);
-bb.image_xscale = 2;
-bb.image_yscale = 2;
+bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_yes);
+bb.image_xscale = 3;
+bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[b_index++] = bb;
 
 _x = 83;
 _y = 80;
 
-bb = instance_create_layer(x+(_x)*2,y-(_y)*2,"GUI",o_alert_x);
-bb.image_xscale = 2;
-bb.image_yscale = 2;
+bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_x);
+bb.image_xscale = 3;
+bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[b_index] = bb;
 

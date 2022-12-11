@@ -12,7 +12,7 @@ generate_upgrade = function(_upgrade)
 		modi = -1;
 		
 	upgrade_index = index % 10;
-	x += (21 * upgrade_index)*2*modi;
+	x += (21 * upgrade_index)*3*modi;
 }
 
 generate_rare_upgrade = function(_upgrade)

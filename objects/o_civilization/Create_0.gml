@@ -13,6 +13,27 @@ upgrades = [
 //initiallize research	
 research = instance_create_layer(x,y,"Player",o_research);
 
+calculate_victory_points = function()
+{
+	victory_points = 0;
+	// go through kept exploration tokens, and combat tokens
+	for(var i = 0; i < array_length(exploration_tokens); i++)
+	{
+		victory_points += exploration_tokens[i].victory_points;
+	}
+	
+	// go through all systems including monoliths
+	for(var i = 0; i < array_length(systems); i++)
+	{
+		victory_points += systems[i].victory_points;
+	}
+	
+	// go through research
+	victory_points += research.calculate_research_victory_points();
+	
+	return victory_points;
+}
+
 add_exploration = function(_exploration, _choice)
 {
 	if(_choice)
@@ -21,6 +42,11 @@ add_exploration = function(_exploration, _choice)
 		_exploration.victory_points = 0;
 	}
 	array_push(exploration_tokens,_exploration);
+}
+
+add_trait = function(add_trait)
+{
+	array_push(trait_list,instance_create_layer(0,0,"Controllers",add_trait));
 }
 
 add_research = function(_research)
