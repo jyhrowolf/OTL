@@ -3,6 +3,7 @@ setup_species = function(_specie)
 {
 	species = _specie;
 	civilization = instance_create_layer(x,y,"Player",o_civilization);
+	civilization.icon = _specie.icon;
 	civilization.influence = _specie.max_influence;
 	civilization.influence_action = _specie.influence_action;
 	civilization.trade = _specie.trade;
@@ -40,7 +41,7 @@ calculate_resource_income = function(_hypo)
 		var t = 1;
 		for(var j = 0; j < inc; j++)
 		{
-			if(j % 4 == 3)
+			if(j % 4 == 2)
 				t++;
 			r += t;
 		}

@@ -93,9 +93,10 @@ if(busy == 0) //initiallize a combat
 			busy = 1;
 		}
 	}
-	else if(is_planet_combat(combat_hex))
+	else if(is_planet_combat(combat_hex) && !combat_hex.sieged)
 	{
 		var attacker = combat_hex.ships[0].player;
+		player_controller.active_player = attacker;
 		combat_civ_solve(combat_hex,player_controller,attacker);
 		if(is_system_unpopulated(combat_hex))
 		{
@@ -106,8 +107,8 @@ if(busy == 0) //initiallize a combat
 		else
 		{
 			busy = 0;
-			action = 0;
-			player_controller.alarm[0] = 1;
+			player_controller.alarm[0] = 60;
+			bottom_bar.my_buttons[6].image_index = 2;
 		}
 	}
 }
@@ -164,8 +165,7 @@ else if(busy == 1)
 		if(combat_player_won(combat_hex,attacker)) // attacker wins
 		{
 			combat_hex.enemy = noone;
-			if(!is_system_unpopulated(combat_hex))
-				combat_civ_solve(combat_hex,player_controller,combat_hex.ships[0].player);
+			combat_civ_solve(combat_hex,player_controller,combat_hex.ships[0].player);
 			if(is_system_unpopulated(combat_hex))
 			{
 				busy = 2;
@@ -176,7 +176,6 @@ else if(busy == 1)
 		else
 		{
 			busy = 0;
-			action = 0;
 			player_controller.alarm[0] = 60;
 			bottom_bar.my_buttons[6].image_index = 2;
 		}

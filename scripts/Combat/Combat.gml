@@ -22,7 +22,7 @@ function action_combat(_gc,_pc, _hex)
 				{
 					var ac = instance_find(o_alert_controller,0);
 					array_push(ac.alerts,o_alert_choose_exploration);
-					show_debug_message("CHOOSE EXPLORATION")
+					show_debug_message("COMBAT CHOOSE EXPLORATION")
 					ac.next_alert(_hex.exploration_token);
 					_hex.exploration_token = noone;
 					_gc.busy = 2;

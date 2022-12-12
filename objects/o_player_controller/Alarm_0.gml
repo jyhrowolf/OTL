@@ -21,7 +21,7 @@ for(var i = 1; i < array_length(players); i++)
 
 var combat = false;
 var list = [];
-ds_map_values_to_array(gc.map,list);
+ds_map_values_to_array(gc.moveable_hex,list);
 for(var i = 0; i < array_length(list); i++) // find all hexes that have 2 different ships.
 {
 	if(is_ship_combat(list[i]))
@@ -56,6 +56,13 @@ if(!next_round)
 	cur_player.calculate_resource_income([0,0,0]);
 	cur_player.calculate_influence_upkeep(0);
 	
+	var ifp = instance_find(o_info_panel,0);
+	if(ifp != noone)
+		instance_destroy(ifp);
+	
+	if(cur_player.info_panel)
+		bottom_bar.my_buttons[7].alarm[1] = 1;
+	
 	gc.selected_hex = cur_player.last_selected_hex;
 	gc.busy = 0;
 	
@@ -69,7 +76,6 @@ else if(combat)
 	ds_map_clear(gc.combat_initiative);
 	gc.combat_reward = [1,1];
 	gc.combat_list = [];
-	gc.action = 8;
 	gc.busy = 0;
 	alarm[8] = 1;
 	gc.alarm[8] = 2;
@@ -77,7 +83,7 @@ else if(combat)
 else // Next round
 {
 	var list = [];
-	ds_map_values_to_array(gc.map,list);
+	ds_map_values_to_array(gc.moveable_hex,list);
 	for (var i = 0; i < array_length(list); i++) {
 	    list[i].sieged = false; // reset siege status
 	}
@@ -167,6 +173,13 @@ else // Next round
 	cur_player.calculate_influence_upkeep(0);
 	gc.selected_hex = cur_player.last_selected_hex;
 	rotate_camera(self,0,cur_player.last_selected_hex);
+	
+	var ifp = instance_find(o_info_panel,0);
+	if(ifp != noone)
+		instance_destroy(ifp);
+	
+	if(cur_player.info_panel)
+		bottom_bar.my_buttons[7].alarm[1] = 1;
 	
 	if(sum > 1)
 	{

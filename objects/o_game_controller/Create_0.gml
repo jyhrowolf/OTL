@@ -173,7 +173,7 @@ for(var t = 0; t < 3; t++)
 }
 ds_map_destroy(tiles);
 
-array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
+//array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
 
 //setup players
 global.player_color[0] = #808080;	//c_grey
