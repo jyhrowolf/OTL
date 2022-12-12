@@ -19,7 +19,10 @@ calculate_victory_points = function()
 	// go through kept exploration tokens, and combat tokens
 	for(var i = 0; i < array_length(exploration_tokens); i++)
 	{
-		victory_points += exploration_tokens[i].victory_points;
+		if(instance_exists(exploration_tokens[i]))
+		{
+			victory_points += exploration_tokens[i].victory_points;
+		}
 	}
 	
 	// go through all systems including monoliths

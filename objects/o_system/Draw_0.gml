@@ -9,7 +9,7 @@ if(explored)
 	{
 		draw_system(self,c_grey);
 		if(enemy != noone)
-			draw_system_enemy(self,enemy,array_length(ships)); //enemy tokens
+			draw_system_enemy(self,enemy,neutrals); //enemy tokens
 	}
 	draw_system_warp_tunnels(self);
 	if(highlighted)

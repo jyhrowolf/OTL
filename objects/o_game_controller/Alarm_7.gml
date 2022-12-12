@@ -2,7 +2,7 @@
 var colonizable = false;
 if(busy == 0)
 {
-	list = player_controller.players[player_controller.active_player].civilization.systems;
+	var list = player_controller.players[player_controller.active_player].civilization.systems;
 	for(var i = 0; i < array_length(list); i++)
 	{
 		var hex = list[i];
@@ -36,5 +36,5 @@ if(!colonizable)
 	alarm[11] = 1;
 }
 
-if(player_controller.action != 7)
+if(player_controller.action != 7 && player_controller.action != 8)
 	alarm[11] = 1;

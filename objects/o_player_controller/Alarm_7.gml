@@ -45,3 +45,30 @@ else if(action == 7)
 		}
 	}
 }
+else if(action == 8) //colonize after combat
+{
+	if(gc.busy == 1) // do not colonize
+	{
+		if(gc.complete <= 0)
+		{
+			action = 0;
+			gc.busy = 0;
+			bottom_bar.my_buttons[6].image_index = 0; //end
+		}
+		else
+			gc.busy = 1;
+		
+		gc.alarm[11] = 1; // clean map
+	}
+	else if(gc.busy == 2) // close white planet
+	{
+		if(gc.complete > 0)
+			gc.busy = 1
+		else // finish
+		{
+			action = 0;
+			gc.busy = 0;
+			bottom_bar.my_buttons[6].image_index = 0; //end
+		}
+	}
+}

@@ -22,6 +22,7 @@ if(busy == 0) //initiallize a combat
 			attacker = defender;
 			defender = temp;
 		}
+		player_controller.active_player = attacker;
 		show_debug_message("Player " + string(attacker) + " attacks Player " + string(defender));
 	
 		for(var i = 0; i < array_length(combat_hex.ships); i++) // initiative
@@ -81,7 +82,7 @@ if(busy == 0) //initiallize a combat
 				if(is_system_unpopulated(combat_hex))
 				{
 					busy = 2;
-					player_controller.active_player = attacker;
+					
 					bottom_bar.my_buttons[6].image_index = 1;
 					bottom_bar.alarm[0] = 1;
 				}
@@ -99,7 +100,6 @@ if(busy == 0) //initiallize a combat
 		if(is_system_unpopulated(combat_hex))
 		{
 			busy = 2;
-			player_controller.active_player = attacker;
 			bottom_bar.my_buttons[6].image_index = 1;
 			bottom_bar.alarm[0] = 1;
 		}
@@ -121,7 +121,7 @@ else if(busy == 1)
 		attacker = defender;
 		defender = temp;
 	}
-	
+	player_controller.active_player = attacker;
 	// fire weapons
 	var list = [];
 	var attacker_dmg;
@@ -169,7 +169,6 @@ else if(busy == 1)
 			if(is_system_unpopulated(combat_hex))
 			{
 				busy = 2;
-				player_controller.active_player = attacker;
 				bottom_bar.my_buttons[6].image_index = 1;
 				bottom_bar.alarm[0] = 1;
 			}
@@ -178,7 +177,7 @@ else if(busy == 1)
 		{
 			busy = 0;
 			action = 0;
-			player_controller.alarm[0] = 1;
+			player_controller.alarm[0] = 60;
 			bottom_bar.my_buttons[6].image_index = 2;
 		}
 	}

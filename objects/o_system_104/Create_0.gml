@@ -7,6 +7,7 @@ ship.update_color();
 ship = instance_create_layer(x-10,y,"Player",o_pirate);
 ships[1] = ship;
 ship.update_color();
+neutrals = 2;
 
 var placements = ds_map_create();
 for(var i = 0; i < 2; i++)

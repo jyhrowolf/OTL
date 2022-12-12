@@ -65,7 +65,6 @@ if(!next_round)
 }
 else if(combat)
 {
-	active_player--;
 	bottom_bar.my_buttons[6].image_index = 3;
 	ds_map_clear(gc.combat_initiative);
 	gc.combat_reward = [1,1];
@@ -139,7 +138,20 @@ else // Next round
 	active_player = next_round_active_player;
 	next_round_active_player = 0;
 	
-	while(players[active_player].lost)
+	var playable = [0,0,0,0,0,0,0];
+	for(var i = 1; i < array_length(players); i++)
+	{
+		cur_player = players[i];
+		if(!cur_player.lost)
+			playable[i] = 1;
+	}
+	var sum = 0;
+	for(var i = 0; i < array_length(playable); i++)
+	{
+		sum += playable[i];
+	}
+	
+	while(players[active_player].lost && sum > 0)
 	{
 		if(active_player + 1 < array_length(players))
 			active_player++;
@@ -156,18 +168,6 @@ else // Next round
 	gc.selected_hex = cur_player.last_selected_hex;
 	rotate_camera(self,0,cur_player.last_selected_hex);
 	
-	var playable = [0,0,0,0,0,0,0];
-	for(var i = 1; i < array_length(players); i++)
-	{
-		cur_player = players[i];
-		if(!cur_player.lost)
-			playable[i] = 1;
-	}
-	var sum = 0;
-	for(var i = 0; i < array_length(playable); i++)
-	{
-		sum += playable[i];
-	}
 	if(sum > 1)
 	{
 		if(round_count < 9)
@@ -210,9 +210,11 @@ else // Next round
 			{
 				show_debug_message("PLAYER " + string(i) + " WON");
 				game_end();
+				exit;
 			}
 		}
 		show_debug_message("NO WINNERS");
 		game_end();
+		exit;
 	}
 }

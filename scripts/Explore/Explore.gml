@@ -76,6 +76,7 @@ function action_explore(_gc,_pc, hex, choose_hex)
 				}
 				else
 				{
+					current_player.last_selected_hex = _gc.selected_hex;
 					if(_gc.selected_hex.exploration_token != noone)
 					{
 						var ac = instance_find(o_alert_controller,0);

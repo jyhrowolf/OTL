@@ -173,12 +173,12 @@ for(var t = 0; t < 3; t++)
 }
 ds_map_destroy(tiles);
 
-//array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_ship_part_14"); //exploration testing
+array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
 
 //setup players
 global.player_color[0] = #808080;	//c_grey
-global.player_color[1] = #000090;	//c_navy
-global.player_color[2] = #900000;	//c_maroon
+global.player_color[1] = #900000;	//c_maroon
+global.player_color[2] = #000090;	//c_navy
 global.player_color[3] = #004000;	//c_green
 global.player_color[4] = #907000;	//c_yellow
 global.player_color[5] = #B8B8B8;	//c_white

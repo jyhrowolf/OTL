@@ -5,7 +5,7 @@ function action_combat(_gc,_pc, _hex)
 	var c_width = camera_get_view_width(view_camera[0]);
 	var c_height = camera_get_view_height(view_camera[0]);
 	var current_player = _pc.players[_pc.active_player];
-	
+	current_player.last_selected_hex = _hex;
 	switch (_gc.busy)
 	{
 		case 0: //get the system
@@ -25,29 +25,31 @@ function action_combat(_gc,_pc, _hex)
 					show_debug_message("CHOOSE EXPLORATION")
 					ac.next_alert(_hex.exploration_token);
 					_hex.exploration_token = noone;
+					_gc.busy = 2;
 				}
-				_gc.busy = 2;
-				
-				if(_hex.player != 0)
+				else
 				{
-					var old_player = _pc.players[_hex.player];
-					array_remove(old_player.civilization.systems,_hex);
-					old_player.civilization.influence++;
-					old_player.calculate_influence_upkeep(0);
-				}
+					if(_hex.player != 0)
+					{
+						var old_player = _pc.players[_hex.player];
+						array_remove(old_player.civilization.systems,_hex);
+						old_player.civilization.influence++;
+						old_player.calculate_influence_upkeep(0);
+					}
 				
-				_hex.player = _pc.active_player;
-				update_planets(_hex);
-				array_push(current_player.civilization.systems,_hex);
-				current_player.civilization.influence--;
-				current_player.calculate_influence_upkeep(0);
-				current_player.last_selected_hex = _hex;
+					_hex.player = _pc.active_player;
+					update_planets(_hex);
+					array_push(current_player.civilization.systems,_hex);
+					current_player.civilization.influence--;
+					current_player.calculate_influence_upkeep(0);
+					current_player.last_selected_hex = _hex;
 				
-				_gc.busy = 0;
-				_pc.action_taken = true;
-				_gc.bottom_bar.my_buttons[6].image_index = 0; //end
+					_gc.busy = 0;
+					_pc.action_taken = true;
+					_gc.bottom_bar.my_buttons[6].image_index = 0; //end
 			
-				alarm[1] = 1; // update map
+					alarm[1] = 1; // update map
+				}
 			}
 		break;
 	}

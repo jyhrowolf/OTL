@@ -100,7 +100,13 @@ for(var i = 0; i < 6; i++)
 		
 		species = instance_create_layer(system.x,system.y,"Player",spec);
 		if(species.faction_color == #000000)
+		{
 			species.faction_color = global.player_color[player_controller.active_player];
+		}
+		else
+		{
+			global.player_color[player_controller.active_player] = species.faction_color;
+		}
 		player.setup_species(species);
 		
 		_point = flat_hex_to_pixel(adv[i],global.hex_size);

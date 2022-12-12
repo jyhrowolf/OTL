@@ -17,6 +17,8 @@ function action_build(_gc,_pc, choose_hex)
 				if(_gc.busy < 5) //build ship
 				{
 					var s = string_digits(object_get_name(current_player.blueprints[_gc.busy-1].object_index));
+					if(string_length(s) > 2)
+						s = string_copy(s,2,2);
 					var ship = instance_create_layer(choose_hex.x,choose_hex.y,"Player",asset_get_index("o_ship_" + string(s)));
 					ship.player = _pc.active_player;
 					ship.update_color();

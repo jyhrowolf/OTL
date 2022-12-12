@@ -27,13 +27,13 @@ function combat_civ_solve(c_hex,_pc,_player)
 {
 	c_hex.sieged = true;
 	var sieged_player = _pc.players[c_hex.player];
-	var d_applied_traits = sieged_player.civilization.trait_list;
-	d_applied_traits = calculate_applied_traits(applied_traits,"system_loss");
+	var d_applied_traits = _pc.players[_player].civilization.trait_list
+	d_applied_traits = calculate_applied_traits(d_applied_traits,"system_loss");
 	var a_applied_traits = _pc.players[_player].civilization.trait_list;
-	a_applied_traits = calculate_applied_traits(applied_traits,"system_combat");
+	a_applied_traits = calculate_applied_traits(a_applied_traits,"system_combat");
 	
 	var loss = 0;
-	if(array_length(d_applied_traits) != 1)
+	if(array_length(d_applied_traits) != 0)
 	{
 		loss = d_applied_traits[0].trait();
 	}
