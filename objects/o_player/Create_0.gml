@@ -32,9 +32,9 @@ setup_species = function(_specie)
 	
 	var applied_traits = civilization.trait_list;
 	applied_traits = calculate_applied_traits(applied_traits,"civilization_create");
-	if(array_length(applied_traits) != 0)
+	for(var i = 0; i < array_length(applied_traits); i++) //add all species traits
 	{
-		applied_traits[0].trait(self);
+		applied_traits[i].trait(self);
 	}
 	
 	civilization.buildable_cost_calculation(_specie.buildable_cost);

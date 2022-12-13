@@ -88,7 +88,7 @@ add_reputation = function(_reputation,_species)
 	for(var i = 0; i < array_length(rep_track);i++)
 	{
 		var nm = object_get_name(rep_track[i].object_index);
-		if(nm == "o_exp_combat")
+		if(nm == "o_exp_combat" && r_t[0] > 0)
 		{
 			r_t[0]--;
 		}
@@ -103,7 +103,7 @@ add_reputation = function(_reputation,_species)
 	for(var i = 0; i < array_length(rep_track);i++)
 	{
 		var nm = object_get_name(rep_track[i].object_index);
-		if(r_t[0] < rep_track[0])
+		if(r_t[0] < _species.rep_track[0])
 		{
 			r_t[0]++;
 		}
@@ -113,7 +113,7 @@ add_reputation = function(_reputation,_species)
 			{
 				r_t[1]--;
 			}
-			else
+			else if(r_t[2] > 0)
 			{
 				r_t[2]--;
 			}

@@ -51,7 +51,7 @@ else if(action == 8) //colonize after combat
 	{
 		if(gc.complete <= 0)
 		{
-			action = 0;
+			action = 8;
 			gc.busy = 0;
 			bottom_bar.my_buttons[6].image_index = 0; //end
 		}
@@ -66,9 +66,15 @@ else if(action == 8) //colonize after combat
 			gc.busy = 1
 		else // finish
 		{
-			action = 0;
+			action = 8;
 			gc.busy = 0;
 			bottom_bar.my_buttons[6].image_index = 0; //end
 		}
+	}
+	else if(gc.busy == 0 && gc.complete <= 0)
+	{
+		action = 8;
+		gc.busy = 0;
+		bottom_bar.my_buttons[6].image_index = 0; //end
 	}
 }
