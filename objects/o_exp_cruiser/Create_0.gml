@@ -9,6 +9,8 @@ exploration_reward = function(_civilization)
 	var pc = instance_find(o_player_controller,0);
 	
 	var hex = pc.players[pc.active_player].last_selected_hex;
+	if(gc.combat_hex != noone)
+		hex = gc.combat_hex;
 	
 	var ship = instance_create_layer(hex.x,hex.y,"Player",o_ship_11);
 	ship.player = pc.active_player;

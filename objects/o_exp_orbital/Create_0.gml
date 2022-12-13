@@ -9,6 +9,8 @@ exploration_reward = function(_civilization)
 	var gc = instance_find(o_game_controller,0);
 	
 	var hex = gc.selected_hex;
+	if(gc.combat_hex != noone)
+		hex = gc.combat_hex;
 	var _x = hex.x;
 	var _y = hex.y;
 	
