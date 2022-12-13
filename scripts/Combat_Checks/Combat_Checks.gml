@@ -1,16 +1,15 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function combat_reward_calculate(_reward,_pc,_player)
+function combat_reward_calculate(_reward,_player)
 {
-	if(_player != 0)
+	if(_player.player != 0)
 	{
-		var player = _pc.players[_player];
 		if(_reward > 5)
 			_reward = 5;
 		var max_vp = noone;
 		for(var i = 0; i < _reward; i++)
 		{
-			var temp_cr = instance_create_layer(player.x,player.y,"Controllers",o_exp_combat);
+			var temp_cr = instance_create_layer(_player.x,_player.y,"Controllers",o_exp_combat);
 			temp_cr.combat_reward();
 			if(max_vp == noone)
 				max_vp = temp_cr;
@@ -19,7 +18,7 @@ function combat_reward_calculate(_reward,_pc,_player)
 			else
 				instance_destroy(temp_cr);
 		}
-		player.civilization.add_exploration(max_vp,0);
+		_player.civilization.add_reputation(max_vp,_player.species);
 	}
 }
 
@@ -27,7 +26,7 @@ function combat_civ_solve(c_hex,_pc,_player)
 {
 	c_hex.sieged = true;
 	var sieged_player = _pc.players[c_hex.player];
-	var d_applied_traits = _pc.players[_player].civilization.trait_list
+	var d_applied_traits = sieged_player.civilization.trait_list
 	d_applied_traits = calculate_applied_traits(d_applied_traits,"system_loss");
 	var a_applied_traits = _pc.players[_player].civilization.trait_list;
 	a_applied_traits = calculate_applied_traits(a_applied_traits,"system_combat");
@@ -49,6 +48,10 @@ function combat_civ_solve(c_hex,_pc,_player)
 				if(list[s].blueprint.has_weapons())
 				{
 					var m_attack = list[s].blueprint.roll_weapons();
+					for(var m = 0; m < array_length(m_attack); m++)
+					{
+						m_attack[m][2] = list[s];
+					}
 					array_push(attacker_dmg,m_attack);
 				}
 			}
@@ -60,18 +63,26 @@ function combat_civ_solve(c_hex,_pc,_player)
 		}
 		if(array_length(attacker_dmg) != 0)
 		{
-			combat_system_solve(combat_hex,attacker_dmg,sieged_player);
+			combat_system_solve(c_hex,attacker_dmg,sieged_player);
 		}
 	}
 	else if(loss == 2) // plant suck
 	{
 		show_debug_message("PLANTS");
 		d_applied_traits[0].plant_bomb(c_hex,_pc);
+		var explo = instance_create_depth(c_hex.x,c_hex.y,depth,o_explosion_1);
+		explo.image_blend = sieged_player.species.faction_color;
+		explo.image_xscale = 5;
+		explo.image_yscale = 5;
 	}
 	else // NEUTRON BOMB
 	{
 		show_debug_message("NEUTRON BOMB");
 		a_applied_traits[0].trait(c_hex,_pc);
+		var explo = instance_create_depth(c_hex.x,c_hex.y,depth,o_explosion_1);
+		explo.image_blend = _pc.players[_player].species.faction_color;
+		explo.image_xscale = 5;
+		explo.image_yscale = 5;
 	}
 }
 
@@ -82,8 +93,21 @@ function combat_system_solve(c_hex,dmg,_player)
 	{
 		for(var j = 0; j < array_length(dmg[i]); j++)
 		{
+			var ship = dmg[i][j][2];
+			var offset = ship.weapon_offset[irandom_range(0,array_length(ship.weapon_offset)-1)];
+			var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
+			shot.class = ship.class;
+			shot.weapons = true;
+			shot.damage = dmg[i][j][0];
 			if(dmg[i][j][1] == 0 || dmg[i][j][1] >= 6)
+			{
 				sum += dmg[i][j][0];
+				shot.target = c_hex;
+			}
+			else
+			{
+				shot.image_alpha = 0.5;
+			}
 		}
 	}
 	for(var i = 0; i < sum; i++)
@@ -111,14 +135,14 @@ function combat_system(c_hex,_sieged)
 	return false;
 }
 
-function combat_round_solve(c_hex,c_r,a_dmg,d_dmg,att,def)
+function combat_round_solve(c_hex,c_r,a_dmg,d_dmg,att,def,_type)
 {
-	c_r[0] += round_solve(c_hex,d_dmg,att);
-	c_r[1] += round_solve(c_hex,a_dmg,def);
+	c_r[0] += round_solve(c_hex,d_dmg,att,_type);
+	c_r[1] += round_solve(c_hex,a_dmg,def,_type);
 	return c_r;
 }
 
-function round_solve(c_hex,dmg,to_player)
+function round_solve(c_hex,dmg,to_player,_type)
 {
 	var vp = 0;
 	var ships = c_hex.ships;
@@ -138,24 +162,43 @@ function round_solve(c_hex,dmg,to_player)
 	{
 		for(var j = 0; j < array_length(dmg[i]); j++)
 		{
-			array_push(damage[dmg[i][j][1]], dmg[i][j][0]);
+			var temp = [dmg[i][j][0],dmg[i][j][2]];
+			array_push(damage[dmg[i][j][1]], temp);
 		}
 	}
-	for(var i = 6; i < 12; i++) // all of the rolls
+	for(var i = 1; i < 12; i++) // all of the rolls
 	{
 		if(hittable_ships(to_ships,i))
 		{
 			for(var j = 0; j < array_length(damage[i]); j++)
 			{
 				show_debug_message("Hits with a " + string(i));
-				vp += lowest_ship(c_hex,to_ships,i,damage[i][j]);
+				vp += lowest_ship(c_hex,to_ships,i,damage[i][j],_type);
+			}
+		}
+		else
+		{
+			for(var j = 0; j < array_length(damage[i]); j++)
+			{
+				var ship = noone;
+				if(instance_exists(damage[i][j][1]))
+					ship = damage[i][j][1];
+				else
+					ship = instance_find(o_ship_corpse, instance_number(o_ship_corpse)-1);
+				
+				var offset = ship.weapon_offset[irandom_range(0,array_length(ship.weapon_offset)-1)];
+				var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
+				shot.class = ship.class;
+				shot.weapons = _type;
+				shot.damage = damage[i][j][0];
+				shot.image_alpha = 0.5;
 			}
 		}
 	}
 	for(var j = 0; j < array_length(damage[0]); j++) // all of the 6s
 	{
 		show_debug_message("Hits with a crit");
-		vp += lowest_ship(c_hex,to_ships,0,damage[0][j]);
+		vp += lowest_ship(c_hex,to_ships,0,damage[0][j],_type);
 	}
 	return vp;
 }
@@ -181,8 +224,20 @@ function hittable_ships(to_ships, roll)
 	return false;
 }
 
-function lowest_ship(c_hex,to_ships,roll,dmg)
+function lowest_ship(c_hex,to_ships,roll,dmg,_type)
 {
+	var ship = noone;
+	if(instance_exists(dmg[1]))
+		ship = dmg[1];
+	else
+		ship = instance_find(o_ship_corpse, instance_number(o_ship_corpse)-1);
+		
+	var offset = ship.weapon_offset[irandom_range(0,array_length(ship.weapon_offset)-1)];
+	var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
+	shot.class = ship.class;
+	shot.weapons = _type;
+	shot.damage = dmg[0];
+				
 	var ls = noone;
 	if(roll == 0)
 		roll = 12;
@@ -213,8 +268,11 @@ function lowest_ship(c_hex,to_ships,roll,dmg)
 	if(ls != noone)
 	{
 		show_debug_message("Player " + string(ls.player) + " Ship takes " + 
-							string(dmg) + " to " + string(ls.hull) + " Hull");
-		ls.hull -= dmg;
+							string(dmg[0]) + " to " + string(ls.hull) + " Hull");
+							
+		shot.target = ls;
+				
+		ls.hull -= dmg[0];
 		if(ls.hull <= 0)
 		{
 			var val = 1;
@@ -235,7 +293,10 @@ function lowest_ship(c_hex,to_ships,roll,dmg)
 			}
 			array_remove(c_hex.ships,ls);
 			show_debug_message("DESTROYED");
+			var corpse = instance_create_depth(ls.x,ls.y,depth,o_ship_corpse);
+			corpse.update_ship(ls);
 			instance_destroy(ls);
+			shot.target = corpse;
 			return val;
 		}
 	}

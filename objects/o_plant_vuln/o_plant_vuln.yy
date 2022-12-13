@@ -32,7 +32,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"application","path":"objects/o_trait/o_trait.yy",},"objectId":{"name":"o_trait","path":"objects/o_trait/o_trait.yy",},"value":"[\"system_loss\"]",},
   ],
   "parent": {
-    "name": "Trait",
-    "path": "folders/Objects/Tokens/Research/Trait.yy",
+    "name": "Specie",
+    "path": "folders/Objects/Tokens/Research/Trait/Specie.yy",
   },
 }

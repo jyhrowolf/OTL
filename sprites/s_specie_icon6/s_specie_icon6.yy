@@ -10,10 +10,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
-  "bbox_right": 54,
-  "bbox_top": 0,
-  "bbox_bottom": 54,
+  "bbox_left": 2,
+  "bbox_right": 51,
+  "bbox_top": 11,
+  "bbox_bottom": 35,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -28,7 +28,7 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"36e02b9f-242f-46ec-93e3-8ab107f4aa99",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd04f7c4-28bb-4b64-a3e1-60c8131669a4",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2791e54f-b3d7-4b44-9530-538a2502ccf8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"36e02b9f-242f-46ec-93e3-8ab107f4aa99","path":"sprites/s_specie_icon6/s_specie_icon6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"cdfc243d-6a2e-431a-b20f-53cee63648bf","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bd04f7c4-28bb-4b64-a3e1-60c8131669a4","path":"sprites/s_specie_icon6/s_specie_icon6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -64,11 +64,11 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"6e972ac1-4620-472c-acde-5cd57ccff733","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"12344912-5db5-4ac0-89d6-8a485021ad06","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Terran",
-    "path": "folders/Sprites/GUI/Game/Specie/Terran.yy",
+    "name": "6Terran",
+    "path": "folders/Sprites/GUI/Game/Specie/6Terran.yy",
   },
 }

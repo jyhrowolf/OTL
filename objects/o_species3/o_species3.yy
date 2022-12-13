@@ -37,6 +37,8 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"max_ships","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"[8,4,2,4]",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"home_system","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"o_home_system3",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"faction_color","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"#CCAA00",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"icon","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"s_specie_icon3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"rep_track","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"[0,0,4]",},
   ],
   "parent": {
     "name": "Species",

@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_center",
   "spriteId": {
     "name": "s_center_ship",
     "path": "sprites/s_center_ship/s_center_ship.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,21 +28,18 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"ship_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_center_ship","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"blueprint","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"o_blueprint_02","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"class","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ship_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_center_ship",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"o_blueprint_02",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"class","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"weapon_offset","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"[[30,0],[-30,0],[15,25],[-15,25],[15,-25],[-15,-25]]",},
   ],
   "parent": {
     "name": "Center",
     "path": "folders/Objects/Map/Civilizations Ships/Ships/0_Neutrals/Center.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_center",
-  "tags": [],
-  "resourceType": "GMObject",
 }

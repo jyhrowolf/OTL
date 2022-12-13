@@ -108,7 +108,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "5_Explosion",
-    "path": "folders/Sprites/Map/Civilizations/Ships/5_Explosion.yy",
+    "name": "5_Combat",
+    "path": "folders/Sprites/Map/Civilizations/Ships/5_Combat.yy",
   },
 }

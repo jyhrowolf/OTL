@@ -1,10 +1,14 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_guardian",
   "spriteId": {
     "name": "s_guardian_ship",
     "path": "sprites/s_guardian_ship/s_guardian_ship.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -24,22 +28,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"ship_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_guardian_ship","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"blueprint","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"o_blueprint_01","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"orbit_path","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"p_ship_orbit_guardian","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"class","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ship_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_guardian_ship",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"o_blueprint_01",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"orbit_path","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"p_ship_orbit_guardian",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"class","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"1",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"weapon_offset","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"[[7,4],[-7,4],[8,-3],[-8,-3]]",},
   ],
   "parent": {
     "name": "Guardians",
     "path": "folders/Objects/Map/Civilizations Ships/Ships/0_Neutrals/Guardians.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_guardian",
-  "tags": [],
-  "resourceType": "GMObject",
 }

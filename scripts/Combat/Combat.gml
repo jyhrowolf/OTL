@@ -29,14 +29,6 @@ function action_combat(_gc,_pc, _hex)
 				}
 				else
 				{
-					if(_hex.player != 0)
-					{
-						var old_player = _pc.players[_hex.player];
-						array_remove(old_player.civilization.systems,_hex);
-						old_player.civilization.influence++;
-						old_player.calculate_influence_upkeep(0);
-					}
-				
 					_hex.player = _pc.active_player;
 					update_planets(_hex);
 					array_push(current_player.civilization.systems,_hex);

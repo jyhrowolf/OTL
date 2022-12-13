@@ -9,8 +9,16 @@ reset_depth();
 
 if(surface_dim[0] <= 0)
 	surface_dim = [sprite_width,sprite_width];
-surface_dim[0] = ceil(surface_dim[0]*1.25);
-surface_dim[1] = ceil(surface_dim[1]*1.25);
+if(class != 2)
+{
+	surface_dim[0] = ceil(surface_dim[0]*1.25);
+	surface_dim[1] = ceil(surface_dim[1]*1.25);
+}
+else
+{
+	surface_dim[0] = ceil(surface_dim[0]*1.5);
+	surface_dim[1] = ceil(surface_dim[1]*1.5);
+}
 
 surf = surface_create(surface_dim[0],surface_dim[1]);
 	

@@ -16,7 +16,9 @@ calculate_discount = function()
 	for(var i = 0; i < 3; i++)
 	{
 		discount[i] = array_length(researched[i]);
-		if(discount[i] == 7)
+		if(discount[i] == 5)
+			discount[i] = 6;
+		else if(discount[i] == 6)
 			discount[i] = 8;
 		victory_points[i] = array_length(researched[i]) - 4;
 		if(victory_points[i] < 0)

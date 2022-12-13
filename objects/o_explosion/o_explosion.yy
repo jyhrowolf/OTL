@@ -27,7 +27,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ships",
-    "path": "folders/Objects/Map/Civilizations Ships/Ships.yy",
+    "name": "Combat",
+    "path": "folders/Objects/Map/Civilizations Ships/Ships/Combat.yy",
   },
 }

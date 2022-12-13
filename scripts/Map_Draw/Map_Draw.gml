@@ -81,10 +81,8 @@ function draw_system(_system,_color)
 		_system.system_center = instance_create_layer(_x,_y,"Map",o_system_center);
 		_system.system_center.system = _system;
 	}
-	if(my_color != #B8B8B8)
-		my_color += #404040;
-	else
-		my_color -= #606060;
+	my_color += #202020;
+
 	if(hovered)
 		for(var i = 0; i < 6; i++)//draw boundaries
 		{

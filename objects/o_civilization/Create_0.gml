@@ -15,8 +15,8 @@ research = instance_create_layer(x,y,"Player",o_research);
 
 calculate_victory_points = function()
 {
-	victory_points = [0,0,0];
-	// go through kept exploration tokens, and combat tokens
+	victory_points = [0,0,0,0];
+	// go through kept exploration tokens
 	for(var i = 0; i < array_length(exploration_tokens); i++)
 	{
 		if(instance_exists(exploration_tokens[i]))
@@ -25,14 +25,31 @@ calculate_victory_points = function()
 		}
 	}
 	
+	var bonus = 0;
+	var applied_traits = trait_list;
+	applied_traits = calculate_applied_traits(applied_traits,"system_reward");
+	if(array_length(applied_traits) != 0)
+	{
+		bonus = 1;
+	}
+	
 	// go through all systems including monoliths
 	for(var i = 0; i < array_length(systems); i++)
 	{
-		victory_points[1] += systems[i].victory_points;
+		victory_points[1] += systems[i].victory_points + bonus;
 	}
 	
 	// go through research
 	victory_points[2] += research.calculate_research_victory_points();
+	
+	// go through reputation track
+	for(var i = 0; i < array_length(rep_track); i++)
+	{
+		if(instance_exists(rep_track[i]))
+		{
+			victory_points[3] += rep_track[i].victory_points;
+		}
+	}
 	
 	return victory_points;
 }
@@ -44,7 +61,10 @@ add_exploration = function(_exploration, _choice)
 		_exploration.exploration_reward(self);
 		_exploration.victory_points = 0;
 	}
-	array_push(exploration_tokens,_exploration);
+	else
+	{
+		array_push(exploration_tokens,_exploration);
+	}
 	update_info();
 }
 
@@ -59,6 +79,76 @@ add_research = function(_research)
 	_research.research_trial(self);
 	research.add_research(_research);
 	update_info();
+}
+
+add_reputation = function(_reputation,_species)
+{
+	var r_t = _species.rep_track;
+	
+	for(var i = 0; i < array_length(rep_track);i++)
+	{
+		var nm = object_get_name(rep_track[i].object_index);
+		if(nm == "o_exp_combat")
+		{
+			r_t[0]--;
+		}
+	}
+	if(r_t[0] >= 1)
+	{
+		array_push(rep_track,_reputation);
+		update_info();
+		return;
+	}
+	
+	for(var i = 0; i < array_length(rep_track);i++)
+	{
+		var nm = object_get_name(rep_track[i].object_index);
+		if(r_t[0] < rep_track[0])
+		{
+			r_t[0]++;
+		}
+		else if(nm == "o_exp_combat" || nm == "o_trade")
+		{
+			if(nm == "o_trade" && r_t[1] > 0)
+			{
+				r_t[1]--;
+			}
+			else
+			{
+				r_t[2]--;
+			}
+		}
+	}
+	if(r_t[2] >= 1)
+	{
+		array_push(rep_track,_reputation);
+		update_info();
+		return;
+	}
+	
+	var index = 0;
+	var min_vp = -1;
+	for(var i = 0; i < array_length(rep_track);i++)
+	{
+		var nm = object_get_name(rep_track[i].object_index);
+		if(nm == "o_exp_combat")
+		{
+			if(min_vp == -1)
+			{
+				min_vp = rep_track[i].victory_points;
+				index = i;
+			}
+			else if(min_vp > rep_track[i].victory_points)
+			{
+				min_vp = rep_track[i].victory_points;
+				index = i;
+			}
+		}
+	}
+	instance_destroy(rep_track[index]);
+	array_set(rep_track,index,_reputation);
+	update_info();
+	return;
 }
 
 add_rare_research = function(_research,index)

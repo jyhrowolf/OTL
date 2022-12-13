@@ -3,6 +3,7 @@ var pc = instance_find(o_player_controller,0);
 player = pc.active_player;
 round_count = pc.round_count;
 civilization = pc.players[player].civilization;
+species = pc.players[player].species;
 research = civilization.research;
 
 civilization.connect_info(self);

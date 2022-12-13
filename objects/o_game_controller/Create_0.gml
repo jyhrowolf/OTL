@@ -174,15 +174,15 @@ for(var t = 0; t < 3; t++)
 ds_map_destroy(tiles);
 
 //array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
-
+global.neutrals_difficulty = 0;
 //setup players
 global.player_color[0] = #808080;	//c_grey
 global.player_color[1] = #900000;	//c_maroon
 global.player_color[2] = #000090;	//c_navy
 global.player_color[3] = #004000;	//c_green
 global.player_color[4] = #907000;	//c_yellow
-global.player_color[5] = #B8B8B8;	//c_white
-global.player_color[6] = #181818;	//c_dkgrey
+global.player_color[5] = #A0A0A0;	//c_white
+global.player_color[6] = #282828;	//c_dkgrey
 player_controller = instance_create_layer(0,0,"Controllers",o_player_controller);
 
 research_controller = instance_create_layer(0,0,"Controllers",o_research_controller);
