@@ -108,7 +108,7 @@ function combat_system_solve(c_hex,dmg,_player)
 			}
 			else
 			{
-				shot.image_alpha = 0.5;
+				shot.image_alpha = 0.35;
 			}
 		}
 	}
@@ -195,7 +195,7 @@ function round_solve(c_hex,dmg,to_player,_type)
 				shot.class = ship.class;
 				shot.weapons = _type;
 				shot.damage = damage[i][j][0];
-				shot.image_alpha = 0.5;
+				shot.image_alpha = 0.35;
 			}
 		}
 	}

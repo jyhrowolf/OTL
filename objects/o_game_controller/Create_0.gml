@@ -175,6 +175,7 @@ ds_map_destroy(tiles);
 
 //array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
 global.neutrals_difficulty = 0;
+global.map_toggle = 1;
 //setup players
 global.player_color[0] = #808080;	//c_grey
 global.player_color[1] = #900000;	//c_maroon

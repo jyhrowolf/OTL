@@ -1,2 +1,3 @@
 /// @description Insert description here
-draw_center_system(system,c_white);
+if( global.map_toggle)
+	draw_center_system(system,c_white);

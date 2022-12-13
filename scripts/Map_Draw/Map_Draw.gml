@@ -64,8 +64,11 @@ function draw_system(_system,_color)
 	var _y = _system.y;
 	var hex_x = global.hex_x;
 	var hex_y = global.hex_y;
-	draw_circle_color(_x-1,_y-1,global.hex_size/7,_color,_color,false);
-	draw_circle_color(_x-1,_y-1,global.hex_size/7-1,c_black,c_black,false); //draw center cirlce
+	if(global.map_toggle)
+	{
+		draw_circle_color(_x-1,_y-1,global.hex_size/7,_color,_color,false);
+		draw_circle_color(_x-1,_y-1,global.hex_size/7-1,c_black,c_black,false); //draw center cirlce
+	}
 	
 	var pc = instance_find(o_player_controller,0);
 	var my_color = c_dkgrey;
