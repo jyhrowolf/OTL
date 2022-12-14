@@ -11,7 +11,7 @@ add_innate_part([2,2]); // base +2 source
 update_ship_display();
 // settup blueprint display
 ship_parts_pos = [
-				[81,-34],
-				[81,-48],
-				[95,-45]
+				[81,-25],
+				[74,-39],
+				[88,-39]
 				];

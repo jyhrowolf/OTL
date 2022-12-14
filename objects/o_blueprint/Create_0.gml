@@ -191,17 +191,17 @@ display_to_blueprint = function(_display)
 update_ship_display = function()
 {
 	ship_display = [-1,-1,-1,-1,-1,-1,-1,-1];
+	var max_part = [0,0,0,0,0,0,0,0];
 	for(var i = 0; i < array_length(ship_parts); i++)
 	{
 		if(ship_parts[i] != noone)
 		{
-			var max_part = 0;
 			for(var p = 0; p < array_length(ship_parts[i].equipment); p++)
 			{
 				if(ship_parts[i].equipment[p][0] != 4 && ship_parts[i].equipment[p][0] != 5)
 				{
-					max_part = max(ship_parts[i].equipment[p][1],max_part);
-					ship_display[ship_parts[i].equipment[p][0]] = max_part;
+					max_part[ship_parts[i].equipment[p][0]] = max(ship_parts[i].equipment[p][1],max_part[ship_parts[i].equipment[p][0]]);
+					ship_display[ship_parts[i].equipment[p][0]] = max_part[ship_parts[i].equipment[p][0]];
 				}
 			}
 		}

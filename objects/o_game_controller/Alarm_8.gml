@@ -95,7 +95,7 @@ if(busy == 0) //initiallize a combat
 					if(combat_hex.player != 0)
 					{
 						var old_player = player_controller.players[combat_hex.player];
-						array_remove(old_player.civilization.systems,_hex);
+						array_remove(old_player.civilization.systems,combat_hex);
 						old_player.civilization.influence++;
 						old_player.calculate_influence_upkeep(0);
 					}
@@ -133,7 +133,7 @@ if(busy == 0) //initiallize a combat
 			if(combat_hex.player != 0)
 			{
 				var old_player = player_controller.players[combat_hex.player];
-				array_remove(old_player.civilization.systems,_hex);
+				array_remove(old_player.civilization.systems,combat_hex);
 				old_player.civilization.influence++;
 				old_player.calculate_influence_upkeep(0);
 			}
@@ -220,7 +220,7 @@ else if(busy == 1)
 				if(combat_hex.player != 0)
 				{
 					var old_player = player_controller.players[combat_hex.player];
-					array_remove(old_player.civilization.systems,_hex);
+					array_remove(old_player.civilization.systems,combat_hex);
 					old_player.civilization.influence++;
 					old_player.calculate_influence_upkeep(0);
 				}
