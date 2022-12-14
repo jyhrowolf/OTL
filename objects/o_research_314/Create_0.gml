@@ -13,7 +13,7 @@ event_inherited();
 research_trial = function(_civilization)
 {
 	//enable Advanced Sythensis
-	_civilization.buildable[0] = 1;
-	_civilization.buildable[1] = 1;
-	_civilization.buildable[2] = 1;
+	_civilization.colonizable[0] = 1;
+	_civilization.colonizable[1] = 1;
+	_civilization.colonizable[2] = 1;
 }

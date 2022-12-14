@@ -12,7 +12,7 @@ exploration_reward = function(_civilization)
 	if(gc.combat_hex != noone)
 		hex = gc.combat_hex;
 	
-	var ship = instance_create_layer(hex.x,hex.y,"Player",o_ship_11);
+	var ship = instance_create_layer(hex.x,hex.y,"Player",o_ship_61);
 	ship.player = pc.active_player;
 	ship.update_color();
 

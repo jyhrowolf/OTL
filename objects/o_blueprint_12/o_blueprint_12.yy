@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_12",
   "spriteId": {
-    "name": "s_blueprint_12",
-    "path": "sprites/s_blueprint_12/s_blueprint_12.yy",
+    "name": "s_blueprint_62",
+    "path": "sprites/s_blueprint_62/s_blueprint_62.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"CHNK-88",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Sinker",},
   ],
   "parent": {
-    "name": "6Terran",
-    "path": "folders/Objects/Controller/Player/Blue Prints/6Terran.yy",
+    "name": "1Wet",
+    "path": "folders/Objects/Controller/Player/Blue Prints/1Wet.yy",
   },
 }

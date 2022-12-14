@@ -45,7 +45,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"c4d2c134-2811-4b6a-81ed-cc4536cdeff4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84bfa991-3cd4-4b44-bbd9-6a9a24b3209d","path":"sprites/s_blueprint_clean_10/s_blueprint_clean_10.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4127a76e-3eb7-4d26-851d-50b51d37fd25","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84bfa991-3cd4-4b44-bbd9-6a9a24b3209d","path":"sprites/s_blueprint_clean_10/s_blueprint_clean_10.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Clean",
-    "path": "folders/Sprites/GUI/Game/Blueprints/Ships/Clean.yy",
+    "path": "folders/Sprites/GUI/Game/Blueprints/Ships/1Wet/Clean.yy",
   },
 }

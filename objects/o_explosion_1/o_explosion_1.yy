@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "1_Terran",
-    "path": "folders/Objects/Map/Civilizations Ships/Ships/1_Terran.yy",
+    "name": "Combat",
+    "path": "folders/Objects/Map/Civilizations Ships/Ships/Combat.yy",
   },
 }

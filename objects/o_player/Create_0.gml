@@ -23,7 +23,10 @@ setup_species = function(_specie)
 	}
 	for(var i = 0; i < array_length(species.research); i++) //add all species research
 	{
-		civilization.add_research(species.research[i]);
+		if(species.research[i].class < 3)
+			civilization.add_research(species.research[i]);
+		else
+			civilization.add_rare_research(species.research[i],0);
 	}
 	for(var i = 0; i < array_length(species.trait_list); i++) //add all species traits
 	{

@@ -108,7 +108,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "5_Combat",
-    "path": "folders/Sprites/Map/Civilizations/Ships/5_Combat.yy",
+    "name": "4_Combat",
+    "path": "folders/Sprites/Map/Civilizations/Ships/6Terran/4_Combat.yy",
   },
 }

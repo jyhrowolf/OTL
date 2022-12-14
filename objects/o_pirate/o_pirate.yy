@@ -40,7 +40,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"weapon_offset","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"[[7,-9],[-7,9]]",},
   ],
   "parent": {
-    "name": "Pirate",
-    "path": "folders/Objects/Map/Civilizations Ships/Ships/0_Neutrals/Pirate.yy",
+    "name": "7_Neutrals",
+    "path": "folders/Objects/Map/Civilizations Ships/Ships/7_Neutrals.yy",
   },
 }

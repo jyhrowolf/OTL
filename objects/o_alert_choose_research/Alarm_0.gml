@@ -6,6 +6,8 @@ if(choice > -1)
 	
 	var expected_cost = (variable.cost - discount)*(discount <= variable.cost - variable.discount) + variable.discount*(discount > variable.cost - variable.discount);
 	var buyable = (current_civ.resources[1] - expected_cost >= 0);
+	if(array_length(current_civ.research.researched[choice]) >= 7)
+		buyable = false;
 	
 	if(buyable)
 	{

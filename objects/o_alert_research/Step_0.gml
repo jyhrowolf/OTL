@@ -25,7 +25,7 @@ if(global.mouse_state <= state)
 	}
 	if(!hov)
 	{
-		if(selected_button != -1)
+		if(selected_button != -1 && instance_exists(my_buttons[selected_button]))
 		{
 			research_name = my_buttons[selected_button].research_name;
 			expected_cost = my_buttons[selected_button].expected_cost;

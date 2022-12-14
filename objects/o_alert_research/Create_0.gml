@@ -33,11 +33,18 @@ for(var i = 0; i < array_length(available_research)-1; i++)
 			if(available_research[i][j] == available_research[i][j+1]) // skip duplicates
 				j++;
 		bb.expected_cost = (bb.cost - discount)*(discount <= bb.cost - bb.discount) + bb.discount*(discount > bb.cost - bb.discount);
-		bb.buyable = (current_civ.resources[1] - bb.expected_cost >= 0) && current_civ.check_research(bb.research)
+
+		if(array_length(current_civ.research.researched[bb.class]) < 7)
+			bb.buyable = (current_civ.resources[1] - bb.expected_cost >= 0) && current_civ.check_research(bb.research);
+		else
+			bb.buyable = false;
+
 		my_buttons[b_index++] = bb;
 	}
 }
-discount = max(current_civ.research.discount[0],current_civ.research.discount[1],current_civ.research.discount[2]);
+discount = max(current_civ.research.discount[0] * (array_length(current_civ.research.researched[0]) < 7),
+				current_civ.research.discount[1]* (array_length(current_civ.research.researched[1]) < 7),
+				current_civ.research.discount[2]* (array_length(current_civ.research.researched[2]) < 7));
 for(var j = 0; j < array_length(available_research[i]); j++) // rare
 {
 	bb = instance_create_layer(x+(_x+21*j)*3,y-(_y + 23*(4-i))*3,"GUI",o_alert_research_display);

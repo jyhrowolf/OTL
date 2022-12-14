@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_10",
   "spriteId": {
-    "name": "s_blueprint_10",
-    "path": "sprites/s_blueprint_10/s_blueprint_10.yy",
+    "name": "s_blueprint_60",
+    "path": "sprites/s_blueprint_60/s_blueprint_60.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"4",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Starby-111",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Swimmer",},
   ],
   "parent": {
-    "name": "6Terran",
-    "path": "folders/Objects/Controller/Player/Blue Prints/6Terran.yy",
+    "name": "1Wet",
+    "path": "folders/Objects/Controller/Player/Blue Prints/1Wet.yy",
   },
 }

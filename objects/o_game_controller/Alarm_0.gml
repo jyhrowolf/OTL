@@ -41,9 +41,9 @@ var species = instance_create_layer(0,0,"Player",o_species_neutrals);
 player.setup_species(species);
 
 // settup neutral blueprints
-instance_create_layer(0,0,"Controllers",o_blueprint_00);
-instance_create_layer(0,0,"Controllers",o_blueprint_01);
-instance_create_layer(0,0,"Controllers",o_blueprint_02);
+instance_create_layer(0,0,"Controllers",o_blueprint_70);
+instance_create_layer(0,0,"Controllers",o_blueprint_71);
+instance_create_layer(0,0,"Controllers",o_blueprint_72);
 
 var system = instance_create_layer(_point[0],_point[1],"Map",o_center_system);
 system.depth = 2;

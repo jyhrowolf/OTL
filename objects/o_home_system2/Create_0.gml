@@ -2,7 +2,7 @@
 //default terran
 var pc = instance_find(o_player_controller,0);
 player = pc.active_player;
-var ship = instance_create_layer(x,y,"Player",o_ship_10);
+var ship = instance_create_layer(x,y,"Player",o_ship_20);
 ship.player = pc.active_player;
 ship.update_color();
 

@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_13",
   "spriteId": {
-    "name": "s_blueprint_13",
-    "path": "sprites/s_blueprint_13/s_blueprint_13.yy",
+    "name": "s_blueprint_63",
+    "path": "sprites/s_blueprint_63/s_blueprint_63.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"5",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"CYCLE-00",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Wader",},
   ],
   "parent": {
-    "name": "6Terran",
-    "path": "folders/Objects/Controller/Player/Blue Prints/6Terran.yy",
+    "name": "1Wet",
+    "path": "folders/Objects/Controller/Player/Blue Prints/1Wet.yy",
   },
 }
