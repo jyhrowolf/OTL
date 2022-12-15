@@ -17,6 +17,7 @@ exploration_reward = function(_civilization)
 	var ship = instance_create_layer(hex.x,hex.y,"Player",o_ship_61);
 	ship.player = pc.active_player;
 	ship.update_color();
+	ship.ship_path_start(ship.path_speed,false);
 
 	array_push(hex.ships, ship);
 	array_push(pc.players[pc.active_player].civilization.ships[1], ship);

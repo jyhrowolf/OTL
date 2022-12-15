@@ -121,10 +121,13 @@ function is_buildable(_choice,_system)
 
 function is_colonizable(_player,_system)
 {
-	for(var i = 0 ; i < array_length(_system.planets); i++) // all planets
+	if(_player.civilization.colony > 0)
 	{
-		if(is_planet_colonizable(_player,_system.planets[i],_system.planets[i].resource))
-			return true;
+		for(var i = 0 ; i < array_length(_system.planets); i++) // all planets
+		{
+			if(is_planet_colonizable(_player,_system.planets[i],_system.planets[i].resource))
+				return true;
+		}
 	}
 	return false;
 }

@@ -64,6 +64,7 @@ else if(action == 1)
 		if(gc.complete <= 0) // go to free
 		{
 			action = 0;
+			gc.busy = 0;
 			bottom_bar.my_buttons[6].image_index = 0; //reset cancel button, to end
 		}
 		else

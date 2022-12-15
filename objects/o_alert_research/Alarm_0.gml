@@ -31,6 +31,7 @@ if(selected_button > -1)
 				
 				instance_destroy(my_buttons[selected_button]);
 				array_delete(my_buttons,selected_button,1);
+				selected_button = -1;
 			}
 		}
 		else if(variable == "cheapest")

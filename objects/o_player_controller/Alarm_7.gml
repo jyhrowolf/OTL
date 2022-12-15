@@ -16,17 +16,12 @@ else if(action == 7)
 {
 	if(gc.busy == 0 || gc.busy == 1) // do not colonize
 	{
-		if(gc.complete <= 0)
-		{
-			action = 0;
-			gc.busy = 0;
-			if(action_taken) //reset cancel button
-				bottom_bar.my_buttons[6].image_index = 0; //end
-			else
-				bottom_bar.my_buttons[6].image_index = 2; //pass
-		}
+		action = 0;
+		gc.busy = 0;
+		if(action_taken) //reset cancel button
+			bottom_bar.my_buttons[6].image_index = 0; //end
 		else
-			gc.busy = 1;
+			bottom_bar.my_buttons[6].image_index = 2; //pass
 		
 		gc.alarm[11] = 1; // clean map
 	}
@@ -42,6 +37,7 @@ else if(action == 7)
 				bottom_bar.my_buttons[6].image_index = 0; //end
 			else
 				bottom_bar.my_buttons[6].image_index = 2; //pass
+			gc.alarm[11] = 1; // clean map
 		}
 	}
 }
@@ -49,14 +45,9 @@ else if(action == 8) //colonize after combat
 {
 	if(gc.busy == 1) // do not colonize
 	{
-		if(gc.complete <= 0)
-		{
-			action = 8;
-			gc.busy = 0;
-			bottom_bar.my_buttons[6].image_index = 0; //end
-		}
-		else
-			gc.busy = 1;
+		action = 8;
+		gc.busy = 0;
+		bottom_bar.my_buttons[6].image_index = 0; //end
 		
 		gc.alarm[11] = 1; // clean map
 	}
@@ -69,6 +60,7 @@ else if(action == 8) //colonize after combat
 			action = 8;
 			gc.busy = 0;
 			bottom_bar.my_buttons[6].image_index = 0; //end
+			gc.alarm[11] = 1; // clean map
 		}
 	}
 	else if(gc.busy == 0 && gc.complete <= 0)
@@ -76,5 +68,6 @@ else if(action == 8) //colonize after combat
 		action = 8;
 		gc.busy = 0;
 		bottom_bar.my_buttons[6].image_index = 0; //end
+		gc.alarm[11] = 1; // clean map
 	}
 }

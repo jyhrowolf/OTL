@@ -37,7 +37,7 @@ function combat_civ_solve(c_hex,_pc,_player)
 		loss = d_applied_traits[0].trait();
 	}
 
-	if(array_length(a_applied_traits) != 1 || loss == 1)
+	if((array_length(a_applied_traits) != 1 && loss == 0) || loss == 1)
 	{
 		var list = c_hex.ships;
 		var attacker_dmg = [];
@@ -84,6 +84,17 @@ function combat_civ_solve(c_hex,_pc,_player)
 		explo.image_xscale = 5;
 		explo.image_yscale = 5;
 	}
+	
+	if(is_system_unpopulated(c_hex))
+	{	
+		instance_destroy(c_hex.system_center);
+		
+		c_hex.player = 0;
+		array_remove(sieged_player.civilization.systems,c_hex);
+		sieged_player.civilization.influence++;
+		sieged_player.calculate_influence_upkeep(0);
+		sieged_player.calculate_resource_income([0,0,0]);
+	}
 }
 
 function combat_system_solve(c_hex,dmg,_player)
@@ -129,7 +140,25 @@ function combat_system(c_hex,_sieged)
 	{
 		for(var j = 0; j < c_hex.planets[i].resources; j++)
 		{
-			_sieged.civilization.resources_destroyed[c_hex.planets[i].resource]++;
+			var planets = c_hex.planets;
+			if(planets[i].resource < 3) // planet
+				_sieged.civilization.resources_destroyed[c_hex.planets[i].resource]++;
+			else if(planets[i].resource < 4) // white
+			{
+				if(_sieged.civilization.resources_built[2] > 0)
+					_sieged.civilization.resources_destroyed[2]++;
+				else if(_sieged.civilization.resources_built[1] > 0)
+					_sieged.civilization.resources_destroyed[1]++;
+				else
+					_sieged.civilization.resources_destroyed[0]++;
+			}
+			else if(planets[i].resource < 5) // orbital
+			{
+				if(_sieged.civilization.resources_built[1] > 0)
+					_sieged.civilization.resources_destroyed[1]++;
+				else
+					_sieged.civilization.resources_destroyed[0]++;
+			}
 			c_hex.planets[i].resources--;
 			return true;
 		}

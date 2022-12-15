@@ -28,12 +28,14 @@ for(var i = 0; i < array_length(list); i++) // find all hexes that have 2 differ
 	{
 		combat = true;
 		gc.combat_hex = list[i];
+		gc.selected_hex = gc.combat_hex;
 		break;
 	}
 	else if(is_planet_combat(list[i]))
 	{
 		combat = true;
 		gc.combat_hex = list[i];
+		gc.selected_hex = gc.combat_hex;
 		break;
 	}
 }

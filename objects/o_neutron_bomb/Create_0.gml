@@ -7,7 +7,24 @@ trait = function(_system,_pc) //
 	var destroyed = [0,0,0];
 	for(var i = 0; i < array_length(planets); i++)
 	{
-		destroyed[planets[i].resource] = planets[i].resources;
+		if(planets[i].resource < 3) // planet
+			destroyed[planets[i].resource] += planets[i].resources;
+		else if(planets[i].resource < 4) // white
+		{
+			if(player.civilization.resources_built[2] > 0)
+				destroyed[2] += planets[i].resources;
+			else if(player.civilization.resources_built[1] > 0)
+				destroyed[1] += planets[i].resources;
+			else
+				destroyed[0] += planets[i].resources;
+		}
+		else if(planets[i].resource < 5) // orbital
+		{
+			if(player.civilization.resources_built[1] > 0)
+				destroyed[1] += planets[i].resources;
+			else
+				destroyed[0] += planets[i].resources;
+		}
 		planets[i].resources = 0;
 	}
 	for(var i = 0; i < 3; i++)

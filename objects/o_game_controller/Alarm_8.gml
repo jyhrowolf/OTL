@@ -88,6 +88,7 @@ if(busy == 0) //initiallize a combat
 			if(combat_player_won(combat_hex,attacker)) // attacker wins
 			{
 				combat_hex.enemy = noone;
+				combat_hex.sieged = true;
 				if(!is_system_unpopulated(combat_hex))
 					combat_civ_solve(combat_hex,player_controller,attacker);
 				if(is_system_unpopulated(combat_hex))
@@ -213,6 +214,7 @@ else if(busy == 1)
 		if(combat_player_won(combat_hex,attacker)) // attacker wins
 		{
 			combat_hex.enemy = noone;
+			combat_hex.sieged = true;
 			if(!is_system_unpopulated(combat_hex))
 				combat_civ_solve(combat_hex,player_controller,attacker);
 			if(is_system_unpopulated(combat_hex))
