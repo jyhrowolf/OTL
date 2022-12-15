@@ -56,6 +56,7 @@
     {"id":{"name":"o_system_208","path":"objects/o_system_208/o_system_208.yy",},"order":4,},
     {"id":{"name":"Game","path":"rooms/Game/Game.yy",},"order":1,},
     {"id":{"name":"s_resource","path":"sprites/s_resource/s_resource.yy",},"order":1,},
+    {"id":{"name":"s_ship_21_drive","path":"sprites/s_ship_21_drive/s_ship_21_drive.yy",},"order":1,},
     {"id":{"name":"o_alert_upgrade_blueprint_display","path":"objects/o_alert_upgrade_blueprint_display/o_alert_upgrade_blueprint_display.yy",},"order":2,},
     {"id":{"name":"o_system","path":"objects/o_system/o_system.yy",},"order":4,},
     {"id":{"name":"o_research_03","path":"objects/o_research_03/o_research_03.yy",},"order":3,},
@@ -82,6 +83,7 @@
     {"id":{"name":"s_specie_icon1","path":"sprites/s_specie_icon1/s_specie_icon1.yy",},"order":0,},
     {"id":{"name":"o_alert_x","path":"objects/o_alert_x/o_alert_x.yy",},"order":5,},
     {"id":{"name":"o_exp_ship_part_06","path":"objects/o_exp_ship_part_06/o_exp_ship_part_06.yy",},"order":7,},
+    {"id":{"name":"s_ship_22_drive","path":"sprites/s_ship_22_drive/s_ship_22_drive.yy",},"order":1,},
     {"id":{"name":"o_system_317","path":"objects/o_system_317/o_system_317.yy",},"order":18,},
     {"id":{"name":"o_ship_part_11","path":"objects/o_ship_part_11/o_ship_part_11.yy",},"order":2,},
     {"id":{"name":"s_blueprint_22","path":"sprites/s_blueprint_22/s_blueprint_22.yy",},"order":3,},
@@ -638,6 +640,6 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.11.0.54",
+    "IDEVersion": "2022.11.1.56",
   },
 }

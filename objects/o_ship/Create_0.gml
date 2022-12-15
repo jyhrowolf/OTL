@@ -115,10 +115,12 @@ ship_path_start = function(_speed,_random_dir)
 {
 	if(_speed > 0)
 	{
-		x += path_get_x(orbit_path,1);
-		y += path_get_y(orbit_path,0);
-		path_start(orbit_path,_speed,path_action_continue,false);
-		path_position = random(1);
+		path_position = irandom_range(0,64)/64;		
+		direction = point_direction(0,0,path_get_x(orbit_path,path_position),path_get_y(orbit_path,path_position));
+		speed = orbit_speed;
+		complete = 1;
+		alarm[1] = point_distance(x,y,x+path_get_x(orbit_path,path_position),y+path_get_y(orbit_path,path_position))/orbit_speed;
+		
 		if(_random_dir)
 		{
 			if(random(1) >= .5)
@@ -138,8 +140,3 @@ ship_path_pause = function()
 {
 	path_endaction = path_action_stop;
 }
-ship_path_end = function()
-{
-	path_end();
-}
-

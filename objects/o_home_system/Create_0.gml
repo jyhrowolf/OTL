@@ -5,6 +5,7 @@ player = pc.active_player;
 var ship = instance_create_layer(x,y,"Player",o_ship_60);
 ship.player = pc.active_player;
 ship.update_color();
+ship.ship_path_start(ship.path_speed,false);
 
 ships[0] = ship;
 array_push(pc.players[player].civilization.ships[0],ship);

@@ -3,6 +3,7 @@
 var ship = instance_create_layer(x,y,"Player",o_guardian);
 ships[0] = ship;
 ship.update_color();
+ship.ship_path_start(ship.path_speed,false);
 neutrals = 1;
 
 var placements = ds_map_create();

@@ -3,9 +3,11 @@
 
 var ship = instance_create_layer(x,y,"Player",o_pirate);
 ships[0] = ship;
+ship.ship_path_start(ship.path_speed,false);
 ship.update_color();
 ship = instance_create_layer(x,y,"Player",o_pirate);
 ships[1] = ship;
+ship.ship_path_start(ship.path_speed,false);
 ship.update_color();
 neutrals = 2;
 

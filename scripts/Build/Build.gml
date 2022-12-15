@@ -22,6 +22,7 @@ function action_build(_gc,_pc, choose_hex)
 					var ship = instance_create_layer(choose_hex.x,choose_hex.y,"Player",asset_get_index("o_ship_" + string(s)));
 					ship.player = _pc.active_player;
 					ship.update_color();
+					ship.ship_path_start(ship.path_speed,(_gc.busy-1 == 3));
 
 					array_push(choose_hex.ships,ship);
 					array_push(current_player.civilization.ships[_gc.busy-1],ship);

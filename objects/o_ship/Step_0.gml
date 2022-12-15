@@ -6,7 +6,7 @@ if(target != noone)
 	y = lerp(y,target.y,complete);
 	direction = point_direction(x,y,target.x,target.y);
 	complete += orbit_speed/200;
-	if((abs(x-target.x) < 1 && abs(y-target.y) < 1) && complete < 1)
+	if((abs(x-target.x) < 2 && abs(y-target.y) < 2) && complete < 1)
 	{
 		complete = 1;
 		target = noone;
