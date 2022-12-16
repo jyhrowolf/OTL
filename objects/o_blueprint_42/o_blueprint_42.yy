@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_42",
   "spriteId": {
-    "name": "s_blueprint_62",
-    "path": "sprites/s_blueprint_62/s_blueprint_62.yy",
+    "name": "s_blueprint_72",
+    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Divine",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Flosae",},
   ],
   "parent": {
-    "name": "4Machine",
-    "path": "folders/Objects/Controller/Player/Blue Prints/4Machine.yy",
+    "name": "4Pirate",
+    "path": "folders/Objects/Controller/Player/Blue Prints/4Pirate.yy",
   },
 }

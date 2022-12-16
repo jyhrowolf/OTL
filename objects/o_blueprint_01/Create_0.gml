@@ -1,22 +1,31 @@
-/// @description Setup Basic Cruiser
+/// @description Setup Basic Guardian
 event_inherited();
 
-add_ship_part(o_ship_part_20,0); // source
-add_ship_part(o_ship_part_10,1); // drive
-add_ship_part(o_ship_part_00,3); // hull
-add_ship_part(o_ship_part_30,4); // Computer
-add_ship_part(o_ship_part_40,2); // Weapon
+var in = 0;
+if(global.neutrals_difficulty == 0) // 2 hull 2 computer 3 1 weapon 3 init
+{
+	add_ship_part(o_ship_part_00,in++); // hull
+	add_ship_part(o_ship_part_00,in++); // hull
+	add_ship_part(o_ship_part_30,in++); // computer
+	add_ship_part(o_ship_part_30,in++); // computer
+	add_ship_part(o_ship_part_40,in++); // weapon
+	add_ship_part(o_ship_part_40,in++); // weapon
+	add_ship_part(o_ship_part_40,in++); // weapon
 
-add_innate_part([7,1]); // base +1 iniative
-add_innate_part([2,1]); // base +1 power
+	add_innate_part([7,3]); // base +3 iniative
+}
+else if(global.neutrals_difficulty == 1) // 3 hull 1 computer 2 2 missile 1 4 weapon 1 init
+{
+	add_ship_part(o_ship_part_00,in++); // hull
+	add_ship_part(o_ship_part_00,in++); // hull
+	add_ship_part(o_ship_part_00,in++); // hull
+	add_ship_part(o_ship_part_30,in++); // computer
+	add_ship_part(o_ship_part_50,in++); // weapon
+	add_ship_part(o_ship_part_42,in++); // weapon
 
-update_ship_display();
-// settup blueprint display
-ship_parts_pos = [
-				[81,-37],
-				[81,-51],
-				[95,-44],
-				[95,-58],
-				[67,-44],
-				[67,-58]
-				];
+	add_innate_part([7,1]); // base +1 iniative
+}
+else
+{
+	add_ship_part(o_ship_part_00,in++); // hull
+}

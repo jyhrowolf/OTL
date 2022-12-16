@@ -41,9 +41,11 @@ var species = instance_create_layer(0,0,"Player",o_species_neutrals);
 player.setup_species(species);
 
 // settup neutral blueprints
-instance_create_layer(0,0,"Controllers",o_blueprint_70);
-instance_create_layer(0,0,"Controllers",o_blueprint_71);
-instance_create_layer(0,0,"Controllers",o_blueprint_72);
+/*
+instance_create_layer(0,0,"Controllers",o_blueprint_00);
+instance_create_layer(0,0,"Controllers",o_blueprint_01);
+instance_create_layer(0,0,"Controllers",o_blueprint_02);
+*/
 
 var system = instance_create_layer(_point[0],_point[1],"Map",o_center_system);
 system.depth = 2;
@@ -91,12 +93,8 @@ for(var i = 0; i < 6; i++)
 		player.rot = i;
 		player.player = player_controller.active_player;
 		array_push(player_controller.players, player);
-		
-		var spec = noone;
-		if(attributes[player_controller.active_player+11] < 6)
-			spec = asset_get_index("o_species" + string(attributes[player_controller.active_player+11]));
-		else
-			spec = o_species_terran;
+
+		var spec = asset_get_index("o_species" + string(attributes[player_controller.active_player+11]));
 		
 		species = instance_create_layer(system.x,system.y,"Player",spec);
 		if(species.faction_color == #000000)

@@ -15,6 +15,14 @@ if(action == 0)
 	current_player.civilization.influence_spent[0]++;
 	current_player.civilization.influence--;
 	current_player.calculate_influence_upkeep(0);
+	
+	var applied_traits = current_player.civilization.trait_list;
+	applied_traits = calculate_applied_traits(applied_traits,"pirate_explore");
+	if(array_length(applied_traits) != 0)
+	{
+		current_player.pirate = 1;
+	}
+	
 }
 else if(action == 1)
 {
@@ -61,7 +69,15 @@ else if(action == 1)
 		gc.selected_hex = system;
 		rotate_camera(self,0,gc.selected_hex);
 		
-		if(gc.complete <= 0) // go to free
+		var applied_traits = current_player.civilization.trait_list;
+		applied_traits = calculate_applied_traits(applied_traits,"pirate_explore");
+		var pirate = 0;
+		if(array_length(applied_traits) != 0)
+		{
+			pirate = current_player.pirate--;
+		}
+		
+		if(gc.complete <= 0 && pirate == 0) // go to free
 		{
 			action = 0;
 			gc.busy = 0;

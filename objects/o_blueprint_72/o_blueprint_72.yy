@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_blueprint_72",
-  "spriteId": null,
+  "spriteId": {
+    "name": "s_blueprint_72",
+    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -29,10 +32,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"13",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"CHNK-88",},
   ],
   "parent": {
-    "name": "7Neutrals",
-    "path": "folders/Objects/Controller/Player/Blue Prints/7Neutrals.yy",
+    "name": "7Terran",
+    "path": "folders/Objects/Controller/Player/Blue Prints/7Terran.yy",
   },
 }

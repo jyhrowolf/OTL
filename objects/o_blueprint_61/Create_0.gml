@@ -6,8 +6,10 @@ add_ship_part(o_ship_part_10,1); // drive
 add_ship_part(o_ship_part_00,3); // hull
 add_ship_part(o_ship_part_30,4); // Computer
 add_ship_part(o_ship_part_40,2); // Weapon
+add_ship_part(o_ship_part_60,5); // shield
 
-add_innate_part([7,1]); // base +1 iniative
+add_innate_part([7,2]); // base +2 iniative
+add_innate_part([2,2]); // base +2 source
 
 update_ship_display();
 // settup blueprint display

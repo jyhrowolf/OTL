@@ -75,6 +75,18 @@ s_h = (11*3)/string_height_ext(str,17,52*3*s_w);
 draw_text_ext_transformed_color(x+_x,y-_y,str,17,52*3*2,
 					min(s_w,s_h), min(s_w,s_h),
 					0,_c,_c,_c,_c,1);
+					
+str = "---------------";
+
+_x = (69)*3 - 1;
+_y += (-7)*3;
+
+s_w = (52*3)/string_width_ext(str,17,52*3);
+s_h = (11*3)/string_height_ext(str,17,52*3*s_w);
+
+draw_text_ext_transformed_color(x+_x,y-_y,str,17,52*3*2,
+					min(s_w,s_h), min(s_w,s_h),
+					0,_c,_c,_c,_c,1);
 
 str = "Exploration: " + string(victory_points[0]) + "";
 

@@ -2,7 +2,7 @@
 if(choice > -1)
 {
 	var gc = instance_find(o_game_controller,0);
-	if(is_planet_colonizable(current_player,variable,choice))
+	if(is_planet_colonizable(current_player,variable,choice,true))
 	{
 		gc.complete--;
 		current_player.civilization.resources_built[choice]++;

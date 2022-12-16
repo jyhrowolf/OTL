@@ -6,7 +6,7 @@ function action_explore(_gc,_pc, hex, choose_hex)
 	var c_height = camera_get_view_height(view_camera[0]);
 	var current_player = _pc.players[_pc.active_player];
 	
-	var applied_traits = _pc.players[_pc.active_player].civilization.trait_list;
+	var applied_traits = current_player.civilization.trait_list;
 	applied_traits = calculate_applied_traits(applied_traits,"explore");
 	var whg = 1;
 	if(array_length(applied_traits) <= 0) // no explore actions
@@ -65,14 +65,30 @@ function action_explore(_gc,_pc, hex, choose_hex)
 			{
 				if(array_length(_gc.selected_hex.ships) > 0) // it is not controllable
 				{
-					_gc.busy = 0;
-					_gc.selected_hex = current_player.last_selected_hex;
-					if(_gc.complete <= 0)
+					var applied_traits = current_player.civilization.trait_list;
+					applied_traits = calculate_applied_traits(applied_traits,"pirate_explore");
+					var pirate_friend = false;
+					if(array_length(applied_traits) != 0)
 					{
-						_gc.bottom_bar.my_buttons[6].image_index = 0; //reset cancel button, to end
-						_pc.action = 0;
+						 pirate_friend = true;
 					}
-					alarm[1] = 1; // update map
+					
+					if(!pirate_friend)
+					{
+						_gc.busy = 0;
+						_gc.selected_hex = current_player.last_selected_hex;
+						if(_gc.complete <= 0)
+						{
+							_gc.bottom_bar.my_buttons[6].image_index = 0; //reset cancel button, to end
+							_pc.action = 0;
+						}
+						alarm[1] = 1; // update map
+					}
+					else
+					{
+						current_player.last_selected_hex = _gc.selected_hex;
+						_gc.busy = 2;
+					}
 				}
 				else
 				{

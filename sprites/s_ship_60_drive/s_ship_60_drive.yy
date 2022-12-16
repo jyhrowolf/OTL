@@ -13,7 +13,7 @@
   "bbox_left": 0,
   "bbox_right": 10,
   "bbox_top": 0,
-  "bbox_bottom": 8,
+  "bbox_bottom": 7,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -49,11 +49,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"181e13e6-53f4-45c0-81ae-844fb30e6c46","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ffab0290-2f52-4fdb-8503-abd1895a01db","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6605efa7-810b-498e-ac0c-7bb63154b77e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"da9be36d-a985-43cd-9484-ab350b96afb3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"497bc40a-471c-49a5-8a59-448e8e193f95","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0c574b52-04c2-4b8b-a510-f429c2deb2a9","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b0bab8b7-d35b-413c-b3c4-70c1f5c2bc00","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"58e70d29-e342-4ad3-b5c3-53805cb3a5f9","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"1b7ae6aa-869c-4866-87c0-2440a6e0d249","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"6bb95199-5b17-427e-85bf-5c498d2dcb5f","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_60_drive/s_ship_60_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "0_Interceptor",
-    "path": "folders/Sprites/Map/Civilizations/Ships/6Terran/0_Interceptor.yy",
+    "name": "0",
+    "path": "folders/Sprites/Map/Civilizations/Ships/6Marines/0.yy",
   },
 }

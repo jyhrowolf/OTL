@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_23",
   "spriteId": {
-    "name": "s_blueprint_23",
-    "path": "sprites/s_blueprint_23/s_blueprint_23.yy",
+    "name": "s_blueprint_73",
+    "path": "sprites/s_blueprint_73/s_blueprint_73.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,11 +32,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"4",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Burrows",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"5",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Wader",},
   ],
   "parent": {
-    "name": "2Plant",
-    "path": "folders/Objects/Controller/Player/Blue Prints/2Plant.yy",
+    "name": "2Wet",
+    "path": "folders/Objects/Controller/Player/Blue Prints/2Wet.yy",
   },
 }

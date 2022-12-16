@@ -14,12 +14,20 @@ function is_system_unpopulated(_hex)
 
 function is_ship_combat(_system)
 {
+	var pc = instance_find(o_player_controller,0);
 	var p_list = [0,0,0,0,0,0,0];
+	var p_friend = 0;
 	var player_ships = _system.ships;
 	for(var i = 0 ; i < array_length(player_ships); i++) // all ships
 	{
 		if(instance_exists(player_ships[i]))
 		{
+			var current_player = pc.players[player_ships[i].player];
+			var applied_traits = current_player.civilization.trait_list;
+			applied_traits = calculate_applied_traits(applied_traits,"pirate_combat");
+			if(array_length(applied_traits) != 0)
+				p_friend = player_ships[i].player;
+			
 			p_list[player_ships[i].player] = 1;
 		}
 	}
@@ -28,6 +36,15 @@ function is_ship_combat(_system)
 	{
 		sum += p_list[i];
 	}
+	
+	if(p_friend != 0)
+	{
+		if(p_list[0] > 0 && p_list[p_friend] > 0)
+		{
+			sum--;
+		}
+	}
+	
 	return sum > 1;
 }
 
@@ -39,7 +56,7 @@ function is_planet_combat(_system)
 		for(var i = 0 ; i < array_length(player_ships); i++) // all ships
 		{
 			if(instance_exists(player_ships[i]))
-				if(player_ships[i].player != _system.player)
+				if(player_ships[i].player != _system.player && player_ships[i].player != 0)
 					return true;
 		}
 	}
@@ -55,6 +72,11 @@ function is_player_pinned(_player,_system,_hypo)
 	
 	var cloak = array_length(applied_traits);
 	
+	applied_traits = current_player.civilization.trait_list;
+	applied_traits = calculate_applied_traits(applied_traits,"pirate_move");
+	
+	var pirate_friend = array_length(applied_traits);
+	
 	var player_ships = _hypo;
 	var enemy_player_ships = 0;
 	var enemy_neutral_ships = 0;
@@ -64,7 +86,7 @@ function is_player_pinned(_player,_system,_hypo)
 			player_ships++;
 		else if (_system.ships[i].player != 0)
 			enemy_player_ships++;
-		else
+		else if(!pirate_friend)
 			enemy_neutral_ships++;
 	}	
 	if(map_hash(_system.hex_coord) == 0	&& enemy_neutral_ships > 0) // is the GCDS there
@@ -125,14 +147,14 @@ function is_colonizable(_player,_system)
 	{
 		for(var i = 0 ; i < array_length(_system.planets); i++) // all planets
 		{
-			if(is_planet_colonizable(_player,_system.planets[i],_system.planets[i].resource))
+			if(is_planet_colonizable(_player,_system.planets[i],_system.planets[i].resource,false))
 				return true;
 		}
 	}
 	return false;
 }
 
-function is_planet_colonizable(_player,_planet,_choice)
+function is_planet_colonizable(_player,_planet,_choice,_colo)
 {
 	for(var h = 0 ; h < array_length(_planet.slots); h++) // all slots in planets
 		if(_planet.resource < 3)
@@ -143,10 +165,19 @@ function is_planet_colonizable(_player,_planet,_choice)
 		}
 		else if(_planet.resource < 4) // white planet
 		{
-			for(var c = 0 ; c < 3; c++) // all resources
-				if(_player.civilization.colonizable[c] >= _planet.slots[h]) // _player can
-					if( h >= _planet.resources) // if it is not currently inhibed
-						return true;
+			if(_colo)
+			{
+				if(_player.civilization.colonizable[_choice] >= _planet.slots[h]) // _player can
+						if( h >= _planet.resources) // if it is not currently inhibed
+							return true;
+			}
+			else
+			{
+				for(var c = 0 ; c < 3; c++) // all resources
+					if(_player.civilization.colonizable[c] >= _planet.slots[h]) // _player can
+						if( h >= _planet.resources) // if it is not currently inhibed
+							return true;
+			}
 		}
 		else if(_planet.resource < 5) // orbital
 		{

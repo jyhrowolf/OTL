@@ -1,26 +1,18 @@
-/// @description Setup Basic Pirate
+/// @description Setup Basic interceptor
 event_inherited();
 
-var in = 0;
-if(global.neutrals_difficulty == 0) // 1 hull 1 computer 2 1 weapon 2 init
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_40,in++); // weapon 
-	add_ship_part(o_ship_part_40,in++); // weapon 
+add_ship_part(o_ship_part_20,0); // source
+add_ship_part(o_ship_part_10,1); // drive
+add_ship_part(o_ship_part_40,2); // weapon
 
-	add_innate_part([7,2]); // base +2 iniative
-}
-else if(global.neutrals_difficulty == 1) // 2 hull 1 computer 1 2 weapon 1 init
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_41,in++); // weapon 
+add_innate_part([7,2]); // base +2 iniative
+//add_innate_part([0,10]); // base +10 health
 
-	add_innate_part([7,1]); // base +1 iniative
-}
-else
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-}
+update_ship_display();
+// settup blueprint display
+ship_parts_pos = [
+				[81,-34],
+				[81,-48],
+				[95,-45],
+				[67,-45]
+				];

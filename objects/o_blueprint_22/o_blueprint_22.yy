@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_22",
   "spriteId": {
-    "name": "s_blueprint_22",
-    "path": "sprites/s_blueprint_22/s_blueprint_22.yy",
+    "name": "s_blueprint_72",
+    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,11 +32,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"7",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Roots",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Sinker",},
   ],
   "parent": {
-    "name": "2Plant",
-    "path": "folders/Objects/Controller/Player/Blue Prints/2Plant.yy",
+    "name": "2Wet",
+    "path": "folders/Objects/Controller/Player/Blue Prints/2Wet.yy",
   },
 }

@@ -9,6 +9,8 @@ add_ship_part(o_ship_part_30,6); // Computer
 add_ship_part(o_ship_part_40,2); // Weapon
 add_ship_part(o_ship_part_40,4); // Weapon
 
+add_innate_part([2,1]); // base +1 power
+
 update_ship_display();
 // settup blueprint display
 ship_parts_pos = [

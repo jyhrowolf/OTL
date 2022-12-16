@@ -109,6 +109,6 @@
   "nineSlice": null,
   "parent": {
     "name": "4_Combat",
-    "path": "folders/Sprites/Map/Civilizations/Ships/6Terran/4_Combat.yy",
+    "path": "folders/Sprites/Map/Civilizations/Ships/7Terran/4_Combat.yy",
   },
 }

@@ -1,37 +1,23 @@
-/// @description Setup Basic Center
+/// @description Setup Basic Dreadnought
 event_inherited();
 
-var in = 0;
-if(global.neutrals_difficulty == 0) // 7 hull 2 computer 4 1 weapon 0 init
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_40,in++); // weapon
-	add_ship_part(o_ship_part_40,in++); // weapon
-	add_ship_part(o_ship_part_40,in++); // weapon
-	add_ship_part(o_ship_part_40,in++); // weapon
-}
-else if(global.neutrals_difficulty == 1) // 3 hull 2 computer 4 1 missile 1 4 weapon 2 init
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_00,in++); // hull
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_30,in++); // computer
-	add_ship_part(o_ship_part_51,in++); // weapon
-	add_ship_part(o_ship_part_51,in++); // weapon
-	add_ship_part(o_ship_part_42,in++); // weapon
+add_ship_part(o_ship_part_20,0); // source
+add_ship_part(o_ship_part_10,1); // drive
+add_ship_part(o_ship_part_00,3); // hull
+add_ship_part(o_ship_part_00,5); // hull
+add_ship_part(o_ship_part_30,6); // Computer
+add_ship_part(o_ship_part_40,2); // Weapon
+add_ship_part(o_ship_part_40,4); // Weapon
 
-	add_innate_part([7,2]); // base +1 iniative
-}
-else
-{
-	add_ship_part(o_ship_part_00,in++); // hull
-}
+update_ship_display();
+// settup blueprint display
+ship_parts_pos = [
+				[89,-40],
+				[89,-54],
+				[103,-47],
+				[103,-61],
+				[61,-47],
+				[61,-61],
+				[75,-40],
+				[75,-54]
+				];

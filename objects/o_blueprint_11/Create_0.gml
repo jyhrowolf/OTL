@@ -8,6 +8,7 @@ add_ship_part(o_ship_part_30,4); // Computer
 add_ship_part(o_ship_part_40,2); // Weapon
 
 add_innate_part([7,1]); // base +1 iniative
+add_innate_part([2,1]); // base +1 power
 
 update_ship_display();
 // settup blueprint display

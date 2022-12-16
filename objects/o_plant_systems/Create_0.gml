@@ -1,6 +1,6 @@
 /// @description plant systems
 trait = function() //
 {
-	// sucks for you
-	return 2;
+	// nice for you
+	return 1;
 }

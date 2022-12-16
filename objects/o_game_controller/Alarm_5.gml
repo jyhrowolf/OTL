@@ -39,7 +39,7 @@ else if(busy >= 1)
 	applied_traits = calculate_applied_traits(applied_traits,"move");
 	
 	var whg = array_length(applied_traits);
-	
+
 	var systems = ds_map_values_to_array(moveable_hex); 
 	for(var i = 0; i < array_length(systems); i++) // clean all hexes
 	{

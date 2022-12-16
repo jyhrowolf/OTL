@@ -30,13 +30,20 @@ calculate_victory_points = function()
 	applied_traits = calculate_applied_traits(applied_traits,"system_reward");
 	if(array_length(applied_traits) != 0)
 	{
-		bonus = 1;
+		bonus = applied_traits[0].trait();
 	}
 	
 	// go through all systems including monoliths
 	for(var i = 0; i < array_length(systems); i++)
 	{
 		victory_points[1] += systems[i].victory_points + bonus;
+	}
+	
+	applied_traits = trait_list;
+	applied_traits = calculate_applied_traits(applied_traits,"pirate_reward");
+	if(array_length(applied_traits) != 0)
+	{
+		victory_points[1] += instance_number(o_pirate);
 	}
 	
 	// go through research

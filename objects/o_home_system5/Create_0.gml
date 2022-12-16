@@ -2,7 +2,7 @@
 //default terran
 var pc = instance_find(o_player_controller,0);
 player = pc.active_player;
-var ship = instance_create_layer(x,y,"Player",o_ship_51);
+var ship = instance_create_layer(x,y,"Player",o_ship_50);
 ship.player = pc.active_player;
 ship.update_color();
 ship.ship_path_start(ship.path_speed,false);
@@ -25,11 +25,10 @@ for(var i = 0; i < 3; i++)
 }
 ds_map_destroy(placements);
 
-planets[0].slots = [0,1];
-planets[0].resources = 1;
+planets[0].slots = [1];
+planets[0].resources = 0;
 planets[0].resource = 2;
 planets[0].image_index = 2;
-pc.players[player].civilization.resources_built[planets[0].resource] += 1;
 
 planets[1].slots = [0];
 planets[1].resources = 1;
@@ -37,10 +36,11 @@ planets[1].resource = 1;
 planets[1].image_index = 1;
 pc.players[player].civilization.resources_built[planets[1].resource] += 1;
 
-planets[2].slots = [1];
-planets[2].resources = 0;
+planets[2].slots = [0,1];
+planets[2].resources = 1;
 planets[2].resource = 0;
 planets[2].image_index = 0;
+pc.players[player].civilization.resources_built[planets[2].resource] += 1;
 
 pc.players[player].civilization.influence--;
 

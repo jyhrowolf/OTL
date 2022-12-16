@@ -62,7 +62,7 @@ calculate_resource_income = function(_hypo)
 }
 calculate_influence_upkeep = function(_hypo)
 {
-	var upk = 13 - civilization.influence;
+	var upk = 12 - civilization.influence;
 	if(upk < 0)
 		upk = 0;
 	var u = 0.215285*upk*upk - 0.0834166*upk + 0.043956;

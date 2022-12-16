@@ -6,13 +6,13 @@ add_ship_part(o_ship_part_10,1); // drive
 add_ship_part(o_ship_part_40,2); // weapon
 
 add_innate_part([7,2]); // base +2 iniative
-//add_innate_part([0,10]); // base +10 health
+add_innate_part([2,1]); // base +1 power
 
 update_ship_display();
 // settup blueprint display
 ship_parts_pos = [
-				[74,-32],
-				[74,-46],
-				[88,-32],
-				[88,-46]
+				[81,-34],
+				[81,-48],
+				[95,-52],
+				[67,-52]
 				];

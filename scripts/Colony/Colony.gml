@@ -22,7 +22,7 @@ function action_colony(_gc,_pc, selected_hex)
 			var m_y = device_mouse_y(0);
 			for(var i = 0; i < array_length(selected_hex.planets); i++)
 				if(position_meeting(m_x, m_y, selected_hex.planets[i]))
-					if(is_planet_colonizable(current_player,selected_hex.planets[i],selected_hex.planets[i].resource)) //spend a colony on planet
+					if(is_planet_colonizable(current_player,selected_hex.planets[i],selected_hex.planets[i].resource,false)) //spend a colony on planet
 						if(selected_hex.planets[i].resource < 3)
 						{
 							_gc.complete--;

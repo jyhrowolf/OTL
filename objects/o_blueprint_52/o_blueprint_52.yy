@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_52",
   "spriteId": {
-    "name": "s_blueprint_62",
-    "path": "sprites/s_blueprint_62/s_blueprint_62.yy",
+    "name": "s_blueprint_72",
+    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"COC",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Divine",},
   ],
   "parent": {
-    "name": "5Marines",
-    "path": "folders/Objects/Controller/Player/Blue Prints/5Marines.yy",
+    "name": "5Machine",
+    "path": "folders/Objects/Controller/Player/Blue Prints/5Machine.yy",
   },
 }

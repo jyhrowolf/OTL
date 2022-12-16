@@ -15,7 +15,7 @@ research_trial = function(_civilization)
 	// enable Advanced robotics
 	_civilization.influence += 1;
 	// calculate new upkeep
-	var upk = 13 - _civilization.influence;
+	var upk = 12 - _civilization.influence;
 	if(upk < 0)
 		upk = 0;
 	var u = 0.215285*upk*upk - 0.0834166*upk + 0.043956;

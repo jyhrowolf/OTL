@@ -4,16 +4,15 @@ event_inherited();
 add_ship_part(o_ship_part_20,0); // source
 add_ship_part(o_ship_part_10,1); // drive
 add_ship_part(o_ship_part_40,2); // weapon
-add_ship_part(o_ship_part_60,3); // shield
 
-add_innate_part([7,3]); // base +3 iniative
-add_innate_part([2,1]); // base +1 source
+add_innate_part([7,2]); // base +2 iniative
+//add_innate_part([0,10]); // base +10 health
 
 update_ship_display();
 // settup blueprint display
 ship_parts_pos = [
-				[81,-28],
-				[81,-42],
-				[95,-42],
-				[67,-42]
+				[81,-34],
+				[81,-48],
+				[95,-37],
+				[67,-37]
 				];

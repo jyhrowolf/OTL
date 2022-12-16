@@ -49,11 +49,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"08df95f3-d637-45d4-91e0-abd73575f665","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ccb37574-0ae9-42b3-a38a-145940508577","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"40d53356-6268-4df1-888f-b7f4ef0ed48f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"1c37c550-a607-43bd-a150-0580b7783f31","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"0fd26790-3147-400f-86b7-c96bd4b7d616","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9e6beb16-db97-4db0-9c38-7fa2f0893f84","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"524ae9ed-e621-4de2-8c7e-be1af7a27402","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"04977687-5375-4b62-ac99-bb75bc5f8fe4","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"34438aec-8a38-4c04-9304-5567be264f59","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"31bdbd43-08a6-46f8-b130-51ccfcd6a617","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_40_drive/s_ship_40_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "0",
-    "path": "folders/Sprites/Map/Civilizations/Ships/4Machine/0.yy",
+    "name": "4Pirate",
+    "path": "folders/Sprites/Map/Civilizations/Ships/4Pirate.yy",
   },
 }

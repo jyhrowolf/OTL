@@ -36,7 +36,7 @@ planets[1].resource = 1;
 planets[1].image_index = 1;
 pc.players[player].civilization.resources_built[planets[1].resource] += 1;
 
-planets[2].slots = [0,1];
+planets[2].slots = [0];
 planets[2].resources = 1;
 planets[2].resource = 0;
 planets[2].image_index = 0;

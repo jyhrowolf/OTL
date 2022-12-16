@@ -31,9 +31,9 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"drive_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_20_drive",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hull_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_60_hull",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"computer_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_60_computer",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"weapon_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_60_weapons",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"hull_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_70_hull",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"computer_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_70_computer",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"weapon_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_70_weapons",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"ship_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_20",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"o_blueprint_20",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"drive_offset","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"[[0,-3]]",},
@@ -43,11 +43,11 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"surface_dim","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"[11+4,11+8+4]",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"orbit_path","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"p_ship_orbit_interceptor",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"class","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"0",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"missile_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_60_missiles",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"missile_sprite","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"s_ship_70_missiles",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"orbit_speed","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"0.75",},
   ],
   "parent": {
-    "name": "2_Plant",
-    "path": "folders/Objects/Map/Civilizations Ships/Ships/2_Plant.yy",
+    "name": "2_Wet",
+    "path": "folders/Objects/Map/Civilizations Ships/Ships/2_Wet.yy",
   },
 }

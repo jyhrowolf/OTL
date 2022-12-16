@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_32",
   "spriteId": {
-    "name": "s_blueprint_62",
-    "path": "sprites/s_blueprint_62/s_blueprint_62.yy",
+    "name": "s_blueprint_32",
+    "path": "sprites/s_blueprint_32/s_blueprint_32.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,11 +32,11 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Flosae",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"7",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Roots",},
   ],
   "parent": {
-    "name": "3Pirate",
-    "path": "folders/Objects/Controller/Player/Blue Prints/3Pirate.yy",
+    "name": "3Plant",
+    "path": "folders/Objects/Controller/Player/Blue Prints/3Plant.yy",
   },
 }

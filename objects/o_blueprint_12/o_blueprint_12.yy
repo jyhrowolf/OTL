@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_12",
   "spriteId": {
-    "name": "s_blueprint_62",
-    "path": "sprites/s_blueprint_62/s_blueprint_62.yy",
+    "name": "s_blueprint_72",
+    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
   },
   "solid": false,
   "visible": true,
@@ -33,10 +33,10 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"8",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Sinker",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Banish-333",},
   ],
   "parent": {
-    "name": "1Wet",
-    "path": "folders/Objects/Controller/Player/Blue Prints/1Wet.yy",
+    "name": "1Empire",
+    "path": "folders/Objects/Controller/Player/Blue Prints/1Empire.yy",
   },
 }

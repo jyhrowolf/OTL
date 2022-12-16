@@ -11,7 +11,7 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 9,
+  "bbox_right": 10,
   "bbox_top": 0,
   "bbox_bottom": 8,
   "HTile": false,
@@ -49,11 +49,11 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4b747bfc-60c6-415f-9faf-feab095b052d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"f012694a-8f90-4341-ad8f-1fbd0a23725c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"6d24c95b-0f09-4dbf-a3d7-62c18939c089","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ac35c009-e115-4b9f-9f59-de2fa28c4615","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"ce2b5d3a-a4d4-4c5b-8fbf-2e81af9c7985","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"0255754c-6afa-4d33-8708-81ad822f5efc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6ec01e0e-f845-47b3-9e8a-63db67d9f22c","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"52a9b2e4-0cb8-44b8-8979-4d2ecd777a7c","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9f43121d-3444-4347-a5b8-dd0fa413c207","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"87d25605-4039-41f6-875a-4806b4884c7d","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2cb4c78-ab0a-45d3-81cd-ecf7e2933d1b","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2bc574ca-29f7-4019-92cc-4e9905010f2e","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"29cb24a9-532a-4963-9e48-c8ca972f6051","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"a4241f48-ed35-407d-a5e3-edb7d2672ec7","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e2336f14-7a19-422e-b7f4-94b19e8fc2f2","path":"sprites/s_ship_10_drive/s_ship_10_drive.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -77,6 +77,6 @@
   "nineSlice": null,
   "parent": {
     "name": "0",
-    "path": "folders/Sprites/Map/Civilizations/Ships/1Wet/0.yy",
+    "path": "folders/Sprites/Map/Civilizations/Ships/1Empire/0.yy",
   },
 }

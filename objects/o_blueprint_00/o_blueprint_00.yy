@@ -2,10 +2,7 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "o_blueprint_00",
-  "spriteId": {
-    "name": "s_blueprint_00",
-    "path": "sprites/s_blueprint_00/s_blueprint_00.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -33,10 +30,9 @@
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"slots","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"4",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"blueprint_name","path":"objects/o_blueprint/o_blueprint.yy",},"objectId":{"name":"o_blueprint","path":"objects/o_blueprint/o_blueprint.yy",},"value":"Bleed-17",},
   ],
   "parent": {
-    "name": "0Empire",
-    "path": "folders/Objects/Controller/Player/Blue Prints/0Empire.yy",
+    "name": "0Neutrals",
+    "path": "folders/Objects/Controller/Player/Blue Prints/0Neutrals.yy",
   },
 }

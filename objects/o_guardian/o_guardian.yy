@@ -42,7 +42,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"orbit_speed","path":"objects/o_ship/o_ship.yy",},"objectId":{"name":"o_ship","path":"objects/o_ship/o_ship.yy",},"value":"0.05",},
   ],
   "parent": {
-    "name": "7_Neutrals",
-    "path": "folders/Objects/Map/Civilizations Ships/Ships/7_Neutrals.yy",
+    "name": "0_Neutrals",
+    "path": "folders/Objects/Map/Civilizations Ships/Ships/0_Neutrals.yy",
   },
 }
