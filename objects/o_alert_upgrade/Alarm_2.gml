@@ -32,7 +32,7 @@ if(selected_button != -1)
 				array_delete(my_buttons,selected_button,1);
 			
 				selected_button = -1;
-				selected_blueprint = -1;
+				selected_blueprint--;
 			
 				alarm[0] = 1;
 			}
@@ -54,7 +54,7 @@ if(selected_button != -1)
 				array_delete(my_buttons,selected_button,1);
 			
 				selected_button = -1;
-				selected_blueprint = -1;
+				selected_blueprint--;
 			
 				alarm[0] = 1;
 			}

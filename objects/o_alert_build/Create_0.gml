@@ -30,8 +30,8 @@ for(var i = 0; i < array_length(available_blueprints); i++)
 	bb.buildable = i;
 	bb.cost = current_civ.buildable_cost[i];
 	bb.ships = current_civ.max_ships[i] - array_length(current_civ.ships[i]);
-	if(current_civ.buildable[i] != 1)
-		bb.image_alpha = 0.6;
+	if(current_civ.buildable[i] != 1 || current_civ.resources[2] - bb.cost < 0)
+		bb.buyable = false;
 	my_buttons[b_index++] = bb;
 }
 //orbital
@@ -45,8 +45,8 @@ bb.buildable = i;
 bb.cost = current_civ.buildable_cost[i];
 bb.blueprint_name = "Orbital";
 bb.ships = -1;
-if(current_civ.buildable[i] != 1)
-	bb.image_alpha = 0.6;
+if(current_civ.buildable[i] != 1 || current_civ.resources[2] - bb.cost < 0)
+	bb.buyable = false;
 my_buttons[b_index++] = bb;
 i++;
 
@@ -61,8 +61,8 @@ bb.buildable = i;
 bb.cost = current_civ.buildable_cost[i];
 bb.blueprint_name = "Monolith";
 bb.ships = -1;
-if(current_civ.buildable[i] != 1)
-	bb.image_alpha = 0.6;
+if(current_civ.buildable[i] != 1 || current_civ.resources[2] - bb.cost < 0)
+	bb.buyable = false;
 my_buttons[b_index++] = bb;
 
 _x = -50;

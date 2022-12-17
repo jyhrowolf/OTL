@@ -1,4 +1,7 @@
 /// @description Draw stuff
+if(!buyable)
+	image_alpha = 0.5;
+
 draw_self();
 if(hovered)
 {
@@ -16,7 +19,7 @@ draw_set_font(f_gui_upgrade);
 var _x = (11)*3;
 var _y = -(sprite_height-(10)*3);
 if(buildable == 4)
-	_y += 12;
+	_y += 6*3;
 
 draw_sprite_ext(s_blueprint_upgrade_weapon_box,0,x+_x,y-_y,3,3,0,c_white,image_alpha);
 draw_text_color(x+_x,y-_y,string(cost),_c,_c,_c,_c,image_alpha);
@@ -26,7 +29,7 @@ if(ships > -1)
 	 _x = sprite_width-(12)*3 -1;
 	 _y = -(sprite_height-(10)*3);
 	if(buildable == 4)
-		_y += 12;
+		_y += 6*3;
 
 	draw_sprite_ext(s_blueprint_upgrade_weapon_box,0,x+_x,y-_y,3,3,0,c_white,image_alpha);
 	draw_text_color(x+_x,y-_y,string(ships),_c,_c,_c,_c,image_alpha);

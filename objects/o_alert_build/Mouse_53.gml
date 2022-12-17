@@ -10,7 +10,13 @@ if(global.mouse_state <= state)
 		{
 			clicked = true;
 			if(i < array_length(my_buttons) - 2)
-				selected_blueprint = i;
+			{
+				if(my_buttons[i].buyable)
+					selected_blueprint = i;
+				else
+					clicked = false;
+				break;
+			}
 			else if (i < array_length(my_buttons) - 1)
 				alarm[0] = 1;
 			else
