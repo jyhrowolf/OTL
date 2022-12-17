@@ -6,6 +6,8 @@ at[3-11]	tech count
 at[12-17]	player species
 at[18-41]	exploration tokens
 at[42-54]	system system_tokens
+at[55-59]	reputation tokens
+at[60]		round end numbers
 */
 randomise();
 var setup = instance_find(o_setup_controller, 0);
@@ -14,7 +16,7 @@ attributes[i++] = setup.attributes[0].attribute_value; //player count
 attributes[i++] = 12 + 2 * (attributes[0] - 2); // research initial draw count
 attributes[i++] = 5 + (attributes[0] - 2); // research initial draw count
 var research_index = i;
-for(var i = research_index-2; i < array_length(setup.attributes)-6; i++)
+for(var i = research_index-2; i < array_length(setup.attributes)-7; i++)
 {
 	attributes[i+2] = setup.attributes[i].attribute_value;
 }
@@ -173,6 +175,42 @@ for(var t = 0; t < 3; t++)
 }
 ds_map_destroy(tiles);
 
+//reputation tiles
+var rep_index = i;
+
+attributes[i++] = 4;	// 4s
+attributes[i++] = 7;	// 3s
+attributes[i++] = 10;	// 2s
+attributes[i++] = 12;	// 1s
+
+sum = 0;
+temp = [];
+for(var i = rep_index; i < array_length(attributes); i++)
+{
+	sum += attributes[i];
+	temp[i-rep_index] = attributes[i];
+}
+while(sum > 0)
+{
+	var index = irandom_range(0,sum-1);
+	var sml_sum = 0;
+	for(var in = 0; in < array_length(temp); in++)
+	{
+		sml_sum += temp[in];
+		if(index < sml_sum)
+		{
+			index = in;
+			break;
+		}
+	}
+	temp[index] -= 1;
+	var s = 4 - index;
+	array_push(reputation_tokens, s);
+	sum--;
+}
+var round_end_count = i;
+attributes[i++] = setup.attributes[species_index + 3].attribute_value; // round end
+
 //array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
 global.neutrals_difficulty = 0;
 global.map_toggle = 1;
@@ -185,6 +223,7 @@ global.player_color[4] = #907000;	//c_yellow
 global.player_color[5] = #A0A0A0;	//c_white
 global.player_color[6] = #282828;	//c_dkgrey
 player_controller = instance_create_layer(0,0,"Controllers",o_player_controller);
+player_controller.round_end = attributes[round_end_count];
 
 research_controller = instance_create_layer(0,0,"Controllers",o_research_controller);
 research_controller.initial_draw_research = attributes[research_index-2];

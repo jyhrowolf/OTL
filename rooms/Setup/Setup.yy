@@ -141,6 +141,14 @@
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"button_text","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"value":"",},
             {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"my_attribute","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"value":"0",},
           ],"isDnd":false,"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":466.0,"y":135.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_268FF01F","properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"attribute_text","path":"objects/o_setup_attribute/o_setup_attribute.yy",},"objectId":{"name":"o_setup_attribute","path":"objects/o_setup_attribute/o_setup_attribute.yy",},"value":"Rounds",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"attribute_value","path":"objects/o_setup_attribute/o_setup_attribute.yy",},"objectId":{"name":"o_setup_attribute","path":"objects/o_setup_attribute/o_setup_attribute.yy",},"value":"8",},
+          ],"isDnd":false,"objectId":{"name":"o_setup_attribute","path":"objects/o_setup_attribute/o_setup_attribute.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":2.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":672.0,"y":135.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_236B7FC7","properties":[
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"button_text","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"value":"",},
+            {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"my_attribute","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"value":"15",},
+          ],"isDnd":false,"objectId":{"name":"o_setup_button_tick","path":"objects/o_setup_button_tick/o_setup_button_tick.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":850.0,"y":135.0,},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":15,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRInstanceLayer","resourceVersion":"1.0","name":"Controllers","instances":[
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_2FE8E2EB","properties":[],"isDnd":false,"objectId":{"name":"o_setup_controller","path":"objects/o_setup_controller/o_setup_controller.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":32.0,"y":1050.0,},
@@ -183,6 +191,8 @@
     {"name":"inst_13ADF17B","path":"rooms/Setup/Setup.yy",},
     {"name":"inst_2EBD6918","path":"rooms/Setup/Setup.yy",},
     {"name":"inst_49627F28","path":"rooms/Setup/Setup.yy",},
+    {"name":"inst_268FF01F","path":"rooms/Setup/Setup.yy",},
+    {"name":"inst_236B7FC7","path":"rooms/Setup/Setup.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

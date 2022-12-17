@@ -185,37 +185,48 @@ else // Next round
 	
 	if(sum > 1)
 	{
-		if(round_count < 9)
+		var player_list = [];
+		var scores = [0,0,0,0,0,0,0];
+		for(var i = 1; i < array_length(players); i++)
 		{
-			var scores = [0,0,0,0,0,0,0];
-			for(var i = 1; i < array_length(players); i++)
+			var temp_scores = players[i].civilization.calculate_victory_points();
+			for(var j = 0; j < array_length(temp_scores); j++)
 			{
-				scores[i] = players[i].civilization.calculate_victory_points();
+				scores[i] += temp_scores[j];
 			}
-			var found = ds_map_create();
-			for(var i = 1; i < array_length(players); i++)
-			{
-				var temp = [];
-				array_copy(temp,0,scores,0,7);
-				array_sort(temp,false);
-				var temp_score = temp[i-1];
-				var p = 1;
-				for(var j = 1; j < array_length(players); j++)
-				{
-					if(scores[j] == temp_score && !ds_map_exists(found,j))
-					{
-						found[?j] = temp_score;
-						p = j;
-						break;
-					}
-				}
-				show_debug_message("Player " + string(p) + " with score " + string(temp_score));
-			}
-			ds_map_destroy(found);
 		}
+		var found = ds_map_create();
+		for(var i = 1; i < array_length(players); i++)
+		{
+			var temp = [];
+			array_copy(temp,0,scores,0,7);
+			array_sort(temp,false);
+			var temp_score = temp[i-1];
+			var p = 1;
+			for(var j = 1; j < array_length(players); j++)
+			{
+				if(scores[j] == temp_score && !ds_map_exists(found,j))
+				{
+					found[?j] = temp_score;
+					p = j;
+					break;
+				}
+			}
+			show_debug_message("Player " + string(p) + " with score " + string(temp_score));
+			array_push(player_list,[p,scores[p]]);
+		}
+		ds_map_destroy(found);
 		round_count++;
 		show_debug_message("ROUND: " + string(round_count));
 		action_taken = false;
+		if(round_count >= round_end)
+		{
+			var end_c = instance_create_depth(0,0,1,o_end_controller);
+			end_c.players = player_list;
+			room_goto_next();
+			instance_destroy(instance_find(o_game_controller,0));
+			instance_destroy(self);
+		}
 	}
 	else // game is over
 	{
@@ -223,13 +234,19 @@ else // Next round
 		{
 			if(playable[i] == 1)
 			{
-				show_debug_message("PLAYER " + string(i) + " WON");
-				game_end();
+				var end_c = instance_create_depth(0,0,1,o_end_controller);
+				end_c.players = [[i,"the only"]];
+				room_goto_next();
+				instance_destroy(instance_find(o_game_controller,0));
+				instance_destroy(self);
 				exit;
 			}
 		}
-		show_debug_message("NO WINNERS");
-		game_end();
+		var end_c = instance_create_depth(0,0,1,o_end_controller);
+		end_c.players = [[0,"0"]];
+		room_goto_next();
+		instance_destroy(instance_find(o_game_controller,0));
+		instance_destroy(self);
 		exit;
 	}
 }

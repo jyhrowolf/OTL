@@ -16,6 +16,7 @@
     {"id":{"name":"s_ship_20","path":"sprites/s_ship_20/s_ship_20.yy",},"order":0,},
     {"id":{"name":"o_home_system6","path":"objects/o_home_system6/o_home_system6.yy",},"order":10,},
     {"id":{"name":"o_research_11","path":"objects/o_research_11/o_research_11.yy",},"order":1,},
+    {"id":{"name":"End","path":"rooms/End/End.yy",},"order":2,},
     {"id":{"name":"o_ship_part_02","path":"objects/o_ship_part_02/o_ship_part_02.yy",},"order":2,},
     {"id":{"name":"s_guardian_ship","path":"sprites/s_guardian_ship/s_guardian_ship.yy",},"order":1,},
     {"id":{"name":"o_ship_53","path":"objects/o_ship_53/o_ship_53.yy",},"order":3,},
@@ -139,6 +140,7 @@
     {"id":{"name":"o_ship_30","path":"objects/o_ship_30/o_ship_30.yy",},"order":0,},
     {"id":{"name":"o_alert","path":"objects/o_alert/o_alert.yy",},"order":2,},
     {"id":{"name":"o_blueprint_50","path":"objects/o_blueprint_50/o_blueprint_50.yy",},"order":0,},
+    {"id":{"name":"o_end_controller","path":"objects/o_end_controller/o_end_controller.yy",},"order":6,},
     {"id":{"name":"s_ship_12_drive","path":"sprites/s_ship_12_drive/s_ship_12_drive.yy",},"order":0,},
     {"id":{"name":"s_alert_trade_buttons","path":"sprites/s_alert_trade_buttons/s_alert_trade_buttons.yy",},"order":0,},
     {"id":{"name":"s_alert_research_tokens_1","path":"sprites/s_alert_research_tokens_1/s_alert_research_tokens_1.yy",},"order":2,},
@@ -494,6 +496,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Setup","path":"rooms/Setup/Setup.yy",},},
     {"roomId":{"name":"Game","path":"rooms/Game/Game.yy",},},
+    {"roomId":{"name":"End","path":"rooms/End/End.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},

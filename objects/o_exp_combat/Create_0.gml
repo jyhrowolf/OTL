@@ -3,6 +3,7 @@ event_inherited();
 
 combat_reward = function()
 {
-	var odds = [1,1,1,1,2,2,2,3,3,4];
-	victory_points = odds[irandom_range(0,9)];
+	var gc = instance_find(o_game_controller,0);
+	var tokens = gc.reputation_tokens;
+	victory_points = array_pop(tokens);
 }

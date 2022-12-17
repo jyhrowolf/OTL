@@ -22,5 +22,6 @@ attributes_bounds = [	[2,6], // player count
 						[1,7],
 						[1,7],
 						[1,7],
-						[1,7]
+						[1,7],
+						[1,15]  // number of rounds
 						];

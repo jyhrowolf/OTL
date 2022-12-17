@@ -1,5 +1,5 @@
 /// @description handle player number
-for(var i = 9; i < array_length(attributes); i++)
+for(var i = 9; i < array_length(attributes)-1; i++)
 {
 	for(var j = 0; j < array_length(buttons); j++)
 	{
