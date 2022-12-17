@@ -34,6 +34,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"discount","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"11",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"type","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"3",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"research_name","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Advanced Synthesis",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Civilization can colonize all advanced planets.",},
   ],
   "parent": {
     "name": "3_Rare",

@@ -25,9 +25,17 @@ if(selected_button != -1)
 		}
 		else if(my_buttons[selected_button].rare >= 0)
 		{
-			bp.add_design_part(my_buttons[selected_button].upgrade);
-			array_delete(current_civ.upgrades[7],my_buttons[selected_button].rare,1);
-			alarm[0] = 1;
+			if(bp.add_design_part(my_buttons[selected_button].upgrade))
+			{
+				array_delete(current_civ.upgrades[7],my_buttons[selected_button].rare,1);
+				instance_destroy(my_buttons[selected_button]);
+				array_delete(my_buttons,selected_button,1);
+			
+				selected_button = -1;
+				selected_blueprint = -1;
+			
+				alarm[0] = 1;
+			}
 		}
 	}
 	else if(index != -1)	// clicked on one
@@ -39,13 +47,21 @@ if(selected_button != -1)
 		}
 		else if(my_buttons[selected_button].rare >= 0)
 		{
-			bp.add_rare_ship_part(my_buttons[selected_button].upgrade,index);
-			array_delete(current_civ.upgrades[7],my_buttons[selected_button].rare,1);
-			alarm[0] = 1;
+			if(bp.add_rare_ship_part(my_buttons[selected_button].upgrade,index))
+			{
+				array_delete(current_civ.upgrades[7],my_buttons[selected_button].rare,1);
+				instance_destroy(my_buttons[selected_button]);
+				array_delete(my_buttons,selected_button,1);
+			
+				selected_button = -1;
+				selected_blueprint = -1;
+			
+				alarm[0] = 1;
+			}
 		}
 	}
 }
-else if(index != -1)
+else if(index != -1 && variable != "rare")
 {
 	bp.remove_part(index);
 }

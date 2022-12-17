@@ -6,6 +6,7 @@ generate_research = function(_research)
 	research_name = research.research_name;
 	class = research.class;
 	type = research.type;
+	description = research.description;
 	cost = research.cost;
 	discount = research.discount;
 	sprite_index = asset_get_index("s_alert_research_tokens_"+string(class));

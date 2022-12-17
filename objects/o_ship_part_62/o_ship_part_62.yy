@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_ship_part_62",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -23,15 +27,11 @@
   "eventList": [],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"part_name","path":"objects/o_ship_part/o_ship_part.yy",},"objectId":{"name":"o_ship_part","path":"objects/o_ship_part/o_ship_part.yy",},"value":"Gauss Shield","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"equipment","path":"objects/o_ship_part/o_ship_part.yy",},"objectId":{"name":"o_ship_part","path":"objects/o_ship_part/o_ship_part.yy",},"value":"[[2,4],[6,1]]","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"part_name","path":"objects/o_ship_part/o_ship_part.yy",},"objectId":{"name":"o_ship_part","path":"objects/o_ship_part/o_ship_part.yy",},"value":"Absorption Shield",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"equipment","path":"objects/o_ship_part/o_ship_part.yy",},"objectId":{"name":"o_ship_part","path":"objects/o_ship_part/o_ship_part.yy",},"value":"[[2,4],[6,1]]",},
   ],
   "parent": {
     "name": "6_Shields",
     "path": "folders/Objects/Tokens/Ship Part/6_Shields.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_ship_part_62",
-  "tags": [],
-  "resourceType": "GMObject",
 }

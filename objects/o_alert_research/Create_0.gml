@@ -17,7 +17,7 @@ image_xscale = 3;
 image_yscale = 3;
 var bb;
 var b_index = 0;
-var _x = -73;
+var _x = -114;
 var _y = -46;
 var discount = 0;
 for(var i = 0; i < array_length(available_research)-1; i++)
@@ -66,7 +66,7 @@ bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[b_index++] = bb;
 
-_x = 83;
+_x = 124;
 _y = 80;
 
 bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_x);
@@ -74,6 +74,12 @@ bb.image_xscale = 3;
 bb.image_yscale = 3;
 bb.image_index = 0;
 my_buttons[b_index] = bb;
+
+text_color = [];
+text_color[0] = #e65abe;
+text_color[1] = #5ae6a0;
+text_color[2] = #c5e65a;
+text_color[3] = #3f4a55;
 
 do_function = function(variable)
 {

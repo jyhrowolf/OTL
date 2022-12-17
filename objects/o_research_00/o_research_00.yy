@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "o_research_00",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -21,22 +25,19 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
-    {"propertyId":{"name":"class","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"cost","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"discount","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"2","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"type","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"research_name","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Neutron Bomb","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"class","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"0",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"cost","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"discount","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"2",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"type","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"research_name","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Neutron Bomb",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Bomb all colonies off of hostile sectors.",},
   ],
   "parent": {
     "name": "0_Millitary",
     "path": "folders/Objects/Tokens/Research/0_Millitary.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "o_research_00",
-  "tags": [],
-  "resourceType": "GMObject",
 }

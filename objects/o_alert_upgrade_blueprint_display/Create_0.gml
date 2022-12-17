@@ -65,6 +65,12 @@ delete_part = function(index)
 	array_insert(ship_parts,index,noone);
 }
 
+delete_rare_part = function(index)
+{
+	array_delete(ship_parts,index,1);
+	array_insert(ship_parts,index,noone);
+}
+
 remove_part = function(index)
 {
 	var old_part = ship_parts[index];
@@ -99,7 +105,7 @@ add_rare_ship_part = function(_ship_part,index)
 	
 	if(!valid_blueprint()) // replace with old part
 	{
-		delete_part(index);
+		delete_rare_part(index);
 		array_set(ship_parts,index,old_part);
 		calculate_blueprint();
 	}
@@ -107,9 +113,12 @@ add_rare_ship_part = function(_ship_part,index)
 	{
 		if(old_part != noone)
 		{
+			//final_map_add(old_part,-1);
 			instance_destroy(old_part);
 		}
+		return true;
 	}
+	return false;
 }
 
 add_ship_part = function(_ship_part,index)
