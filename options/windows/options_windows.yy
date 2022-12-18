@@ -4,7 +4,7 @@
   "name": "Windows",
   "option_windows_display_name": "OTL",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "0.15.1.1",
+  "option_windows_version": "0.15.3.0",
   "option_windows_company_info": "",
   "option_windows_product_info": "",
   "option_windows_copyright_info": "",

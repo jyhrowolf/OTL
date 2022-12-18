@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "4Pirate",
-    "path": "folders/Sprites/Map/Civilizations/Ships/4Pirate.yy",
+    "name": "0",
+    "path": "folders/Sprites/Map/Civilizations/Ships/4Pirate/0.yy",
   },
 }

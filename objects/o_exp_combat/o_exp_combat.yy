@@ -26,10 +26,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"name","path":"objects/o_exploration/o_exploration.yy",},"objectId":{"name":"o_exploration","path":"objects/o_exploration/o_exploration.yy",},"value":"Combat Token",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"victory_points","path":"objects/o_exploration/o_exploration.yy",},"objectId":{"name":"o_exploration","path":"objects/o_exploration/o_exploration.yy",},"value":"0",},
   ],
   "parent": {
     "name": "Combat",

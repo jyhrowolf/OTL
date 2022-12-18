@@ -74,7 +74,9 @@ if(!next_round)
 }
 else if(combat)
 {
+	action_taken = true;
 	bottom_bar.my_buttons[6].image_index = 3;
+	bottom_bar.alarm[0] = 1;
 	ds_map_clear(gc.combat_initiative);
 	gc.combat_reward = [1,1];
 	gc.combat_list = [];

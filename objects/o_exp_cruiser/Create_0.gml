@@ -14,7 +14,10 @@ exploration_reward = function(_civilization)
 	if(gc.combat_hex != noone && array_length(gc.combat_initiative) > 0)
 		hex = gc.combat_hex;
 	
-	var ship = instance_create_layer(hex.x,hex.y,"Player",o_ship_61);
+	var s = string_digits(object_get_name(pc.players[pc.active_player].blueprints[1].object_index));
+	if(string_length(s) > 2)
+		s = string_copy(s,2,2);
+	var ship = instance_create_layer(hex.x,hex.y,"Player",asset_get_index("o_ship_" + string(s)));
 	ship.player = pc.active_player;
 	ship.update_color();
 	ship.ship_path_start(ship.path_speed,false);

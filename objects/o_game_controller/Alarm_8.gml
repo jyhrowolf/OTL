@@ -12,7 +12,6 @@ if(busy == 0) //initiallize a combat
 				c_list[combat_hex.ships[i].player] = 1;
 				array_push(combat_list,combat_hex.ships[i].player);
 			}
-		
 		}
 		var attacker = combat_list[array_length(combat_list) - 1];
 		var defender = combat_list[array_length(combat_list) - 2];
@@ -103,7 +102,6 @@ if(busy == 0) //initiallize a combat
 					
 					busy = 2;
 					bottom_bar.my_buttons[6].image_index = 1;
-					bottom_bar.alarm[0] = 1;
 				}
 				else
 				{
@@ -140,7 +138,6 @@ if(busy == 0) //initiallize a combat
 			}
 			busy = 2;
 			bottom_bar.my_buttons[6].image_index = 1;
-			bottom_bar.alarm[0] = 1;
 		}
 		else
 		{
@@ -228,7 +225,6 @@ else if(busy == 1)
 				}
 				busy = 2;
 				bottom_bar.my_buttons[6].image_index = 1;
-				bottom_bar.alarm[0] = 1;
 			}
 			else
 			{

@@ -4,10 +4,13 @@ function array_remove(_list,_obj)
 {
 	for(var i = 0; i < array_length(_list); i++)
 	{
-		if(_obj.id == _list[i].id)
+		if(instance_exists(_list[i]))
 		{
-			array_delete(_list,i,1);
-			return true;
+			if(_obj.id == _list[i].id)
+			{
+				array_delete(_list,i,1);
+				return true;
+			}
 		}
 	}
 	return false;

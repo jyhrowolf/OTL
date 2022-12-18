@@ -109,7 +109,7 @@ function combat_system_solve(c_hex,dmg,_player)
 			offset[0] *= dcos(ship.direction);
 			offset[1] *= dsin(ship.direction);
 			var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
-			shot.class = ship.class;
+			shot.class = ship.class + (ship.class == 3);
 			shot.weapons = true;
 			shot.damage = dmg[i][j][0];
 			if(dmg[i][j][1] == 0 || dmg[i][j][1] >= 6)
@@ -221,7 +221,7 @@ function round_solve(c_hex,dmg,to_player,_type)
 				offset[0] *= dcos(ship.direction);
 				offset[1] *= dsin(ship.direction);
 				var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
-				shot.class = ship.class;
+				shot.class = ship.class + (ship.class == 3);
 				shot.weapons = _type;
 				shot.damage = damage[i][j][0];
 				shot.image_alpha = 0.35;
@@ -269,7 +269,7 @@ function lowest_ship(c_hex,to_ships,roll,dmg,_type)
 	offset[0] *= dcos(ship.direction);
 	offset[1] *= dsin(ship.direction);
 	var shot = instance_create_depth(ship.x + offset[0],ship.y+ offset[1],ship.depth-1,o_shot);
-	shot.class = ship.class;
+	shot.class = ship.class + (ship.class == 3);
 	shot.weapons = _type;
 	shot.damage = dmg[0];
 				

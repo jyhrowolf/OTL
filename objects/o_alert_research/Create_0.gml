@@ -58,7 +58,7 @@ for(var j = 0; j < array_length(available_research[i]); j++) // rare
 }
 
 _x = -51;
-_y = -72;
+_y = -76;
 
 bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_yes);
 bb.image_xscale = 3;

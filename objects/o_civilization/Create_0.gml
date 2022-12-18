@@ -155,7 +155,6 @@ add_reputation = function(_reputation,_species)
 	instance_destroy(rep_track[index]);
 	array_set(rep_track,index,_reputation);
 	update_info();
-	return;
 }
 
 add_rare_research = function(_research,index)
