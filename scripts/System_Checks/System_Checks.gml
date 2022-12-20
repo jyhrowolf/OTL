@@ -98,6 +98,16 @@ function is_player_pinned(_player,_system,_hypo)
 	return b;
 }
 
+function is_other_player_ship_ignore(_player,_system,_o)
+{
+	for(var i = 0 ; i < array_length(_system.ships); i++) // all ships
+	{
+		if(_system.ships[i].player != _player && _system.ships[i].object_index != _o)
+			return true;
+	}
+	return false;
+}
+
 function is_player_ship(_player,_system,_move)
 {
 	for(var i = 0 ; i < array_length(_system.ships); i++) // all ships

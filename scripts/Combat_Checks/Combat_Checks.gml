@@ -14,7 +14,10 @@ function combat_reward_calculate(_reward,_player)
 			if(max_vp == noone)
 				max_vp = temp_cr;
 			else if(max_vp.victory_points < temp_cr.victory_points)
+			{
+				instance_destroy(max_vp);
 				max_vp = temp_cr;
+			}
 			else
 				instance_destroy(temp_cr);
 		}

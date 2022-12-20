@@ -208,6 +208,7 @@ while(sum > 0)
 	array_push(reputation_tokens, s);
 	sum--;
 }
+
 var round_end_count = i;
 attributes[i++] = setup.attributes[species_index + 3].attribute_value; // round end
 

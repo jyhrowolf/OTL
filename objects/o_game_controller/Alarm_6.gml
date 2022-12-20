@@ -7,6 +7,11 @@ if(busy == 0) // find hexes that are influenceable
 	
 	var whg = array_length(applied_traits);
 	
+	applied_traits = player_controller.players[player_controller.active_player].civilization.trait_list;
+	applied_traits = calculate_applied_traits(applied_traits,"pirate_move");
+	
+	var p_f = array_length(applied_traits);
+	
 	if(!player_controller.action_taken)
 		busy = complete;
 		
@@ -32,7 +37,8 @@ if(busy == 0) // find hexes that are influenceable
 	for(var i = 0; i < array_length(systems); i++)
 	{
 		if(systems[i].player == current_player.player || 
-			(is_player_ship(current_player.player,systems[i],false) && systems[i].player == 0 && !is_other_player_ship(current_player.player,systems[i])))
+			(is_player_ship(current_player.player,systems[i],false) && systems[i].player == 0 && !is_other_player_ship(current_player.player,systems[i])) ||
+			(p_f && is_player_ship(current_player.player,systems[i],false) && systems[i].player == 0 && !is_other_player_ship_ignore(current_player.player,systems[i],o_pirate)))
 		{
 			systems[i].highlighted = true;
 			systems[i].depth = 2;
@@ -56,10 +62,22 @@ if(busy == 0) // find hexes that are influenceable
 			{
 				var new_coord = [old_coord[0] + adv[j][0], old_coord[1] + adv[j][1]];
 				var new_hex = moveable_hex[? map_hash(new_coord)];
-				if(new_hex.player == 0 && !is_other_player_ship(current_player.player,new_hex))
+				if(new_hex.player == 0)
 				{
-					new_hex.highlighted = true;
-					new_hex.depth = 2;
+					if(p_f)
+					{
+						if(!is_other_player_ship_ignore(current_player.player,new_hex,o_pirate))
+						{
+							new_hex.highlighted = true;
+							new_hex.depth = 2;
+						}
+					}
+					else if(!is_other_player_ship(current_player.player,new_hex))
+					{
+						new_hex.highlighted = true;
+						new_hex.depth = 2;
+					}
+					
 				}
 			}
 		}
@@ -71,10 +89,21 @@ if(busy == 0) // find hexes that are influenceable
 				{
 					var new_coord = moveable[i].hex_coord;
 					var new_hex = moveable_hex[? map_hash(new_coord)];
-					if(new_hex.player == 0 && !is_other_player_ship(current_player.player,new_hex))
+					if(new_hex.player == 0)
 					{
-						new_hex.highlighted = true;
-						new_hex.depth = 2;
+						if(p_f)
+						{
+							if(!is_other_player_ship_ignore(current_player.player,new_hex,o_pirate))
+							{
+								new_hex.highlighted = true;
+								new_hex.depth = 2;
+							}
+						}
+						else if(!is_other_player_ship(current_player.player,new_hex))
+						{
+							new_hex.highlighted = true;
+							new_hex.depth = 2;
+						}
 					}
 				}
 			}

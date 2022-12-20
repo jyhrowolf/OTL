@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "o_blueprint_52",
   "spriteId": {
-    "name": "s_blueprint_72",
-    "path": "sprites/s_blueprint_72/s_blueprint_72.yy",
+    "name": "s_blueprint_52",
+    "path": "sprites/s_blueprint_52/s_blueprint_52.yy",
   },
   "solid": false,
   "visible": true,

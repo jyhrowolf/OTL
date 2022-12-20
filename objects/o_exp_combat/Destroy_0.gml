@@ -4,6 +4,5 @@
 var gc = instance_find(o_game_controller,0);
 if(instance_exists(gc))
 {
-	var tokens = gc.reputation_tokens;
-	array_insert(tokens,irandom_range(0,array_length(tokens)-1),victory_points);
+	array_insert(gc.reputation_tokens,irandom_range(0,array_length(gc.reputation_tokens)),victory_points);
 }

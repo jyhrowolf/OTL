@@ -13,8 +13,8 @@ update_ship_display();
 // settup blueprint display
 ship_parts_pos = [
 				[82,-38],
-				[96,-31],
-				[96,-45],
-				[68,-31],
-				[68,-45]
+				[96,-24],
+				[96,-52],
+				[68,-24],
+				[68,-52]
 				];
