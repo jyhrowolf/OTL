@@ -9,9 +9,8 @@ else if(image_index == 1) // cancel
 	var gc = instance_find(o_game_controller,0);
 	if(gc.player_controller.action == 8)
 	{
-		var pc = instance_find(o_player_controller,0);
 		gc.busy = 0;
-		pc.alarm[0] = 1;
+		gc.player_controller.alarm[0] = 1;
 	}
 	else if(gc.player_controller.action != 0)
 	{

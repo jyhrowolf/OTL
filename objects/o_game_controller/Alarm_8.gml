@@ -29,6 +29,8 @@ if(busy == 0) //initiallize a combat
 		cur_player.calculate_resource_income([0,0,0]);
 		cur_player.calculate_influence_upkeep(0);
 		
+		rotate_camera(player_controller,0,combat_hex);
+		
 		show_debug_message("Player " + string(attacker) + " attacks Player " + string(defender));
 	
 		for(var i = 0; i < array_length(combat_hex.ships); i++) // initiative
@@ -88,18 +90,9 @@ if(busy == 0) //initiallize a combat
 			{
 				combat_hex.enemy = noone;
 				combat_hex.sieged = true;
-				if(!is_system_unpopulated(combat_hex))
-					combat_civ_solve(combat_hex,player_controller,attacker);
+				combat_civ_solve(combat_hex,player_controller,attacker);
 				if(is_system_unpopulated(combat_hex))
 				{
-					if(combat_hex.player != 0)
-					{
-						var old_player = player_controller.players[combat_hex.player];
-						array_remove(old_player.civilization.systems,combat_hex);
-						old_player.civilization.influence++;
-						old_player.calculate_influence_upkeep(0);
-					}
-					
 					busy = 2;
 					bottom_bar.my_buttons[6].image_index = 1;
 				}
@@ -109,6 +102,12 @@ if(busy == 0) //initiallize a combat
 					player_controller.alarm[0] = 60;
 					bottom_bar.my_buttons[6].image_index = 2;
 				}
+			}
+			else
+			{
+				busy = 0;
+				player_controller.alarm[0] = 60;
+				bottom_bar.my_buttons[6].image_index = 2;
 			}
 		}
 		else
@@ -126,16 +125,12 @@ if(busy == 0) //initiallize a combat
 		cur_civ.calculate_resources([0,0,0]);
 		cur_player.calculate_resource_income([0,0,0]);
 		cur_player.calculate_influence_upkeep(0);
+		
+		rotate_camera(player_controller,0,combat_hex);
+		
 		combat_civ_solve(combat_hex,player_controller,attacker);
 		if(is_system_unpopulated(combat_hex))
 		{
-			if(combat_hex.player != 0)
-			{
-				var old_player = player_controller.players[combat_hex.player];
-				array_remove(old_player.civilization.systems,combat_hex);
-				old_player.civilization.influence++;
-				old_player.calculate_influence_upkeep(0);
-			}
 			busy = 2;
 			bottom_bar.my_buttons[6].image_index = 1;
 		}
@@ -157,13 +152,6 @@ else if(busy == 1)
 		attacker = defender;
 		defender = temp;
 	}
-	player_controller.active_player = attacker;
-	var cur_player = player_controller.players[attacker];
-	var cur_civ = cur_player.civilization;
-	cur_civ.calculate_colony(cur_civ.colony);
-	cur_civ.calculate_resources([0,0,0]);
-	cur_player.calculate_resource_income([0,0,0]);
-	cur_player.calculate_influence_upkeep(0);
 	// fire weapons
 	var list = [];
 	var attacker_dmg;
@@ -212,17 +200,9 @@ else if(busy == 1)
 		{
 			combat_hex.enemy = noone;
 			combat_hex.sieged = true;
-			if(!is_system_unpopulated(combat_hex))
-				combat_civ_solve(combat_hex,player_controller,attacker);
+			combat_civ_solve(combat_hex,player_controller,attacker);
 			if(is_system_unpopulated(combat_hex))
 			{
-				if(combat_hex.player != 0)
-				{
-					var old_player = player_controller.players[combat_hex.player];
-					array_remove(old_player.civilization.systems,combat_hex);
-					old_player.civilization.influence++;
-					old_player.calculate_influence_upkeep(0);
-				}
 				busy = 2;
 				bottom_bar.my_buttons[6].image_index = 1;
 			}

@@ -27,8 +27,8 @@ function zoom_camera(_pc,_change,_selected_hex)
 				player.zoom += _change;
 			else
 				player.zoom = 1;
-	
-	rotate_camera(_pc,0,_selected_hex);
+	if(instance_exists(_selected_hex))
+		rotate_camera(_pc,0,_selected_hex);
 }
 
 function rotate_camera(_pc,_change,_selected_hex)

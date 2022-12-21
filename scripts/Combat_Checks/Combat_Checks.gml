@@ -95,8 +95,6 @@ function combat_civ_solve(c_hex,_pc,_player)
 		c_hex.player = 0;
 		array_remove(sieged_player.civilization.systems,c_hex);
 		sieged_player.civilization.influence++;
-		sieged_player.calculate_influence_upkeep(0);
-		sieged_player.calculate_resource_income([0,0,0]);
 	}
 }
 

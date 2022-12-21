@@ -2,10 +2,7 @@
 action_taken = true;
 action = 0;
 
-if(active_player + 1 < array_length(players))
-	active_player++;
-else
-	active_player = 1;
+
 
 var gc = instance_find(o_game_controller,0);
 
@@ -43,6 +40,11 @@ for(var i = 0; i < array_length(list); i++) // find all hexes that have 2 differ
 if(!next_round)
 {
 	action_taken = false;
+	if(active_player + 1 < array_length(players))
+			active_player++;
+		else
+			active_player = 1;
+	
 	while(players[active_player].passed || players[active_player].lost)
 	{
 		if(active_player + 1 < array_length(players))

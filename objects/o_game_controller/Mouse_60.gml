@@ -14,5 +14,8 @@ if(pc.action >= 0 && global.mouse_state < 1) //interact with map
 		case 5: //zoom in
 			zoom_camera(pc,change,selected_hex);
 		break;
+		case 8:
+			zoom_camera(pc,change,combat_hex);
+		break;
 	}
 }
