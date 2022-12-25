@@ -12,6 +12,7 @@ if(global.mouse_state <= state)
 			my_buttons[i].depth = -17;
 			if(i < array_length(my_buttons) - 2)
 			{
+				hovered_button = i;
 				research_name = my_buttons[i].research_name;
 				expected_cost = my_buttons[i].expected_cost;
 				hov = true;
@@ -25,6 +26,7 @@ if(global.mouse_state <= state)
 	}
 	if(!hov)
 	{
+		hovered_button = -1;
 		if(selected_button != -1 && instance_exists(my_buttons[selected_button]))
 		{
 			research_name = my_buttons[selected_button].research_name;

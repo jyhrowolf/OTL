@@ -1,5 +1,5 @@
 /// @description Draw Gui
-draw_sprite_ext(s_alert_research_tokens_back,0,x,y,3,3,0,c_white,1);
+draw_sprite_ext(s_alert_research_tokens_back,back_image_index,x,y,3,3,0,c_white,1);
 draw_self();
 
 var _c = text_color[class];

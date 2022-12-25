@@ -76,10 +76,10 @@ bb.image_index = 0;
 my_buttons[b_index] = bb;
 
 text_color = [];
-text_color[0] = #e65abe;
-text_color[1] = #5ae6a0;
-text_color[2] = #c5e65a;
-text_color[3] = #3f4a55;
+text_color[0] = #FF63D2;
+text_color[1] = #63FFB1;
+text_color[2] = #DAFF63;
+text_color[3] = #4B5866;
 
 do_function = function(variable)
 {

@@ -1,4 +1,5 @@
 /// @description Draw Button
+draw_sprite_ext(s_bottom_button_back,image_alpha == 0.8,x,y,3,3,0,c_white,1);
 draw_self();
 
 var pc = player_controller; //draw bits for influence
@@ -20,4 +21,4 @@ _x = (31)*3;
 _y = (-23)*3 + 1;
 
 draw_text_color(x+_x,y-_y,string(pc.players[pc.active_player].civilization.influence_action[image_index-1]),
-					_c,_c,_c,_c,1);
+					_c,_c,_c,_c,image_alpha);

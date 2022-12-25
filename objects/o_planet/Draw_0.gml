@@ -7,7 +7,7 @@ if(global.map_toggle)
 		draw_sprite(s_resource_slot,slots[i], x - 5*(array_length(slots)-1) + 10*i, y + 10);
 		if(i < resources)
 		{
-			draw_sprite_ext(s_resource,0, x - 5*(array_length(slots)-1) + 10*i, y + 10,1,1,0,my_color,1);
+			draw_sprite_ext(s_resource,slots[i], x - 5*(array_length(slots)-1) + 10*i, y + 10,1,1,0,my_color,1);
 		}
 	}
 }

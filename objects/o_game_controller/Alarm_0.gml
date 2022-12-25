@@ -5,6 +5,8 @@ global.mouse_state = 0;
 global.hex_size = 50;
 global.hex_x = [];
 global.hex_y = [];
+global.hex_gate_x = [];
+global.hex_gate_y = [];
 for(var i = 0; i < 2*pi; i += pi/3)
 {
 	global.hex_x[i] = global.hex_size*cos(i);
@@ -12,6 +14,51 @@ for(var i = 0; i < 2*pi; i += pi/3)
 }
 global.hex_x[6] = global.hex_x[0];
 global.hex_y[6] = global.hex_y[0];
+
+var i = 0;
+var t = 0.507;
+var d = 1.019;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+i++;
+t = 0.48;
+d = 1.011;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+i++;
+t = 0.472;
+d = 0.981;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+i++;
+t = 0.492;
+d = 0.959;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+i++;
+t = 0.52;
+d = 0.967;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+i++;
+t = 0.527;
+d = 0.997;
+global.hex_gate_x[i] = lerp(global.hex_x[i]*d,global.hex_x[i+1]*d,t);
+global.hex_gate_y[i] = lerp(global.hex_y[i]*d,global.hex_y[i+1]*d,t);
+global.hex_gate_x[6] = global.hex_gate_x[0];
+global.hex_gate_y[6] = global.hex_gate_y[0];
+var temp_gate_x = [];
+var temp_gate_y = [];
+for(var i = 0; i < 6; i ++)
+{
+	temp_gate_x[i] = global.hex_gate_x[6-i];
+	temp_gate_y[i] = global.hex_gate_y[6-i];
+}
+for(var i = 0; i < 6; i ++)
+{
+	global.hex_gate_x[i] = temp_gate_x[i];
+	global.hex_gate_y[i] = temp_gate_y[i];
+}
 
 hex_width = global.hex_size*2;
 hex_height = global.hex_size*sqrt(3);

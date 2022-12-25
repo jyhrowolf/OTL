@@ -5,5 +5,6 @@ if(next_round_active_player == 0)
 {
 	next_round_active_player = active_player;
 	players[active_player].civilization.resources[0] += 2;
+	bottom_bar.my_buttons[6].golden = false;
 }
 alarm[0] = 1;

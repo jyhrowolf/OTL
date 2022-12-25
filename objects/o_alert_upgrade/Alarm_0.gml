@@ -19,11 +19,8 @@ if(variable == noone)
 			changes += my_buttons[array_length(my_buttons)-3-i].changes;
 		}
 	
-		if(variable == noone)
-		{
-			gc.busy = 1;
-			player_controller.alarm[3] = 1;
-		}
+		gc.busy = 1;
+		player_controller.alarm[3] = 1;
 	}
 }
 else if(variable == "rare")

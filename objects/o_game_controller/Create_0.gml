@@ -218,10 +218,10 @@ global.map_toggle = 1;
 //setup players
 global.player_color[0] = #808080;	//c_grey
 global.player_color[1] = #900000;	//c_maroon
-global.player_color[2] = #000090;	//c_navy
+global.player_color[2] = #0050A0;	//c_navy
 global.player_color[3] = #004000;	//c_green
 global.player_color[4] = #907000;	//c_yellow
-global.player_color[5] = #A0A0A0;	//c_white
+global.player_color[5] = #80A0A0;	//c_white
 global.player_color[6] = #282828;	//c_dkgrey
 player_controller = instance_create_layer(0,0,"Controllers",o_player_controller);
 player_controller.round_end = attributes[round_end_count];

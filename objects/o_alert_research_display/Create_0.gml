@@ -20,7 +20,13 @@ generate_research = function(_research)
 		image_index = index % 10;
 		x += (21 * image_index)*3;
 	}
-	
+	back_image_index = 0;
+	if(class == 3)
+		back_image_index = 3;
+	else if(image_index == 0)
+		back_image_index = 1;
+	else if(image_index == 7)
+		back_image_index = 2;
 }
 text_color = [];
 text_color[0] = #e65abe;

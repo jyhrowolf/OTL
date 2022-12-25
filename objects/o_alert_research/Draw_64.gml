@@ -6,6 +6,11 @@ var _y = (55)*3;
 var _c;
 var s_w;
 var s_h;
+
+var temp_but = selected_button;
+if(hovered_button >= 0)
+	selected_button = hovered_button;
+
 if(selected_button != -1 && instance_exists(my_buttons[selected_button]))
 {
 	var bb = my_buttons[selected_button];
@@ -82,7 +87,7 @@ if(selected_button != -1 && instance_exists(my_buttons[selected_button]))
 						0,_c,_c,_c,_c,1);
 	
 }
-
+selected_button = temp_but;
 
 _c = #161616;
 draw_set_halign(fa_right);

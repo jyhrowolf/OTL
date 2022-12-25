@@ -63,7 +63,7 @@ for(var j = 0; j < array_length(available_upgrades[i]); j++)
 	bb.generate_rare_upgrade(available_upgrades[i][j]);
 	my_buttons[b_index++] = bb;
 }
-// rare tech
+// blueprint
 _x = -164;
 _y = 79;
 for(var i = 0; i < array_length(available_blueprints); i++)

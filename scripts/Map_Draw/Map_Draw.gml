@@ -17,11 +17,15 @@ function update_planets(_hex)
 function zoom_camera(_pc,_change,_selected_hex)
 {
 	var player = _pc.players[_pc.active_player];
+	if(player.zoom >= 2.5)
+		_change *= 2.5;
+	if(player.zoom >= 3.5)
+		_change *= 2;
 	if(_change > 0)
-		if(player.zoom + _change <= 3)
+		if(player.zoom + _change <= 6)
 			player.zoom += _change;
 		else
-			player.zoom = 3;
+			player.zoom = 6;
 	else
 		if(player.zoom + _change >= 1)
 				player.zoom += _change;
@@ -84,7 +88,6 @@ function draw_system(_system,_color)
 		_system.system_center = instance_create_layer(_x,_y,"Map",o_system_center);
 		_system.system_center.system = _system;
 	}
-	my_color += #202020;
 
 	if(hovered)
 		for(var i = 0; i < 6; i++)//draw boundaries
@@ -92,12 +95,12 @@ function draw_system(_system,_color)
 			draw_line_width_color(_x + hex_x[i],_y + hex_y[i],
 								lerp(_x + hex_x[i],_x + hex_x[i+1],0.3),
 								lerp(_y + hex_y[i],_y + hex_y[i+1],0.3),
-								1,my_color,my_color);
+								1,my_color,c_white);
 							
 			draw_line_width_color(_x + hex_x[6-i],_y + hex_y[6-i],
 								lerp(_x + hex_x[6-i],_x + hex_x[6-i-1],0.3),
 								lerp(_y + hex_y[6-i],_y + hex_y[6-i-1],0.3),
-								1,my_color,my_color);
+								1,my_color,c_white);
 		}
 }
 
@@ -215,14 +218,9 @@ function draw_system_warp_tunnels(_system)
 		var _y = _system.y;
 		if(_system.layout[i])
 		{
-			_x += (global.hex_size-8)*cos(-pi/3*i + pi/6);
-			_y += (global.hex_size-8)*sin(-pi/3*i + pi/6);
+			_x += global.hex_gate_x[i];
+			_y += global.hex_gate_y[i];
 			var _rot = 60*i+60;
-			if(i == 0 || i == 1 || i == 5)
-			{
-				_x += 2*cos(-pi/3*i + pi/6);
-				_y += 2*sin(-pi/3*i + pi/6);
-			}
 			
 			draw_sprite_ext(s_warp_tunnel, 0, _x, _y, 1, 1, _rot, c_white, 1);
 		}

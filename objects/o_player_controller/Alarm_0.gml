@@ -2,8 +2,6 @@
 action_taken = true;
 action = 0;
 
-
-
 var gc = instance_find(o_game_controller,0);
 
 var next_round = true;
@@ -95,6 +93,7 @@ else // Next round
 	}
 	
 	bottom_bar.my_buttons[6].image_index = 2;
+	bottom_bar.my_buttons[6].golden = true;
 	
 	var cur_player;
 	var cur_civ;
@@ -179,6 +178,7 @@ else // Next round
 	cur_player.calculate_influence_upkeep(0);
 	gc.selected_hex = cur_player.last_selected_hex;
 	rotate_camera(self,0,cur_player.last_selected_hex);
+	
 	
 	var ifp = instance_find(o_info_panel,0);
 	if(ifp != noone)

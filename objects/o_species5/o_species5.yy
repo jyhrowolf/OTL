@@ -37,7 +37,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"max_ships","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"[8,4,2,4]",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"buildable_cost","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"1",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"home_system","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"o_home_system5",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"faction_color","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"#D0D0D0",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"faction_color","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"#B0C0A0",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"icon","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"s_specie_icon5",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"rep_track","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"[0,0,4]",},
   ],
