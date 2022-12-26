@@ -39,6 +39,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"faction_color","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"#0077DD",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"icon","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"s_specie_icon2",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"rep_track","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"[0,1,3]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"cursor","path":"objects/o_species/o_species.yy",},"objectId":{"name":"o_species","path":"objects/o_species/o_species.yy",},"value":"s_cursor2",},
   ],
   "parent": {
     "name": "Species",

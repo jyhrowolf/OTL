@@ -29,8 +29,14 @@ function combat_civ_solve(c_hex,_pc,_player)
 {
 	c_hex.sieged = true;
 	var sieged_player = _pc.players[c_hex.player];
+	
 	var d_applied_traits = sieged_player.civilization.trait_list
+	d_applied_traits = calculate_applied_traits(d_applied_traits,"pirate_combat");
+	var p_f = array_length(d_applied_traits);
+		
+	d_applied_traits = sieged_player.civilization.trait_list
 	d_applied_traits = calculate_applied_traits(d_applied_traits,"system_loss");
+	
 	var a_applied_traits = _pc.players[_player].civilization.trait_list;
 	a_applied_traits = calculate_applied_traits(a_applied_traits,"system_combat");
 	
@@ -80,19 +86,23 @@ function combat_civ_solve(c_hex,_pc,_player)
 	}
 	else // NEUTRON BOMB
 	{
-		show_debug_message("NEUTRON BOMB");
-		a_applied_traits[0].trait(c_hex,_pc);
-		var explo = instance_create_depth(c_hex.x,c_hex.y,depth,o_explosion_1);
-		explo.image_blend = _pc.players[_player].species.faction_color;
-		explo.image_xscale = 5;
-		explo.image_yscale = 5;
+		if(_player != 0 || !p_f)
+		{
+			show_debug_message("NEUTRON BOMB");
+			a_applied_traits[0].trait(c_hex,_pc);
+			var explo = instance_create_depth(c_hex.x,c_hex.y,depth,o_explosion_1);
+			explo.image_blend = _pc.players[_player].species.faction_color;
+			explo.image_xscale = 5;
+			explo.image_yscale = 5;
+		}
 	}
 	
-	if(is_system_unpopulated(c_hex))
+	if(is_system_unpopulated(c_hex) && ((_player != 0 || !p_f)))
 	{	
 		instance_destroy(c_hex.system_center);
 		
 		c_hex.player = 0;
+		c_hex.hive = false;
 		array_remove(sieged_player.civilization.systems,c_hex);
 		sieged_player.civilization.influence++;
 	}

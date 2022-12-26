@@ -13,3 +13,4 @@ for(var i = 0; i < array_length(list); i++)
 			hex.depth = 3;
 	}
 }
+get_moveable(self);

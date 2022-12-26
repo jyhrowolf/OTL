@@ -15,7 +15,7 @@ if(busy == 0) //initiallize a combat
 		}
 		var attacker = combat_list[array_length(combat_list) - 1];
 		var defender = combat_list[array_length(combat_list) - 2];
-		if(attacker == combat_hex.player)
+		if(attacker == combat_hex.player || attacker == 0)
 		{
 			var temp = attacker;
 			attacker = defender;
@@ -86,7 +86,7 @@ if(busy == 0) //initiallize a combat
 		{
 			combat_reward_calculate(combat_reward[0],player_controller.players[defender]);
 			combat_reward_calculate(combat_reward[1],player_controller.players[attacker]);
-			if(combat_player_won(combat_hex,attacker)) // attacker wins
+			if(combat_player_won(combat_hex,attacker) && combat_hex.player != attacker) // attacker wins
 			{
 				combat_hex.enemy = noone;
 				combat_hex.sieged = true;
@@ -118,35 +118,70 @@ if(busy == 0) //initiallize a combat
 	else if(is_planet_combat(combat_hex) && !combat_hex.sieged)
 	{
 		var attacker = combat_hex.ships[0].player;
-		player_controller.active_player = attacker;
-		var cur_player = player_controller.players[attacker];
-		var cur_civ = cur_player.civilization;
-		cur_civ.calculate_colony(cur_civ.colony);
-		cur_civ.calculate_resources([0,0,0]);
-		cur_player.calculate_resource_income([0,0,0]);
-		cur_player.calculate_influence_upkeep(0);
-		
-		rotate_camera(player_controller,0,combat_hex);
-		
-		combat_civ_solve(combat_hex,player_controller,attacker);
-		if(is_system_unpopulated(combat_hex))
+		if(attacker != 0)
 		{
-			busy = 2;
-			bottom_bar.my_buttons[6].image_index = 1;
+			player_controller.active_player = attacker;
+			var cur_player = player_controller.players[attacker];
+			var cur_civ = cur_player.civilization;
+			cur_civ.calculate_colony(cur_civ.colony);
+			cur_civ.calculate_resources([0,0,0]);
+			cur_player.calculate_resource_income([0,0,0]);
+			cur_player.calculate_influence_upkeep(0);
+		
+			rotate_camera(player_controller,0,combat_hex);
+		
+			combat_civ_solve(combat_hex,player_controller,attacker);
+			if(is_system_unpopulated(combat_hex))
+			{
+				busy = 2;
+				bottom_bar.my_buttons[6].image_index = 1;
+			}
+			else
+			{
+				busy = 0;
+				player_controller.alarm[0] = 60;
+				bottom_bar.my_buttons[6].image_index = 2;
+			}
 		}
 		else
 		{
+			combat_civ_solve(combat_hex,player_controller,attacker);
 			busy = 0;
 			player_controller.alarm[0] = 60;
 			bottom_bar.my_buttons[6].image_index = 2;
 		}
+	}
+	else if(combat_hex.hive)
+	{
+		combat_hex.neutrals++;
+		var adv = [
+		    [1,0], [1,-1], [0,-1], 
+		    [-1,0], [-1,1], [0,1] 
+		];
+		var ran = irandom_range(0,5);
+		var target = connected_to_hex(combat_hex,moveable_hex,adv[ran]);
+		if(target != noone)
+		{
+			player_controller.active_player = 0;
+			rotate_camera(player_controller,0,combat_hex);
+			array_push(target.ships,combat_hex.ships[0]);
+			combat_hex.ships[0].target = target;
+			array_delete(combat_hex.ships,0,1);
+			
+			if(array_length(combat_hex.ships) == 0)
+				combat_hex.enemy = noone;
+		}
+		
+		busy = 0;
+		player_controller.alarm[0] = 60;
+		bottom_bar.my_buttons[6].image_index = 2;
 	}
 }
 else if(busy == 1)
 {
 	var attacker = combat_list[array_length(combat_list) - 1];
 	var defender = combat_list[array_length(combat_list) - 2];
-	if(attacker == combat_hex.player)
+	if(attacker == combat_hex.player || attacker == 0)
 	{
 		var temp = attacker;
 		attacker = defender;
@@ -196,7 +231,7 @@ else if(busy == 1)
 	{
 		combat_reward_calculate(combat_reward[0],player_controller.players[defender]);
 		combat_reward_calculate(combat_reward[1],player_controller.players[attacker]);
-		if(combat_player_won(combat_hex,attacker)) // attacker wins
+		if(combat_player_won(combat_hex,attacker) && combat_hex.player != attacker) // attacker wins
 		{
 			combat_hex.enemy = noone;
 			combat_hex.sieged = true;

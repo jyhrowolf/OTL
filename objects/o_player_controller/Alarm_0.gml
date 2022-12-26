@@ -33,6 +33,16 @@ for(var i = 0; i < array_length(list); i++) // find all hexes that have 2 differ
 		gc.selected_hex = gc.combat_hex;
 		break;
 	}
+	else if(list[i].hive)
+	{
+		if(array_length(list[i].ships) > 0 && array_length(list[i].ships) == list[i].neutrals)
+		{
+			combat = true;
+			gc.combat_hex = list[i];
+			gc.selected_hex = gc.combat_hex;
+			break;
+		}
+	}
 }
 
 if(!next_round)
@@ -52,6 +62,7 @@ if(!next_round)
 	}
 	
 	var cur_player = players[active_player];
+	cursor.update_cursor(cur_player);
 	var cur_civ = cur_player.civilization;
 	cur_civ.calculate_colony(cur_civ.colony);
 	cur_civ.calculate_resources([0,0,0]);
@@ -90,6 +101,8 @@ else // Next round
 	ds_map_values_to_array(gc.moveable_hex,list);
 	for (var i = 0; i < array_length(list); i++) {
 	    list[i].sieged = false; // reset siege status
+		if(list[i].hive)
+			list[i].neutrals = array_length(list[i].ships);
 	}
 	
 	bottom_bar.my_buttons[6].image_index = 2;
@@ -149,7 +162,7 @@ else // Next round
 	active_player = next_round_active_player;
 	next_round_active_player = 0;
 	
-	var playable = [0,0,0,0,0,0,0];
+	var playable = [0,0,0,0,0,0,0,0,0,0];
 	for(var i = 1; i < array_length(players); i++)
 	{
 		cur_player = players[i];
@@ -171,6 +184,7 @@ else // Next round
 	}
 	
 	cur_player = players[active_player];
+	cursor.update_cursor(cur_player);
 	cur_civ = cur_player.civilization;
 	cur_civ.calculate_colony(cur_civ.colony);
 	cur_civ.calculate_resources([0,0,0]);
@@ -190,7 +204,7 @@ else // Next round
 	if(sum > 1)
 	{
 		var player_list = [];
-		var scores = [0,0,0,0,0,0,0];
+		var scores = [0,0,0,0,0,0,0,0,0,0];
 		for(var i = 1; i < array_length(players); i++)
 		{
 			var temp_scores = players[i].civilization.calculate_victory_points();
@@ -203,7 +217,7 @@ else // Next round
 		for(var i = 1; i < array_length(players); i++)
 		{
 			var temp = [];
-			array_copy(temp,0,scores,0,7);
+			array_copy(temp,0,scores,0,10);
 			array_sort(temp,false);
 			var temp_score = temp[i-1];
 			var p = 1;

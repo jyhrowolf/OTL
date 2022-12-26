@@ -3,20 +3,25 @@
 at[0]		player count
 at[1-2]		tech draw
 at[3-11]	tech count
-at[12-17]	player species
-at[18-41]	exploration tokens
-at[42-54]	system system_tokens
-at[55-59]	reputation tokens
-at[60]		round end numbers
+at[12-21]	player species
+at[22-44]	exploration tokens
+at[45-57]	system system_tokens
+at[58-62]	reputation tokens
+at[63]		round end numbers
 */
 randomise();
 var setup = instance_find(o_setup_controller, 0);
+
+cursor = setup.cursor;
+
 var i = 0;
 attributes[i++] = setup.attributes[0].attribute_value; //player count
 attributes[i++] = 12 + 2 * (attributes[0] - 2); // research initial draw count
 attributes[i++] = 5 + (attributes[0] - 2); // research initial draw count
+if(attributes[0] == 9)
+	attributes[i-1]--;
 var research_index = i;
-for(var i = research_index-2; i < array_length(setup.attributes)-7; i++)
+for(var i = research_index-2; i < array_length(setup.attributes)-10; i++)
 {
 	attributes[i+2] = setup.attributes[i].attribute_value;
 }
@@ -66,7 +71,7 @@ while(sum > 0)
 	array_push(research_tokens, string(s));
 	sum--;
 }
-i+= 8
+i += 11;
 /*array_sort(research_tokens,function(elm1, elm2)
     {
         return elm1 - elm2;
@@ -124,9 +129,9 @@ while(sum > 0)
 	sum--;
 }
 
-var tier_bounds = [10,13,20];
-var tier_dif = [[],[12,13],[19,20]];
-var tier_special = [[],[14,81],[81,82]];
+var tier_bounds = [10,15,26];
+var tier_dif = [[],[15],[25,26]];
+var tier_special = [[],[81],[81,82]];
 var tier_index = i;
 attributes[i++] = tier_bounds[0];	// system system_tokens t-1
 attributes[i++] = tier_bounds[1];	// t-2
@@ -134,12 +139,17 @@ attributes[i++] = tier_bounds[1];	// t-2
 var t_3 = 0;
 switch (attributes[0])
 {
+	case 9:
+	case 8:
+		t_3 += 2;
+	case 7:
+		t_3 += 4;
 	case 6:
 		t_3 += 2;
 	case 5:
 		t_3 += 2;
 	case 4:
-		t_3 += 4;
+		t_3 += 6;
 	case 3:
 		t_3 += 3;
 	case 2:
@@ -178,10 +188,12 @@ ds_map_destroy(tiles);
 //reputation tiles
 var rep_index = i;
 
-attributes[i++] = 4;	// 4s
-attributes[i++] = 7;	// 3s
-attributes[i++] = 10;	// 2s
-attributes[i++] = 12;	// 1s
+var bonus_rep = attributes[0] >= 7;
+
+attributes[i++] = 4 + 2*bonus_rep;	// 4s
+attributes[i++] = 7 + 3*bonus_rep;	// 3s
+attributes[i++] = 10 + 2*bonus_rep;	// 2s
+attributes[i++] = 12 + 2*bonus_rep;	// 1s
 
 sum = 0;
 temp = [];
@@ -222,9 +234,14 @@ global.player_color[2] = #0050A0;	//c_navy
 global.player_color[3] = #004000;	//c_green
 global.player_color[4] = #907000;	//c_yellow
 global.player_color[5] = #80A0A0;	//c_white
-global.player_color[6] = #282828;	//c_dkgrey
+global.player_color[6] = #383838;	//c_dkgrey
+global.player_color[7] = #AA80AA;	//c_pink
+global.player_color[8] = #FFA500;	//c_orange
+global.player_color[9] = #600060;	//c_purple
+
 player_controller = instance_create_layer(0,0,"Controllers",o_player_controller);
 player_controller.round_end = attributes[round_end_count];
+player_controller.cursor = cursor;
 
 research_controller = instance_create_layer(0,0,"Controllers",o_research_controller);
 research_controller.initial_draw_research = attributes[research_index-2];

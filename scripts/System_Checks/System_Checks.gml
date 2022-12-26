@@ -239,6 +239,19 @@ function valid_rotation(_system,_map,_player,_whg)
 	return false;
 }
 
+function connected_to_hex(_system,_map, _direction)
+{
+	var old_coord = _system.hex_coord;
+	var new_coord = [old_coord[0] + _direction[0], old_coord[1] + _direction[1]];
+	if (ds_map_exists(_map, map_hash(new_coord)))
+	{
+		var sys = _map[? map_hash(new_coord)]
+		if(sys.explored)
+			return sys;
+	}
+	return noone;
+}
+
 function connected_to_player(_system,_map,_player)
 {
 	var adv = [

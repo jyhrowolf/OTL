@@ -37,6 +37,6 @@
   ],
   "parent": {
     "name": "Civilization Starters",
-    "path": "folders/Objects/Map/Systems/Sector 2 (201-211,214,281)/Civilization Starters.yy",
+    "path": "folders/Objects/Map/Systems/Sector 2 (201-214,281)/Civilization Starters.yy",
   },
 }

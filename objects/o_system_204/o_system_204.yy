@@ -35,7 +35,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"enemy","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"s_pirate_icon",},
   ],
   "parent": {
-    "name": "Sector 2 (201-211,214,281)",
-    "path": "folders/Objects/Map/Systems/Sector 2 (201-211,214,281).yy",
+    "name": "Sector 2 (201-214,281)",
+    "path": "folders/Objects/Map/Systems/Sector 2 (201-214,281).yy",
   },
 }

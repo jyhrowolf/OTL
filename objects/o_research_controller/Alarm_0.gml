@@ -13,7 +13,6 @@ for(var i = 0; i < amount; i++)
 	
 	if(index == 3 && array_length(available_research[3]) == 7) // rare is full
 	{
-		i--;
 		array_insert(research_tokens,0,token);
 	}
 	else

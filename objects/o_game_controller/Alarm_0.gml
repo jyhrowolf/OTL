@@ -62,8 +62,8 @@ for(var i = 0; i < 6; i ++)
 
 hex_width = global.hex_size*2;
 hex_height = global.hex_size*sqrt(3);
-width = 5;
-height = 5;
+width = 6;
+height = 6;
 
 for (var q = -width+1; q < width; q++)
 	for(var r = -height+1; r < height; r++)
@@ -87,13 +87,6 @@ array_push(player_controller.players, player);
 var species = instance_create_layer(0,0,"Player",o_species_neutrals);
 player.setup_species(species);
 
-// settup neutral blueprints
-/*
-instance_create_layer(0,0,"Controllers",o_blueprint_00);
-instance_create_layer(0,0,"Controllers",o_blueprint_01);
-instance_create_layer(0,0,"Controllers",o_blueprint_02);
-*/
-
 var system = instance_create_layer(_point[0],_point[1],"Map",o_center_system);
 system.depth = 2;
 instance_destroy(map[? map_hash([q,r])])
@@ -108,7 +101,11 @@ var maps = [[0,0,1,0,0,1],
 			[1,0,1,0,1,0],
 			[1,0,1,1,0,1],
 			[1,1,1,1,1,0],
-			[1,1,1,1,1,1]];
+			[1,1,1,1,1,1],
+			[0,1,1,1,0,1,1,1,1],
+			[0,1,1,1,1,1,1,1,1],
+			[1,1,1,1,1,1,1,1,1],
+			];
 var _layout = maps[attributes[0] - 2];
 
 var guardian_list = ds_list_create();
@@ -118,8 +115,17 @@ for(var i = 0; i < 4; i++)
 }
 ds_list_shuffle(guardian_list);
 
-for(var i = 0; i < 6; i++)
+if(array_length(_layout) > 6)
+	adv = [
+		[3,-1], [3,-3], [1,-3], [-1,-2],
+		[-3,0], [-3,2], [-2,3], [0,3], [2,1]
+	];
+var rot = 0;
+for(var i = 0; i < array_length(_layout); i++)
 {
+	if(array_length(_layout) > 6)
+		if(i%3 == 2)
+			rot--;
 	if(_layout[i] == 0)
 	{
 		var ran = ds_list_find_value(guardian_list,0);
@@ -129,7 +135,7 @@ for(var i = 0; i < 6; i++)
 		system.hex_coord = adv[i];
 		system.tier = tier_calculate(adv[i]);
 		system.depth = 3;
-		rotate_layout(system,i+1);
+		rotate_layout(system,rot+1);
 		instance_destroy(map[? map_hash(adv[i])])
 		map[? map_hash(adv[i])] = system;
 	}
@@ -137,7 +143,7 @@ for(var i = 0; i < 6; i++)
 	{
 		player_controller.active_player += 1;
 		player = instance_create_layer(system.x,system.y,"Player",o_player);
-		player.rot = i;
+		player.rot = rot;
 		player.player = player_controller.active_player;
 		array_push(player_controller.players, player);
 
@@ -159,16 +165,18 @@ for(var i = 0; i < 6; i++)
 		system.hex_coord = adv[i];
 		system.tier = tier_calculate(adv[i]);
 		system.depth = 3;
-		rotate_layout(system,i+1);
+		rotate_layout(system,rot+1);
 		
 		instance_destroy(map[? map_hash(adv[i])])
 		map[? map_hash(adv[i])] = system;
 	}
+	rot++;
 }
 ds_list_destroy(guardian_list);
 
 player_controller.active_player = 1; // set the first player to the active player.
 var cur_player = player_controller.players[player_controller.active_player];
+cursor.update_cursor(cur_player);
 cur_player.civilization.calculate_colony(cur_player.civilization.colony);
 cur_player.calculate_resource_income([0,0,0]);
 cur_player.civilization.calculate_resources([0,0,0]);

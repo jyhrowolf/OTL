@@ -33,7 +33,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"victory_points","path":"objects/o_system/o_system.yy",},"objectId":{"name":"o_system","path":"objects/o_system/o_system.yy",},"value":"2",},
   ],
   "parent": {
-    "name": "Sector 3 (301-318,381-382)",
-    "path": "folders/Objects/Map/Systems/Sector 3 (301-318,381-382).yy",
+    "name": "Sector 3 (301-324,381-382)",
+    "path": "folders/Objects/Map/Systems/Sector 3 (301-324,381-382).yy",
   },
 }

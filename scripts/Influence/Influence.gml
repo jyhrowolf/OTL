@@ -13,6 +13,14 @@ function action_influence(_gc,_pc, choose_hex)
 		{
 			if(choose_hex.player == 0 && _gc.complete > 0)
 			{
+				if(choose_hex.exploration_token != noone)
+				{
+					var ac = instance_find(o_alert_controller,0);
+					array_push(ac.alerts,o_alert_choose_exploration);
+					show_debug_message("CHOOSE EXPLORATION")
+					ac.next_alert(_gc.selected_hex.exploration_token);
+					choose_hex.exploration_token = noone;
+				}
 				choose_hex.player = _pc.active_player;
 				update_planets(choose_hex);
 				array_push(current_player.civilization.systems,choose_hex);
