@@ -226,7 +226,7 @@ function valid_rotation(_system,_map,_player,_whg)
 								return true;
 						}
 					}
-					if(sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1 && _system.layout[j] == 1)
+					if((sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1 || sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 2) && _system.layout[j] == 1)
 					{
 						if(_system.tier == 1 && connected_to_center(_system,_map))
 							return true;
