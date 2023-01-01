@@ -222,7 +222,7 @@ while(sum > 0)
 }
 
 var round_end_count = i;
-attributes[i++] = setup.attributes[species_index + 3].attribute_value; // round end
+attributes[i++] = setup.attributes[species_index + 6].attribute_value; // round end
 
 array_insert(exploration_tokens,array_length(exploration_tokens)-5,"o_exp_cruiser"); //exploration testing
 global.neutrals_difficulty = 0;

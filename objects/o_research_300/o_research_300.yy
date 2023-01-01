@@ -34,7 +34,7 @@
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"discount","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"5",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"type","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"3",},
     {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"research_name","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Antimater Splitter",},
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Does not do anything.",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"description","path":"objects/o_research_trial/o_research_trial.yy",},"objectId":{"name":"o_research_trial","path":"objects/o_research_trial/o_research_trial.yy",},"value":"Splits anitmatter damage into 4 shots.",},
   ],
   "parent": {
     "name": "3_Rare",

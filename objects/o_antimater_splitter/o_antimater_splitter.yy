@@ -29,7 +29,7 @@
   ],
   "properties": [],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"application","path":"objects/o_trait/o_trait.yy",},"objectId":{"name":"o_trait","path":"objects/o_trait/o_trait.yy",},"value":"[\"damage_taken\"]",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"application","path":"objects/o_trait/o_trait.yy",},"objectId":{"name":"o_trait","path":"objects/o_trait/o_trait.yy",},"value":"[\"antimatter_roll\"]",},
   ],
   "parent": {
     "name": "Trait",

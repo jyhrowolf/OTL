@@ -195,7 +195,10 @@ function round_solve(c_hex,dmg,to_player,_type)
 		{
 			if(ships[i].player == to_player)
 			{
-				array_push(to_ships[ships[i].blueprint.shield], ships[i]);
+				if(_type)
+					array_push(to_ships[ships[i].blueprint.shield], ships[i]);
+				else
+					array_push(to_ships[0], ships[i]);
 			}
 		}
 	}

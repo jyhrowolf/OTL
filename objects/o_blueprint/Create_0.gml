@@ -234,6 +234,24 @@ roll_weapons = function()
 	var attacks = [];
 	for(var d = 1; d < array_length(weapons); d++)
 	{
+		if(d == 4)
+		{
+			var pc = instance_find(o_player_controller,0);
+			var current_player = pc.players[pc.active_player];
+			var applied_traits = current_player.civilization.trait_list;
+			applied_traits = calculate_applied_traits(applied_traits,"antimatter_roll");
+			var splt = array_length(applied_traits);
+			if(splt)
+			{
+				for(var w = 0; w < weapons[d]; w++)
+				{
+					var roll = roll_six(computer);
+					for(var i = 0; i < 4; i++)
+						array_push(attacks,[1,roll]);
+				}
+				break;
+			}
+		}
 		for(var w = 0; w < weapons[d]; w++)
 		{
 			array_push(attacks,[d,roll_six(computer)]);
