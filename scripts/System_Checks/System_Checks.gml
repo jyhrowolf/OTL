@@ -226,7 +226,7 @@ function valid_rotation(_system,_map,_player,_whg)
 								return true;
 						}
 					}
-					if((sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1 || sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 2) && _system.layout[j] == 1)
+					if((sys.layout[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1) && _system.layout[j] == 1)
 					{
 						if(_system.tier == 1 && connected_to_center(_system,_map))
 							return true;
@@ -268,7 +268,7 @@ function connected_to_player(_system,_map,_player)
 			var sys = _map[? map_hash(new_coord)]
 			if(sys.explored)
 				if(sys.player == _player || (is_player_ship(_player,sys,false) && !is_player_pinned(_player,sys,0)))
-					if(sys.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1)
+					if(sys.layout[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1)
 						return true;
 		}
 	}

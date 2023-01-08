@@ -71,24 +71,8 @@ for(var i = 0; i < array_length(list); i++) // calculate all hex connections
 				}
 				else if(new_hex.layout[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] == 1) // if adjacent explored hex has a gateway into hex
 				{
-					if(old_hex.explored)
+					if(!old_hex.explored)
 					{
-						if(old_hex.layout[j] == 1)
-						{
-							new_hex.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] = 1;
-							old_hex.connections[j] = 1
-							connected = true;
-						}
-						else
-						{
-							new_hex.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] = 1;
-							old_hex.connections[j] = 2;
-						}
-					}
-					else
-					{
-						new_hex.connections[(j+3)*(j+3 < 6) + (j-3)*(j+3>=6)] = 1;
-						old_hex.connections[j] = 1
 						connected = true;
 						var tier = old_hex.tier;
 						tier = (tier-1)*(tier<4) + 2*(tier>=4);
