@@ -1,6 +1,6 @@
 /// @description Influence
 var current_player = player_controller.players[player_controller.active_player];
-if(busy == 0) // find hexes that are influenceable
+if(busy >= 0) // find hexes that are influenceable
 {
 	var applied_traits = player_controller.players[player_controller.active_player].civilization.trait_list;
 	applied_traits = calculate_applied_traits(applied_traits,"move");

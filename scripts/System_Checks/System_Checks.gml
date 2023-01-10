@@ -15,7 +15,9 @@ function is_system_unpopulated(_hex)
 function is_ship_combat(_system)
 {
 	var pc = instance_find(o_player_controller,0);
-	var p_list = [0,0,0,0,0,0,0];
+	
+	var p_list = [0,0,0,0,0,0,0,0,0,0];
+	var pirates = 0;
 	var p_friend = 0;
 	var player_ships = _system.ships;
 	for(var i = 0 ; i < array_length(player_ships); i++) // all ships
@@ -25,10 +27,18 @@ function is_ship_combat(_system)
 			var current_player = pc.players[player_ships[i].player];
 			var applied_traits = current_player.civilization.trait_list;
 			applied_traits = calculate_applied_traits(applied_traits,"pirate_combat");
-			if(array_length(applied_traits) != 0)
+			var p_f = array_length(applied_traits) != 0;
+			
+			if(p_f)
 				p_friend = player_ships[i].player;
 			
-			p_list[player_ships[i].player] = 1;
+			if(_system.ships[i].object_index == o_pirate)
+			{
+				if(!p_f)
+					pirates = 1;
+			}
+			else
+				p_list[player_ships[i].player] = 1;
 		}
 	}
 	var sum = 0;
@@ -36,14 +46,11 @@ function is_ship_combat(_system)
 	{
 		sum += p_list[i];
 	}
+	if(p_list[0] == 0)
+		sum += pirates;
 	
 	if(p_friend != 0)
-	{
-		if(p_list[0] > 0 && p_list[p_friend] > 0)
-		{
-			sum--;
-		}
-	}
+		sum -= pirates
 	
 	return sum > 1;
 }

@@ -13,7 +13,7 @@ function action_influence(_gc,_pc, choose_hex)
 		{
 			if(choose_hex.player == 0 && _gc.complete > 0)
 			{
-				if(choose_hex.exploration_token != noone)
+				if(choose_hex.exploration_token != noone && !is_player_ship(0,choose_hex,false))
 				{
 					var ac = instance_find(o_alert_controller,0);
 					array_push(ac.alerts,o_alert_choose_exploration);
