@@ -29,7 +29,7 @@ else if(global.neutrals_difficulty == 1) // 3 hull 2 computer 4 1 missile 1 4 we
 	add_ship_part(o_ship_part_51,in++); // weapon
 	add_ship_part(o_ship_part_42,in++); // weapon
 
-	add_innate_part([7,2]); // base +1 iniative
+	add_innate_part([7,2]); // base +2 iniative
 }
 else
 {

@@ -11,6 +11,9 @@ current_civ = player_controller.players[player_controller.active_player].civiliz
 available_upgrades = current_civ.upgrades;
 available_blueprints = player_controller.players[player_controller.active_player].blueprints;
 
+init_map = ds_map_create();
+final_map = ds_map_create();
+
 x = view_get_wport(0)/2;
 y = view_get_hport(0)*2/5;
 image_xscale = 3;
@@ -77,7 +80,20 @@ for(var i = 0; i < array_length(available_blueprints); i++)
 	if(current_civ.buildable[i] != 1)
 		bb.image_alpha = 0.6;
 	my_buttons[b_index++] = bb;
+	
+	var keys = [];
+	ds_map_keys_to_array(bb.init_map,keys);
+	for(var k = 0; k < array_length(keys); k++)
+	{
+		var val = bb.init_map[? keys[k]]
+		if(ds_map_exists(init_map, keys[k]))
+			init_map[? keys[k]] += val;
+		else
+			init_map[? keys[k]] = 1;
+	}
 }
+
+ds_map_copy(final_map,init_map);
 
 _x = -50;
 _y = -103;

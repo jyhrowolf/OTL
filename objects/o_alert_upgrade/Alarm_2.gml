@@ -1,4 +1,4 @@
-/// @description Click on blueprint
+/// @description Drop on blueprint
 
 var m_x = device_mouse_x_to_gui(0);
 var m_y = device_mouse_y_to_gui(0);
@@ -61,12 +61,64 @@ if(selected_button != -1)
 		}
 	}
 }
-else if(index != -1 && variable != "rare")
+else if(cursor.hover_asset != noone)
 {
-	bp.remove_part(index);
+	if(index != -1)	// clicked on one
+	{
+		if(cursor.hover_asset.rare == -1 && variable == noone)
+		{
+			var s = object_get_name(cursor.hover_asset.upgrade.object_index);
+			bp.add_ship_part(asset_get_index(s),index);
+		}
+		else if(cursor.hover_asset.rare >= 0)
+		{
+			if(bp.add_rare_ship_part(cursor.hover_asset.upgrade,index))
+			{
+				instance_destroy(cursor.hover_asset);
+				cursor.hover_asset = noone;
+			}
+		}
+	}
+	else
+	{
+		instance_destroy(cursor.hover_asset);
+		cursor.hover_asset = noone;
+	}
 }
+
+ds_map_clear(final_map);
+for(var i = array_length(my_buttons) - 2 - 4; i < array_length(my_buttons) - 2; i++)
+{
+	var bp = my_buttons[i];
+	var keys = [];
+	ds_map_keys_to_array(bp.final_map,keys);
+	for(var k = 0; k < array_length(keys); k++)
+	{
+		var val = bp.final_map[? keys[k]]
+		if(ds_map_exists(final_map, keys[k]))
+			final_map[? keys[k]] += val;
+		else
+			final_map[? keys[k]] = bp.final_map[? keys[k]];
+	}
+}
+
 changes = 0;
-for(var i = 0; i < array_length(available_blueprints); i++)
+var list = [];
+ds_map_keys_to_array(final_map, list);
+for (var i = 0; i < array_length(list); i++) 
 {
-	changes += my_buttons[array_length(my_buttons)-3-i].changes;
+	if(ds_map_exists(init_map,list[i]))
+	{
+		var ad = final_map[?list[i]] - init_map[?list[i]];
+		changes += ad*(ad>0);
+	}
+	else
+	{
+		changes += final_map[?list[i]];
+	}
 }
+
+cursor.hover_sprite = noone;
+cursor.hover_index = 0;
+cursor.hover_offset = [0,0];
+selected_button = -1;

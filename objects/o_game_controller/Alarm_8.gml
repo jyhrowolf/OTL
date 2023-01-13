@@ -170,6 +170,11 @@ if(busy == 0) //initiallize a combat
 			
 			if(array_length(combat_hex.ships) == 0)
 				combat_hex.enemy = noone;
+				
+			if(!is_ship_combat(combat_hex))
+			{
+				combat_civ_solve(combat_hex,player_controller,0)
+			}
 		}
 		
 		busy = 0;

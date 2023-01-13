@@ -71,8 +71,9 @@ function action_build(_gc,_pc, choose_hex)
 				_gc.complete--;
 				if(_gc.complete > 0 && current_player.civilization.resources[2] >= current_player.civilization.buildable_cost[0]) //not finished
 				{
+					var modi = 0.1*(_gc.busy == 1) + 0.8*(_gc.busy < 5) + 0.5*(_gc.busy >= 5);
+					alarm[4] = 60*modi;
 					_gc.busy = 0;
-					alarm[4] = 1;
 				}
 				else // finish
 				{

@@ -58,6 +58,36 @@ valid_blueprint = function()
 	return false;
 }
 
+click_part = function(index)
+{
+	if(ship_parts[index] != noone)
+	{
+		var display = instance_create_layer(x+(ship_parts_pos[index][0])*3,y-(ship_parts_pos[index][1])*3,"GUI",o_alert_upgrade_display);
+		if(ship_parts[index].rare == -1)
+			display.generate_upgrade(string_digits(object_get_name(ship_parts[index].object_index)));
+		else
+		{
+			display.rare = 1;
+			display.generate_rare_upgrade(ship_parts[index]);
+		}
+		display.blueprint = true;
+		
+		if(remove_part(index))
+		{
+			var cursor = instance_find(o_cursor,0);
+			cursor.hover_sprite = display.upgrade_sprite;
+			cursor.hover_index = display.upgrade_index;
+			cursor.hover_offset = [(x+(ship_parts_pos[index][0])*3 - cursor.x) div 2,
+									(y-(ship_parts_pos[index][1])*3 - cursor.y) div 2];
+			cursor.hover_asset = display;
+		}
+		else
+		{
+			instance_destroy(display);
+		}
+	}
+}
+
 delete_part = function(index)
 {
 	instance_destroy(ship_parts[index]);
@@ -74,6 +104,7 @@ delete_rare_part = function(index)
 remove_part = function(index)
 {
 	var old_part = ship_parts[index];
+	var valid = false;
 
 	array_delete(ship_parts,index,1);
 	array_insert(ship_parts,index,noone);
@@ -88,11 +119,15 @@ remove_part = function(index)
 	{
 		if(old_part != noone)
 		{
-			final_map_add(old_part,-1);
+			if(old_part.rare == -1)
+				final_map_add(old_part,-1);
 			instance_destroy(old_part);
 		}
+		valid = true;
 	}
 	calculate_changes();
+	
+	return valid;
 }
 
 add_rare_ship_part = function(_ship_part,index)
@@ -184,7 +219,8 @@ final_map_add = function(_ship_part,_amount)
 calculate_changes = function()
 {
 	changes = 0;
-	var list = ds_map_keys_to_array(final_map);
+	var list = [];
+	ds_map_keys_to_array(final_map, list);
 	for (var i = 0; i < array_length(list); i++) 
 	{
 	    if(ds_map_exists(init_map,list[i]))

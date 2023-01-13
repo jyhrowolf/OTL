@@ -10,11 +10,17 @@ if(global.mouse_state <= state)
 		{
 			clicked = true;
 			if(i < array_length(my_buttons) - 2 - 4)
+			{
 				selected_button = i;
+				cursor.hover_sprite = my_buttons[selected_button].upgrade_sprite;
+				cursor.hover_index = my_buttons[selected_button].upgrade_index;
+				cursor.hover_offset = [(my_buttons[selected_button].x - cursor.x) div 2,
+										(my_buttons[selected_button].y - cursor.y) div 2];
+			}
 			else if (i < array_length(my_buttons) - 2)
 			{
 				selected_blueprint = i;
-				alarm[2] = 1;
+				alarm[3] = 1;
 			}
 			else if (i < array_length(my_buttons) - 1)
 				alarm[0] = 1;
