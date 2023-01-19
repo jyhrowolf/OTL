@@ -94,11 +94,11 @@ for(var i = array_length(my_buttons) - 2 - 4; i < array_length(my_buttons) - 2; 
 	ds_map_keys_to_array(bp.final_map,keys);
 	for(var k = 0; k < array_length(keys); k++)
 	{
-		var val = bp.final_map[? keys[k]]
+		var val = bp.final_map[? keys[k]];
 		if(ds_map_exists(final_map, keys[k]))
 			final_map[? keys[k]] += val;
 		else
-			final_map[? keys[k]] = bp.final_map[? keys[k]];
+			final_map[? keys[k]] = val;
 	}
 }
 

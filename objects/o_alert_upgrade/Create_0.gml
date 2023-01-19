@@ -89,7 +89,7 @@ for(var i = 0; i < array_length(available_blueprints); i++)
 		if(ds_map_exists(init_map, keys[k]))
 			init_map[? keys[k]] += val;
 		else
-			init_map[? keys[k]] = 1;
+			init_map[? keys[k]] = val;
 	}
 }
 

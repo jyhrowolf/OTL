@@ -42,7 +42,7 @@
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"name","varType":2,"value":"","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],},
   ],
   "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"state","path":"objects/o_alert/o_alert.yy",},"objectId":{"name":"o_alert","path":"objects/o_alert/o_alert.yy",},"value":"3",},
+    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"state","path":"objects/o_alert/o_alert.yy",},"objectId":{"name":"o_alert","path":"objects/o_alert/o_alert.yy",},"value":"4",},
   ],
   "parent": {
     "name": "Exploration",

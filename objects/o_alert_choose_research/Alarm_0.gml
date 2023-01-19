@@ -21,7 +21,6 @@ if(choice > -1)
 		player_controller.alarm[2] = 1;
 		var ar = instance_find(o_alert_research,0);
 		ar.alarm[2] = 1;
-		global.mouse_state--;
 		instance_destroy(self);
 	}
 }

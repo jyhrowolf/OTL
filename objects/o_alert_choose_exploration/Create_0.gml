@@ -2,8 +2,9 @@
 
 // Inherit the parent event
 event_inherited();
+depth = -19;
 screen_darken = instance_create_layer(0,0,"GUI",o_alert_screen_darken);
-screen_darken.depth = -11;
+screen_darken.depth = -11-2*state;
 
 player_controller = instance_find(o_player_controller,0);
 current_player = player_controller.players[player_controller.active_player];
@@ -22,6 +23,7 @@ for(var i = 0; i < 2; i++)
 	bb.image_xscale = 3;
 	bb.image_yscale = 3;
 	bb.image_index = i;
+	bb.depth -= state;
 	my_buttons[i] = bb;
 }
 
@@ -32,6 +34,7 @@ bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_yes);
 bb.image_xscale = 3;
 bb.image_yscale = 3;
 bb.image_index = 0;
+bb.depth -= state;
 my_buttons[i++] = bb;
 
 _x = 38;
@@ -41,6 +44,7 @@ bb = instance_create_layer(x+(_x)*3,y-(_y)*3,"GUI",o_alert_x);
 bb.image_xscale = 3;
 bb.image_yscale = 3;
 bb.image_index = 0;
+bb.depth -= state;
 my_buttons[i] = bb;
 
 alarm[2] = 1;

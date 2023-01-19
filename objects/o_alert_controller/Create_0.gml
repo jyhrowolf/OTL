@@ -12,6 +12,7 @@ next_alert = function(variable)
 		pc.action = -1;
 		var alert = array_pop(alerts);
 		var a = instance_create_layer(0,0,"GUI",alert);
+		
 		a.variable = variable;
 		if(variable != noone)
 			a.do_function(variable);
@@ -19,6 +20,7 @@ next_alert = function(variable)
 	else if(queue > 0)
 	{
 		queue--;
+		global.mouse_state--;
 	}
 	if(queue == 0)
 	{
