@@ -19,3 +19,6 @@ The playable species are:
 7. Terran (Terran)
 
 In the start screen you can choose number of players, their specie, the number of rounds, and the number of researchs in each tech.
+
+
+Credits to the orignal Eclipse Kickstarter and the team behind 2nd dawn.
